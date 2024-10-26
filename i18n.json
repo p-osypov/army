@@ -1,0 +1,7 @@
+{
+  "locales": ["ua", "ru"],
+  "defaultLocale": "ua",
+  "pages": {
+    "*": ["header", "footer"]
+  }
+}
