@@ -2,7 +2,7 @@
 
 ```bash
 npm install
-npm run prepare
+npm run husky:execute
 npm run dev
 ```
 
