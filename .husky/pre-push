@@ -1,0 +1,4 @@
+npx next lint --max-warnings=0
+npm run prettier:check
+npm run ts:check
+npm run build
