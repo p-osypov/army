@@ -1,0 +1,34 @@
+:root {
+  --max-width: 1290px;
+  --font-family: 'Gilroy';
+
+  /* for padding, margin, gap */
+  --spacing: 8px;
+  --spacing-x2: 16px;
+  --spacing-x3: 24px;
+  --spacing-x4: 32px;
+
+  --line-height: 1;
+
+  --font-size-xs: 0.6rem;
+  --font-size-thin: 0.75rem; /* 12px */
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-normal: 1rem; /* 16px */
+  --font-size-title: 3.25rem; /* 52px */
+
+  --font-weight-extra-bold: 800;
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-thin: 200;
+
+  --color-black: rgb(0, 0, 0);
+  --color-text: #000000;
+  --color-white: white;
+  --color-accent: #415346;
+  --z-index-max: 2147483647;
+  --z-index-header: 1000;
+
+}
