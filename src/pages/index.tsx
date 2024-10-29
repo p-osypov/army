@@ -12,7 +12,13 @@ function Index() {
         <meta name="description" content="" />
       </Head>
       <main>
-        <Container color={'black'}>
+        <Container>
+          <div
+            style={{
+              height: '800px',
+              backgroundImage: 'url(/img/main-photo.png)',
+            }}
+          ></div>
           <h1>{t('name')}</h1>
         </Container>
       </main>
