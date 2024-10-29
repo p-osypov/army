@@ -1,4 +1,4 @@
-import { locales } from '@/../i18n.json';
+import i18nConfig from '@/../i18n.json';
 import { SC } from '@/shared/components/header/header.styles';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
@@ -54,7 +54,7 @@ function Header() {
           </SC.Language>
           {isLanguageMenuOpen && (
             <SC.LanguageList>
-              {locales
+              {i18nConfig.locales
                 .filter((locale) => locale !== lang)
                 .map((locale) => (
                   <SC.Language
