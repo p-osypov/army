@@ -1,8 +1,8 @@
+import { locales } from '@/../i18n.json';
 import { SC } from '@/shared/components/header/header.styles';
 import useTranslation from 'next-translate/useTranslation';
-import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { locales } from '@/../i18n.json';
+import { useState } from 'react';
 
 const menuItems = [
   { id: 1, href: '/', text: 'home' },
@@ -11,7 +11,7 @@ const menuItems = [
 ];
 
 function Header() {
-  const { t, lang, ...rest } = useTranslation('header');
+  const { t, lang } = useTranslation('header');
 
   const router = useRouter();
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
@@ -24,7 +24,6 @@ function Header() {
       router.push(router.pathname, router.asPath, { locale: selectedLang });
     }
   };
-  console.log(isLanguageMenuOpen);
 
   return (
     <SC.Header>
