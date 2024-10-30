@@ -65,8 +65,11 @@ export const SC = {
     font-weight: var(--font-weight-semi-bold);
     color: var(--color-white);
   `,
-  ChevronDown: styled(Icons.ChevronDown)`
+  ChevronDown: styled(Icons.ChevronDown)<{ $isLanguageMenuOpen: boolean }>`
     font-weight: 900;
+    transform: ${({ $isLanguageMenuOpen }) =>
+      $isLanguageMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)'};
+    transition: transform 0.3s ease;
   `,
 
   LanguageList: styled.div`
@@ -81,13 +84,10 @@ export const SC = {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 30px;
+    padding: var(--spacing-x3) var(--spacing-x4);
     border-radius: 100px;
     min-width: 174px;
-  `,
-  Supp: styled.span`
-    padding-right: 10px;
+    gap: 10px;
     font-size: var(--spacing-x2);
   `,
-  IconArrowRight: styled(Icons.ArrowRight)``,
 };
