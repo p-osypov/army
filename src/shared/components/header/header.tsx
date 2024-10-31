@@ -4,6 +4,7 @@ import { SC } from '@/shared/components/header/header.styles';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const menuItems = [
   { href: '/', tranKey: 'home' },
@@ -39,12 +40,9 @@ function Header() {
         </SC.TitleLogo>
         <SC.Navigation>
           {menuItems.map((item) => (
-            <SC.NavigationListItem
-              href={item.href}
-              key={`nav-item-${item.tranKey}`}
-            >
+            <Link href={item.href} key={`nav-item-${item.tranKey}`}>
               {t(item.tranKey)}
-            </SC.NavigationListItem>
+            </Link>
           ))}
         </SC.Navigation>
         <SC.LanguageSelector>

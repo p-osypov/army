@@ -1,6 +1,5 @@
 import Icons from '@/shared/assets/icons';
 import styled from 'styled-components';
-import Link from 'next/link';
 
 export const SC = {
   Header: styled.header`
@@ -45,7 +44,6 @@ export const SC = {
     flex: 1;
     justify-content: center;
   `,
-  NavigationListItem: styled(Link)``,
 
   LanguageSelector: styled.div`
     position: relative;
@@ -53,7 +51,7 @@ export const SC = {
   Language: styled.button`
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--spacing);
     background: transparent;
     margin-right: var(--spacing);
   `,
@@ -87,7 +85,7 @@ export const SC = {
     padding: var(--spacing-x3) var(--spacing-x4);
     border-radius: 100px;
     min-width: 174px;
-    gap: 10px;
+    gap: var(--spacing);
     font-size: var(--spacing-x2);
   `,
 };
