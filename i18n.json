@@ -1,5 +1,5 @@
 {
-  "locales": ["ua", "en", "pl", "ru"],
+  "locales": ["ua", "en", "pl"],
   "defaultLocale": "ua",
   "pages": {
     "*": ["header", "footer"]
