@@ -82,8 +82,9 @@ export const SC = {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-x3) var(--spacing-x4);
+    padding: 0 var(--spacing-x4);
     border-radius: 100px;
+    min-height: 55px;
     min-width: 174px;
     gap: var(--spacing);
     font-size: var(--spacing-x2);
