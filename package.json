@@ -10,13 +10,16 @@
     "prettier": "prettier --write **/*.{js,ts,tsx,css,json}",
     "prettier:check": "prettier --check **/*.{js,ts,tsx,css,json}",
     "ts:check": "tsc",
-    "husky:execute": "chmod ug+x .husky",
+    "check": "npx next lint --max-warnings=0 && npm run ts:check && npm run prettier:check",
+    "husky:execute": "chmod ug+x .husky/*",
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": "npm run prettier"
   },
   "dependencies": {
     "axios": "^1.7.2",
     "formik": "^2.4.6",
-    "yup": "^1.4.0",
     "next": "^14.2.3",
     "next-translate": "^2.6.2",
     "next-translate-plugin": "^2.6.2",
@@ -26,7 +29,8 @@
     "react-toastify": "^10.0.5",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.8",
-    "use-debounce": "^10.0.0"
+    "use-debounce": "^10.0.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
@@ -42,7 +46,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.2.5"
   }
 }
