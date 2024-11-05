@@ -10,11 +10,11 @@ export const SC = {
   `,
 
   Content: styled(Container)`
-    // переробити на 2 div
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding-bottom: var(--spacing-x4);
     min-height: 100vh;
     padding-top: calc(106px + var(--spacing-x2));
   `,
@@ -34,11 +34,19 @@ export const SC = {
   Title: styled.h1`
     font-size: 90px;
     margin-bottom: var(--spacing-x4);
-    font-weight: var(--font-weight-semi-bold);
+    font-weight: var(--font-weight-medium);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.2)
+    );
+    background-clip: text;
+    color: transparent;
+    padding-right: var(--spacing);
   `,
 
   Subtitle: styled.p`
-    margin-bottom: var(--spacing-x4);
+    margin-bottom: calc(var(--spacing-x3) * 2);
     font-size: 20px;
   `,
 
@@ -51,14 +59,23 @@ export const SC = {
     cursor: pointer;
     font-size: 18px;
     color: var(--color-white);
-    margin-bottom: calc(var(--spacing) * 8);
+    margin-bottom: calc(var(--spacing-x4) * 3);
   `,
 
   Contacts: styled.div`
     display: flex;
-    align-self: flex-end;
     gap: var(--spacing-x4);
-    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
   `,
-  ContactLink: styled.a``,
+  ContactLink: styled.a`
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing);
+
+    .icon {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  `,
 };

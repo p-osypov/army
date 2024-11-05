@@ -6,7 +6,7 @@ export const SC = {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: var(--z-index-header);
     color: var(--color-white);
   `,
