@@ -1,12 +1,11 @@
-import React from 'react';
-import { SC } from './first-screen.styles';
 import Icons from '@/shared/assets/icons';
+import { SC } from './first-screen.styles';
 
 function FirstScreen() {
   return (
     <SC.Section>
       <SC.Content>
-        <SC.UnitName>103 ОБР ТРО "Чорний стриж"</SC.UnitName>
+        <SC.UnitName>103 ОБР ТРО Чорний стриж</SC.UnitName>
         <SC.Title>
           Кожен хід армії <br /> Сила в кожній місії
         </SC.Title>
