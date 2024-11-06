@@ -2,6 +2,7 @@
   "locales": ["ua", "en", "pl"],
   "defaultLocale": "ua",
   "pages": {
-    "*": ["header", "footer"]
+    "*": ["header", "footer"],
+    "/": ["first-screen"]
   }
 }
