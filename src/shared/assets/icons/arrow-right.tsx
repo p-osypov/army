@@ -3,8 +3,8 @@ import { IconProps } from '@/shared/assets/icons/icons.types';
 
 const ArrowRight = ({ color, ...props }: IconProps) => (
   <svg
-    width="15"
-    height="13"
+    width="20"
+    height="20"
     viewBox="0 0 15 13"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
