@@ -1,4 +1,5 @@
 import { Container } from '@/shared/assets/styles/layout';
+import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
 import styled from 'styled-components';
 
 export const SC = {
@@ -16,13 +17,13 @@ export const SC = {
     justify-content: center;
     padding-bottom: var(--spacing-x4);
     min-height: 100vh;
-    padding-top: calc(106px + var(--spacing-x2));
+    padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x2));
   `,
 
   UnitName: styled.span`
     display: block;
-    border: 1px solid #41534640;
-    background: #41534633;
+    border: 1px solid rgba(65, 83, 70, 25%);
+    background-color: rgba(65, 83, 70, 20%);
     border-radius: 20px;
     color: #979897;
     padding: var(--spacing) var(--spacing-x2);
@@ -35,7 +36,7 @@ export const SC = {
     font-size: 90px;
     margin-bottom: var(--spacing-x4);
     font-weight: var(--font-weight-medium);
-    background: linear-gradient(
+    background-image: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 0.2)
@@ -43,6 +44,7 @@ export const SC = {
     background-clip: text;
     color: transparent;
     padding-right: var(--spacing);
+    padding-bottom: var(--spacing);
   `,
 
   Subtitle: styled.p`
@@ -50,14 +52,14 @@ export const SC = {
     font-size: 20px;
   `,
 
-  Button: styled.button`
+  JoinUsBtn: styled.button`
     display: flex;
-    gap: 10px;
-    background: #415346;
+    gap: var(--spacing);
+    background-color: #415346;
     padding: 20px 40px;
     border-radius: 100px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: var(--font-size-medium);
     color: var(--color-white);
     margin-bottom: calc(var(--spacing-x4) * 3);
   `,
@@ -76,6 +78,7 @@ export const SC = {
     .icon {
       height: 1.25rem;
       width: 1.25rem;
+      margin-right: var(--spacing);
     }
   `,
 };

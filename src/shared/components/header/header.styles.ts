@@ -1,6 +1,6 @@
 import Icons from '@/shared/assets/icons';
 import styled from 'styled-components';
-
+export const HEADER_HEIGHT = 106;
 export const SC = {
   Header: styled.header`
     position: fixed;
@@ -64,6 +64,8 @@ export const SC = {
     color: var(--color-white);
   `,
   ChevronDown: styled(Icons.ChevronDown)<{ $isLanguageMenuOpen: boolean }>`
+    height: 10px;
+    width: 8px;
     font-weight: 900;
     transform: ${({ $isLanguageMenuOpen }) =>
       $isLanguageMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)'};
@@ -88,5 +90,10 @@ export const SC = {
     min-width: 174px;
     gap: var(--spacing);
     font-size: var(--spacing-x2);
+
+    .icon {
+      height: 16px;
+      width: 14px;
+    }
   `,
 };
