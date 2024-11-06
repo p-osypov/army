@@ -67,7 +67,7 @@ function Header() {
         </SC.LanguageSelector>
         <SC.SuppButton>
           {t('support')}
-          <Icons.ArrowRight />
+          <Icons.ArrowRight className="icon" />
         </SC.SuppButton>
       </SC.Container>
     </SC.Header>

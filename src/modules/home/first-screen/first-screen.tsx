@@ -1,26 +1,29 @@
 import Icons from '@/shared/assets/icons';
 import { SC } from './first-screen.styles';
+import useTranslation from 'next-translate/useTranslation';
+import { contacts } from '@/shared/config';
 
 function FirstScreen() {
+  const { t } = useTranslation('first-screen');
+
   return (
     <SC.Section>
       <SC.Content>
-        <SC.UnitName>103 ОБР ТРО Чорний стриж</SC.UnitName>
+        <SC.UnitName>{t('unitName')}</SC.UnitName>
         <SC.Title>
-          Кожен хід армії <br /> Сила в кожній місії
+          {t('title')} <br />
+          {t('title2')}
         </SC.Title>
-        <SC.Subtitle>
-          Після повномасштабного вторгнення ми мобілізували свої зусилля.
-        </SC.Subtitle>
-        <SC.Button>Приєднатися до нас</SC.Button>
+        <SC.Subtitle>{t('subtitle')}</SC.Subtitle>
+        <SC.JoinUsBtn>{t('joinUsBtn')}</SC.JoinUsBtn>
         <SC.Contacts>
-          <SC.ContactLink href="tel:(209) 555-0104">
-            <Icons.PhoneNum style={{ marginRight: '10px' }} />
-            (209) 555-0104
+          <SC.ContactLink href="tel:{contacts.tel}">
+            <Icons.PhoneNum className="icon" />
+            {contacts.tel}
           </SC.ContactLink>
-          <SC.ContactLink href="mailto:debbie.baker@example.com">
-            <Icons.Email style={{ marginRight: '10px' }} />
-            debbie.baker@example.com
+          <SC.ContactLink href="mailto:{contacts.email}">
+            <Icons.Email className="icon" />
+            {contacts.email}
           </SC.ContactLink>
         </SC.Contacts>
       </SC.Content>
