@@ -13,9 +13,8 @@
   --font-size-xs: 0.6rem;
   --font-size-thin: 0.75rem; /* 12px */
   --font-size-small: 0.875rem; /* 14px */
-  --font-size-sm: 0.875rem; /* 14px */
   --font-size-normal: 1rem; /* 16px */
-  --font-size-normal: 1.125rem; /* 18px */
+  --font-size-medium: 1.125rem; /* 18px */
   --font-size-title: 3.25rem; /* 52px */
 
   --font-weight-extra-bold: 800;
