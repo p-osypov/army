@@ -1,4 +1,5 @@
 import { Container } from '@/shared/assets/styles/layout';
+import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
 import styled from 'styled-components';
 
@@ -14,7 +15,7 @@ export const SC = {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-end;
     padding-bottom: var(--spacing-x4);
     min-height: 100vh;
     padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x2));
@@ -30,6 +31,14 @@ export const SC = {
     font-size: 12px;
     letter-spacing: 3px;
     margin-bottom: var(--spacing-x3);
+    ${mediaWidth('max', 'md')} {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+    ${mediaWidth('max', 'sm')} {
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
   `,
 
   Title: styled.h1`
@@ -45,23 +54,55 @@ export const SC = {
     color: transparent;
     padding-right: var(--spacing);
     padding-bottom: var(--spacing);
+    ${mediaWidth('max', 'lg')} {
+      font-size: 80px;
+      margin-bottom: var(--spacing-x3);
+    }
+    ${mediaWidth('max', 'md')} {
+      font-size: 70px;
+      margin-bottom: var(--spacing-x2);
+    }
+    ${mediaWidth('max', 'sm')} {
+      font-size: 60px;
+    }
   `,
 
   Subtitle: styled.p`
     margin-bottom: calc(var(--spacing-x3) * 2);
     font-size: 20px;
+    ${mediaWidth('max', 'lg')} {
+      font-size: 18px;
+      margin-bottom: calc(var(--spacing-x3) * 1.5);
+    }
+    ${mediaWidth('max', 'md')} {
+      font-size: 16px;
+      margin-bottom: var(--spacing-x4);
+    }
+    ${mediaWidth('max', 'sm')} {
+      font-size: 14px;
+    }
   `,
 
   JoinUsBtn: styled.button`
     display: flex;
-    gap: var(--spacing);
     background-color: #415346;
     padding: 20px 40px;
     border-radius: 100px;
     cursor: pointer;
     font-size: var(--font-size-medium);
     color: var(--color-white);
-    margin-bottom: calc(var(--spacing-x4) * 3);
+    margin-bottom: calc(var(--spacing-x4) * 2);
+    ${mediaWidth('max', 'lg')} {
+      padding: 18px 34px;
+    }
+    ${mediaWidth('max', 'md')} {
+      padding: 16px 28px;
+      font-size: var(--font-size-normal);
+    }
+    ${mediaWidth('max', 'sm')} {
+      padding: 14px 20px;
+      font-size: var(--font-size-sm);
+    }
   `,
 
   Contacts: styled.div`
@@ -69,6 +110,12 @@ export const SC = {
     gap: var(--spacing-x4);
     justify-content: flex-end;
     width: 100%;
+    ${mediaWidth('max', 'md')} {
+      font-size: var(--font-size-small);
+    }
+    ${mediaWidth('max', 'sm')} {
+      font-size: var(--font-size-thin);
+    }
   `,
   ContactLink: styled.a`
     display: flex;

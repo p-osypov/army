@@ -1,4 +1,5 @@
 import Icons from '@/shared/assets/icons';
+import { mediaWidth } from '@/shared/assets/styles/mixins';
 import styled from 'styled-components';
 export const HEADER_HEIGHT = 106;
 export const SC = {
@@ -23,12 +24,21 @@ export const SC = {
     padding: 22px 38px;
     backdrop-filter: blur(20px);
     gap: var(--spacing-x2);
+    ${mediaWidth('max', 'md')} {
+      padding: 18px 34px;
+    }
+    ${mediaWidth('max', 'sm')} {
+      padding: 12px 28px;
+    }
   `,
 
   TitleLogo: styled.div`
     display: flex;
     align-items: center;
-    min-width: 240px;
+    gap: var(--spacing);
+    ${mediaWidth('max', 'lg')} {
+      max-width: 180px;
+    }
   `,
 
   Logo: styled.img`
@@ -37,16 +47,26 @@ export const SC = {
 
   Title: styled.span`
     font-weight: var(--font-weight-bold);
+    ${mediaWidth('max', 'md')} {
+      display: none;
+    }
   `,
+
   Navigation: styled.nav`
     display: flex;
     gap: var(--spacing-x3);
     flex: 1;
     justify-content: center;
+    ${mediaWidth('max', 'sm')} {
+      display: none;
+    }
   `,
 
   LanguageSelector: styled.div`
     position: relative;
+    ${mediaWidth('max', 'sm')} {
+      margin-left: auto;
+    }
   `,
   Language: styled.button`
     display: flex;
@@ -62,6 +82,9 @@ export const SC = {
   LangText: styled.span`
     font-weight: var(--font-weight-semi-bold);
     color: var(--color-white);
+    ${mediaWidth('max', 'md')} {
+      display: none;
+    }
   `,
   ChevronDown: styled(Icons.ChevronDown)<{ $isLanguageMenuOpen: boolean }>`
     height: 10px;
@@ -84,16 +107,23 @@ export const SC = {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 var(--spacing-x4);
+    padding: 20px var(--spacing-x4);
     border-radius: 100px;
-    min-height: 55px;
-    min-width: 174px;
     gap: var(--spacing);
     font-size: var(--spacing-x2);
 
     .icon {
       height: 16px;
       width: 14px;
+    }
+    ${mediaWidth('max', 'md')} {
+      padding: 18px var(--spacing-x3);
+    }
+    ${mediaWidth('max', 'sm')} {
+      padding: var(--spacing-x2) var(--spacing-x2);
+    }
+    ${mediaWidth('max', 'xxs')} {
+      display: none;
     }
   `,
 };
