@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import { Container } from '@/shared/assets/styles/layout';
+import FirstScreen from '@/modules/home/first-screen';
 
 function Index() {
   const { t } = useTranslation('header');
@@ -12,15 +12,7 @@ function Index() {
         <meta name="description" content="" />
       </Head>
       <main>
-        <Container>
-          <div
-            style={{
-              height: '800px',
-              backgroundImage: 'url(/img/main-photo.png)',
-            }}
-          ></div>
-          <h1>{t('name')}</h1>
-        </Container>
+        <FirstScreen />
       </main>
     </>
   );
