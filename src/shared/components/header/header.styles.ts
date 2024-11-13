@@ -47,6 +47,7 @@ export const SC = {
 
   Title: styled.span`
     font-weight: var(--font-weight-bold);
+    font-size: 22px;
     ${mediaWidth('max', 'md')} {
       display: none;
     }
@@ -110,7 +111,8 @@ export const SC = {
     padding: 20px var(--spacing-x4);
     border-radius: 100px;
     gap: var(--spacing);
-    font-size: var(--spacing-x2);
+    font-size: var(--font-size-normal);
+    min-width: 174px;
 
     .icon {
       height: 16px;
