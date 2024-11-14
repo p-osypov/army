@@ -119,6 +119,11 @@ export const SC = {
   SocialLink: styled.a`
     background-color: transparent;
 
+    svg {
+      width: 44px;
+      height: 44px;
+    }
+
     &:hover svg {
       transition: fill 0.3s ease;
     }
