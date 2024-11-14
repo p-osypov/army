@@ -11,7 +11,7 @@ function FirstScreen() {
       <SC.Content>
         <SC.UnitName>{t('unitName')}</SC.UnitName>
         <SC.Title>
-          {t('title')} <br />
+          {t('title')} <br className="br" />
           {t('title2')}
         </SC.Title>
         <SC.Subtitle>{t('subtitle')}</SC.Subtitle>

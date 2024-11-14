@@ -61,9 +61,19 @@ export const SC = {
     ${mediaWidth('max', 'md')} {
       font-size: 70px;
       margin-bottom: var(--spacing-x2);
+      max-width: 75%;
     }
     ${mediaWidth('max', 'sm')} {
       font-size: 60px;
+      .br {
+        display: none;
+      }
+    }
+    ${mediaWidth('max', 'xs')} {
+      font-size: 50px;
+    }
+    ${mediaWidth('max', 'xxs')} {
+      font-size: 40px;
     }
   `,
 
@@ -80,6 +90,9 @@ export const SC = {
     }
     ${mediaWidth('max', 'sm')} {
       font-size: 14px;
+    }
+    ${mediaWidth('max', 'sm')} {
+      font-size: 12px;
     }
   `,
 
@@ -101,7 +114,11 @@ export const SC = {
     }
     ${mediaWidth('max', 'sm')} {
       padding: 14px 20px;
-      font-size: var(--font-size-sm);
+      font-size: var(--font-size-small);
+    }
+    ${mediaWidth('max', 'xs')} {
+      padding: 12px 16px;
+      font-size: var(--font-size-thin);
     }
   `,
 
@@ -116,6 +133,9 @@ export const SC = {
     ${mediaWidth('max', 'sm')} {
       font-size: var(--font-size-thin);
     }
+    ${mediaWidth('max', 'xs')} {
+      font-size: var(--font-size-xs);
+    }
   `,
   ContactLink: styled.a`
     display: flex;
@@ -126,6 +146,20 @@ export const SC = {
       height: 1.25rem;
       width: 1.25rem;
       margin-right: var(--spacing);
+
+      ${mediaWidth('max', 'md')} {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+      ${mediaWidth('max', 'sm')} {
+        height: 1.1rem;
+        width: 1.1rem;
+      }
+      ${mediaWidth('max', 'xxs')} {
+        height: 1rem;
+        width: 1rem;
+        margin-right: 5px;
+      }
     }
   `,
 };
