@@ -13,6 +13,7 @@ const infoItems = [
 
 function Footer() {
   const { t } = useTranslation('footer');
+  const currentYear = new Date().getFullYear();
 
   return (
     <SC.Footer>
@@ -27,11 +28,11 @@ function Footer() {
           </SC.About>
           <SC.Contacts>
             <SC.FooterTitle>{t('contacts')}</SC.FooterTitle>
-            <SC.FooterContactLink href="tel:{contacts.footerTel}">
+            <SC.FooterContactLink href={`tel:${contacts.footerTel}`}>
               <Icons.FooterPhoneNum className="icon" />
               {contacts.footerTel}
             </SC.FooterContactLink>
-            <SC.FooterContactLink href="mailto:{contacts.footerEmail}">
+            <SC.FooterContactLink href={`mailto:${contacts.footerEmail}`}>
               <Icons.FooterEmail className="icon" />
               {contacts.footerEmail}
             </SC.FooterContactLink>
@@ -49,30 +50,26 @@ function Footer() {
           <SC.SocialNetworks>
             <SC.FooterTitle>{t('socialNetworks')}</SC.FooterTitle>
             <SC.FooterIcons>
-              <SC.SocialLink
-                href={'https://www.facebook.com/chornyi.stryzh/?_rdr'}
-              >
+              <SC.SocialLink href={contacts.facebookLink}>
                 <Icons.Facebook />
               </SC.SocialLink>
-              <SC.SocialLink href={'https://www.instagram.com/chornyi.stryzh/'}>
+              <SC.SocialLink href={contacts.instagramLink}>
                 <Icons.Instagram />
               </SC.SocialLink>
-              <SC.SocialLink
-                href={
-                  'https://www.youtube.com/@%D0%A0%D0%A3%D0%91%D0%BF%D0%90%D0%9A%D0%A7%D0%BE%D1%80%D0%BD%D0%B8%D0%B9%D0%A1%D1%82%D1%80%D0%B8%D0%B6'
-                }
-              >
+              <SC.SocialLink href={contacts.youtubeLink}>
                 <Icons.Youtube />
               </SC.SocialLink>
             </SC.FooterIcons>
           </SC.SocialNetworks>
         </SC.Content>
         <SC.FooterBottom>
-          <span>© Yoursitename 2023 | All Rights Reserved</span>
+          <span>
+            © {t('name')} {currentYear} | {t('allRights')}
+          </span>
           <SC.FooterBottomLinks>
-            <Link href={'/'}>Trams & Condition</Link>
-            <Link href={'/'}>Privacy Policy</Link>
-            <Link href={'/'}>Contact Us</Link>
+            <Link href={'/'}>{t('tramsAndCondition')}</Link>
+            <Link href={'/'}>{t('privacyPolicy')}</Link>
+            <Link href={'/'}>{t('contactUs')}</Link>
           </SC.FooterBottomLinks>
         </SC.FooterBottom>
       </SC.Container>
