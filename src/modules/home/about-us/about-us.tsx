@@ -1,7 +1,6 @@
-import Icons from '@/shared/assets/icons';
-import { SC } from './about-us.styles';
-import useTranslation from 'next-translate/useTranslation';
 import { Label } from '@/shared/components/label/label';
+import useTranslation from 'next-translate/useTranslation';
+import { SC } from './about-us.styles';
 
 function AboutUs() {
   const { t } = useTranslation('about-us');
