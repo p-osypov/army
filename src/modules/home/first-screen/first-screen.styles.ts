@@ -1,6 +1,7 @@
 import { Container } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
+import { Label } from '@/shared/components/label/label';
 import styled from 'styled-components';
 
 export const SC = {
@@ -8,7 +9,9 @@ export const SC = {
     background-image: url(/img/main-photo.png);
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: cover;
     color: var(--color-white);
+    margin-bottom: 100px;
   `,
 
   Content: styled(Container)`
@@ -19,26 +22,17 @@ export const SC = {
     padding-bottom: var(--spacing-x4);
     min-height: 100vh;
     padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x2));
+    ${mediaWidth('max', 'xs')} {
+      justify-content: center;
+      padding-top: calc(${HEADER_HEIGHT}px + var(--spacing));
+    }
+    ${mediaWidth('max', 'xxs')} {
+      padding-top: ${HEADER_HEIGHT}px;
+    }
   `,
 
-  UnitName: styled.span`
-    display: block;
-    border: 1px solid rgba(65, 83, 70, 25%);
-    background-color: rgba(65, 83, 70, 20%);
-    border-radius: 20px;
-    color: #979897;
-    padding: var(--spacing) var(--spacing-x2);
-    font-size: 12px;
-    letter-spacing: 3px;
+  UnitName: styled(Label)`
     margin-bottom: var(--spacing-x3);
-    ${mediaWidth('max', 'md')} {
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
-    ${mediaWidth('max', 'sm')} {
-      font-size: 8px;
-      letter-spacing: 1px;
-    }
   `,
 
   Title: styled.h1`
@@ -93,6 +87,9 @@ export const SC = {
     }
     ${mediaWidth('max', 'sm')} {
       font-size: 12px;
+    }
+    ${mediaWidth('max', 'xs')} {
+      max-width: 75%;
     }
   `,
 
