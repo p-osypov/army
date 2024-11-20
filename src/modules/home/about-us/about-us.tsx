@@ -8,23 +8,23 @@ function AboutUs() {
   return (
     <SC.Section>
       <SC.Content>
-        <SC.Div1>
-          <SC.Background1>
+        <SC.ImgColumn>
+          <SC.InfoBlock>
             <SC.Logo src="/img/logo2.png" />
-            <SC.Background1Item>
+            <SC.InfoBlockItem>
               <SC.Goals>220 цілей</SC.Goals>
               <SC.Destroyed>знищено</SC.Destroyed>
-            </SC.Background1Item>
-          </SC.Background1>
-          <SC.Background2 />
-          <SC.Background3 />
-        </SC.Div1>
-        <SC.Div2>
+            </SC.InfoBlockItem>
+          </SC.InfoBlock>
+          <SC.ImgBlock />
+          <SC.ImgBlock2 />
+        </SC.ImgColumn>
+        <SC.TextColumn>
           <Label>{t('aboutUS')}</Label>
           <SC.Title>{t('title')}</SC.Title>
           <SC.AboutText>{t('aboutUsText')}</SC.AboutText>
           <SC.AboutText>{t('aboutDroneText')}</SC.AboutText>
-        </SC.Div2>
+        </SC.TextColumn>
       </SC.Content>
     </SC.Section>
   );
