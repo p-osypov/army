@@ -7,6 +7,6 @@ export const Label = styled.span`
   border-radius: 20px;
   color: #979897;
   padding: var(--spacing) var(--spacing-x2);
-  font-size: 12px;
+  font-size: var(--font-size-thin);
   letter-spacing: 3px;
 `;

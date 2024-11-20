@@ -1,4 +1,5 @@
 import { Container } from '@/shared/assets/styles/layout';
+import { mediaWidth } from '@/shared/assets/styles/mixins';
 import styled from 'styled-components';
 
 export const SC = {
@@ -10,22 +11,28 @@ export const SC = {
   Content: styled(Container)`
     display: flex;
     justify-content: space-between;
-    gap: calc(var(--spacing-x3) * 2);
-    min-height: 574px;
+    gap: var(--spacing-x4);
     flex-wrap: wrap;
+    min-height: 574px;
   `,
 
-  Div1: styled.div`
+  ImgColumn: styled.div`
     position: relative;
-    min-width: calc(50% - var(--spacing-x3));
-    min-height: 100%;
+    max-width: 48%;
+    min-width: 48%;
+    min-height: 574px;
+    ${mediaWidth('max', 'lg')} {
+      max-width: 100%;
+      min-width: 100%;
+      min-height: 300px;
+    }
   `,
 
-  Background1: styled.div`
+  InfoBlock: styled.div`
     display: flex;
     align-items: center;
     position: absolute;
-    background-color: #415346;
+    background-color: var(--color-accent);
     padding: var(--spacing-x3) var(--spacing-x4);
     gap: var(--spacing-x2);
     top: 10%;
@@ -37,24 +44,31 @@ export const SC = {
     display: block;
   `,
 
-  Background1Item: styled.div``,
+  InfoBlockItem: styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+  `,
 
   Goals: styled.span`
     font-size: 30px;
   `,
 
-  Destroyed: styled.p`
+  Destroyed: styled.span`
     font-size: 18px;
   `,
 
-  Background2: styled.div`
+  ImgBlock: styled.div`
     position: absolute;
     bottom: 0;
     background-color: white;
     min-height: 54%;
     min-width: 54%;
+    ${mediaWidth('max', 'lg')} {
+      min-height: 70%;
+    }
   `,
-  Background3: styled.div`
+  ImgBlock2: styled.div`
     background-color: white;
     min-height: 90%;
     min-width: 43%;
@@ -63,13 +77,18 @@ export const SC = {
     right: 0;
   `,
 
-  Div2: styled.div`
+  TextColumn: styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: var(--spacing-x2);
-    max-width: calc(50% - var(--spacing-x3));
+    max-width: 48%;
+    min-width: 48%;
+    ${mediaWidth('max', 'lg')} {
+      max-width: 100%;
+      min-width: 100%;
+    }
   `,
 
   Title: styled.h1`
@@ -82,10 +101,13 @@ export const SC = {
     background-clip: text;
     color: transparent;
     font-weight: var(--font-weight-medium);
+    ${mediaWidth('max', 'xs')} {
+      font-size: 36px;
+    }
   `,
 
   AboutText: styled.p`
-    color: #fafafab2;
+    opacity: 70%;
     line-height: 1.5;
   `,
 };

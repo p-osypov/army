@@ -12,22 +12,33 @@ export const SC = {
     background-size: cover;
     color: var(--color-white);
     margin-bottom: 100px;
+    ${mediaWidth('max', 'lg')} {
+      margin-bottom: 70px;
+    }
+    ${mediaWidth('max', 'md')} {
+      margin-bottom: 50px;
+    }
+    ${mediaWidth('max', 'md')} {
+      margin-bottom: 50px;
+    }
+    ${mediaWidth('max', 'sm')} {
+      margin-bottom: 30px;
+    }
+    ${mediaWidth('max', 'xs')} {
+      margin-bottom: 10px;
+    }
   `,
 
   Content: styled(Container)`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-end;
-    padding-bottom: var(--spacing-x4);
+    justify-content: center;
+    padding-bottom: var(--spacing);
     min-height: 100vh;
-    padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x2));
-    ${mediaWidth('max', 'xs')} {
-      justify-content: center;
-      padding-top: calc(${HEADER_HEIGHT}px + var(--spacing));
-    }
-    ${mediaWidth('max', 'xxs')} {
-      padding-top: ${HEADER_HEIGHT}px;
+    padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x4));
+    ${mediaWidth('max', 'md')} {
+      padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x2));
     }
   `,
 
@@ -81,21 +92,13 @@ export const SC = {
     ${mediaWidth('max', 'md')} {
       font-size: 16px;
       margin-bottom: var(--spacing-x4);
-    }
-    ${mediaWidth('max', 'sm')} {
-      font-size: 14px;
-    }
-    ${mediaWidth('max', 'sm')} {
-      font-size: 12px;
-    }
-    ${mediaWidth('max', 'xs')} {
       max-width: 75%;
     }
   `,
 
   JoinUsBtn: styled.button`
     display: flex;
-    background-color: #415346;
+    background-color: var(--color-accent);
     padding: 20px 40px;
     border-radius: 100px;
     cursor: pointer;
