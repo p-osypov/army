@@ -18,9 +18,6 @@ export const SC = {
     ${mediaWidth('max', 'md')} {
       margin-bottom: 50px;
     }
-    ${mediaWidth('max', 'md')} {
-      margin-bottom: 50px;
-    }
     ${mediaWidth('max', 'sm')} {
       margin-bottom: 30px;
     }
