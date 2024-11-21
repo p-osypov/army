@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const SC = {
   Section: styled.section`
     color: var(--color-white);
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   `,
 
   Content: styled(Container)`
