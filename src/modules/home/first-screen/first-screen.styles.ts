@@ -1,6 +1,7 @@
 import { Container } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
+import { Label } from '@/shared/components/label/label';
 import styled from 'styled-components';
 
 export const SC = {
@@ -8,37 +9,38 @@ export const SC = {
     background-image: url(/img/main-photo.png);
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: cover;
     color: var(--color-white);
+    margin-bottom: 100px;
+    ${mediaWidth('max', 'lg')} {
+      margin-bottom: 70px;
+    }
+    ${mediaWidth('max', 'md')} {
+      margin-bottom: 50px;
+    }
+    ${mediaWidth('max', 'sm')} {
+      margin-bottom: 30px;
+    }
+    ${mediaWidth('max', 'xs')} {
+      margin-bottom: 10px;
+    }
   `,
 
   Content: styled(Container)`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-end;
-    padding-bottom: var(--spacing-x4);
+    justify-content: center;
+    padding-bottom: var(--spacing);
     min-height: 100vh;
-    padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x2));
+    padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x4));
+    ${mediaWidth('max', 'md')} {
+      padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x2));
+    }
   `,
 
-  UnitName: styled.span`
-    display: block;
-    border: 1px solid rgba(65, 83, 70, 25%);
-    background-color: rgba(65, 83, 70, 20%);
-    border-radius: 20px;
-    color: #979897;
-    padding: var(--spacing) var(--spacing-x2);
-    font-size: 12px;
-    letter-spacing: 3px;
+  UnitName: styled(Label)`
     margin-bottom: var(--spacing-x3);
-    ${mediaWidth('max', 'md')} {
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
-    ${mediaWidth('max', 'sm')} {
-      font-size: 8px;
-      letter-spacing: 1px;
-    }
   `,
 
   Title: styled.h1`
@@ -87,18 +89,13 @@ export const SC = {
     ${mediaWidth('max', 'md')} {
       font-size: 16px;
       margin-bottom: var(--spacing-x4);
-    }
-    ${mediaWidth('max', 'sm')} {
-      font-size: 14px;
-    }
-    ${mediaWidth('max', 'sm')} {
-      font-size: 12px;
+      max-width: 75%;
     }
   `,
 
   JoinUsBtn: styled.button`
     display: flex;
-    background-color: #415346;
+    background-color: var(--color-accent);
     padding: 20px 40px;
     border-radius: 100px;
     cursor: pointer;
