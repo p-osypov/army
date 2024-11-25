@@ -43,7 +43,7 @@ export const SC = {
     margin-bottom: var(--spacing-x3);
   `,
 
-  Title: styled.h1`
+  Title: styled.div`
     font-size: 90px;
     margin-bottom: var(--spacing-x4);
     font-weight: var(--font-weight-medium);

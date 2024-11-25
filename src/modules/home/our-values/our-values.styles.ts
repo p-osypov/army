@@ -10,7 +10,7 @@ export const SC = {
   Content: styled(Container)`
     display: flex;
     flex-direction: column;
-    gap: calc(var(--spacing-x3) * 2);
+    gap: calc(var(--spacing) * 6);
   `,
 
   ValueBlock: styled.div`
@@ -18,9 +18,9 @@ export const SC = {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-x2);
-    max-width: 40%;
+    max-width: 480px;
   `,
-  Title: styled.h1`
+  Title: styled.span`
     font-size: 48px;
     background-image: linear-gradient(
       90deg,
@@ -34,11 +34,12 @@ export const SC = {
   ValueText: styled.p`
     opacity: 70%;
     line-height: 1.5;
+    font-size: var(--font-size-medium);
   `,
 
   InfoBlock: styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: var(--spacing-x4);
     flex-wrap: wrap;
   `,
@@ -46,16 +47,15 @@ export const SC = {
   Block: styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex: 1;
     gap: var(--spacing-x3);
-    max-width: 31%;
     min-height: 282px;
     border-top: 3px solid #211f1f;
     background-color: #111111;
-    padding: calc(var(--spacing-x3) * 1.5);
+    padding: calc(var(--spacing) * 9) var(--spacing-x4);
   `,
 
-  BlockTitle: styled.h2`
+  BlockTitle: styled.span`
     font-size: 26px;
     font-weight: var(--font-weight-semi-bold);
   `,
