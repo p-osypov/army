@@ -21,9 +21,6 @@ export const SC = {
     ${mediaWidth('max', 'sm')} {
       margin-bottom: 30px;
     }
-    ${mediaWidth('max', 'xs')} {
-      margin-bottom: 10px;
-    }
   `,
 
   Content: styled(Container)`

@@ -6,6 +6,15 @@ export const SC = {
   Section: styled.section`
     color: var(--color-white);
     margin-bottom: 100px;
+    ${mediaWidth('max', 'lg')} {
+      margin-bottom: 70px;
+    }
+    ${mediaWidth('max', 'md')} {
+      margin-bottom: 50px;
+    }
+    ${mediaWidth('max', 'sm')} {
+      margin-bottom: 30px;
+    }
   `,
 
   Content: styled(Container)`

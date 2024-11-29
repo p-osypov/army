@@ -1,10 +1,20 @@
 import { Container } from '@/shared/assets/styles/layout';
+import { mediaWidth } from '@/shared/assets/styles/mixins';
 import styled from 'styled-components';
 
 export const SC = {
   Section: styled.section`
     color: var(--color-white);
     margin-bottom: 100px;
+    ${mediaWidth('max', 'lg')} {
+      margin-bottom: 70px;
+    }
+    ${mediaWidth('max', 'md')} {
+      margin-bottom: 50px;
+    }
+    ${mediaWidth('max', 'sm')} {
+      margin-bottom: 30px;
+    }
   `,
 
   Content: styled(Container)`
@@ -18,7 +28,7 @@ export const SC = {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-x2);
-    max-width: 480px;
+    max-width: 500px;
   `,
   Title: styled.span`
     font-size: 48px;
@@ -30,11 +40,15 @@ export const SC = {
     background-clip: text;
     color: transparent;
     font-weight: var(--font-weight-medium);
+    padding-bottom: 5px;
   `,
   ValueText: styled.p`
     opacity: 70%;
     line-height: 1.5;
     font-size: var(--font-size-medium);
+    ${mediaWidth('max', 'xxs')} {
+      font-size: var(--font-size-normal);
+    }
   `,
 
   InfoBlock: styled.div`
@@ -42,6 +56,12 @@ export const SC = {
     justify-content: center;
     gap: var(--spacing-x4);
     flex-wrap: wrap;
+    ${mediaWidth('max', 'md')} {
+      gap: var(--spacing-x3);
+    }
+    ${mediaWidth('max', 'md')} {
+      gap: var(--spacing-x2);
+    }
   `,
 
   Block: styled.div`
@@ -53,10 +73,23 @@ export const SC = {
     border-top: 3px solid #211f1f;
     background-color: #111111;
     padding: calc(var(--spacing) * 9) var(--spacing-x4);
+    ${mediaWidth('max', 'lg')} {
+      padding: calc(var(--spacing) * 5) var(--spacing-x4);
+    }
+    ${mediaWidth('max', 'md')} {
+      min-width: 360px;
+      min-height: 100%;
+    }
+    ${mediaWidth('max', 'xxs')} {
+      min-width: 280px;
+    }
   `,
 
   BlockTitle: styled.span`
     font-size: 26px;
     font-weight: var(--font-weight-semi-bold);
+    ${mediaWidth('max', 'xxs')} {
+      font-size: 22px;
+    }
   `,
 };
