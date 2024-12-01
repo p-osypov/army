@@ -154,6 +154,7 @@ export const SC = {
 
   FooterBottomLinks: styled.div`
     display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-x3);
   `,
 };
