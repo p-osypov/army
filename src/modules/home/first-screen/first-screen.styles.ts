@@ -91,7 +91,6 @@ export const SC = {
   `,
 
   JoinUsBtn: styled.button`
-    display: flex;
     background-color: var(--color-accent);
     padding: 20px 40px;
     border-radius: 100px;
