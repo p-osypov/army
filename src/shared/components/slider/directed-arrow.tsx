@@ -1,4 +1,3 @@
-import React, { MouseEventHandler } from 'react';
 import { SC } from './slider.styles';
 
 export type DirectedArrowProps = {
