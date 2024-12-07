@@ -23,7 +23,7 @@ export const SC = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: calc(var(--spacing) * 6);
+    gap: var(--spacing-x2);
   `,
 
   TitleBlock: styled.div`
@@ -45,14 +45,9 @@ export const SC = {
     padding-bottom: 5px;
     text-align: center;
     max-width: 580px;
-  `,
-  JoinUsBtn: styled.button`
-    background-color: var(--color-accent);
-    padding: 20px 40px;
-    border-radius: 100px;
-    cursor: pointer;
-    font-size: var(--font-size-medium);
-    color: var(--color-white);
+    ${mediaWidth('max', 'xxs')} {
+      font-size: 36px;
+    }
   `,
 
   SliderContainer: styled.div`
@@ -68,16 +63,42 @@ export const SC = {
     gap: var(--spacing-x2);
     text-align: center;
     padding: 10px;
+    ${mediaWidth('max', 'xs')} {
+      gap: var(--spacing);
+    }
   `,
   Image: styled.img`
     width: 100%;
     margin-bottom: 15px;
   `,
   Name: styled.span`
-    font-size: 20px;
+    font-size: var(--font-size-medium);
+    ${mediaWidth('max', 'xxs')} {
+      font-size: var(--font-size-normal);
+    }
   `,
   Position: styled.span`
     opacity: 70%;
+    font-size: var(--font-size-normal);
+    ${mediaWidth('max', 'xxs')} {
+      font-size: var(--font-size-small);
+    }
+  `,
+
+  JoinUsBtn: styled.button`
+    background-color: var(--color-accent);
+    padding: 20px 40px;
+    border-radius: 100px;
+    cursor: pointer;
     font-size: var(--font-size-medium);
+    color: var(--color-white);
+    margin-top: var(--spacing-x4);
+    ${mediaWidth('max', 'xs')} {
+      padding: 17px 30px;
+    }
+    ${mediaWidth('max', 'xxs')} {
+      padding: 15px 20px;
+      font-size: var(--font-size-normal);
+    }
   `,
 };

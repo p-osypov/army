@@ -14,6 +14,9 @@ export const SC = {
     justify-content: space-between;
     z-index: 1;
     width: 100%;
+    ${mediaWidth('max', 'sm')} {
+      top: 50%;
+    }
   `,
   Arrow: styled(Icons.CardArrowRight)<{
     $direction: DirectedArrowProps['direction'];
@@ -32,6 +35,18 @@ export const SC = {
       cursor: pointer;
       width: 70px;
       height: 70px;
+      ${mediaWidth('max', 'sm')} {
+        width: 60px;
+        height: 60px;
+      }
+      ${mediaWidth('max', 'xs')} {
+        width: 50px;
+        height: 50px;
+      }
+      ${mediaWidth('max', 'xxs')} {
+        width: 40px;
+        height: 40px;
+      }
     }
     ${mediaWidth('max', 'xxl')} {
       transform: rotate(
@@ -41,6 +56,18 @@ export const SC = {
         $direction === 'left' ? 'var(--spacing-x2)' : 'initial'};
       right: ${({ $direction }) =>
         $direction === 'right' ? 'var(--spacing-x2)' : 'initial'};
+    }
+    ${mediaWidth('max', 'sm')} {
+      width: 50px;
+      height: 50px;
+    }
+    ${mediaWidth('max', 'xs')} {
+      width: 40px;
+      height: 40px;
+    }
+    ${mediaWidth('max', 'xxs')} {
+      width: 30px;
+      height: 30px;
     }
   `,
 };
