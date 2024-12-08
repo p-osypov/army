@@ -28,10 +28,10 @@ function Team() {
         <SC.SliderContainer>
           <SC.Slider sliderRef={sliderRef} {...teamSliderSettings}>
             {teamArray.map((member) => (
-              <SC.Card key={member.name}>
+              <SC.Card key={`slider-card-${member.name}`}>
                 <SC.Image src={member.image} alt={member.name} />
                 <SC.Name>{member.name}</SC.Name>
-                <SC.Position>{member.position}</SC.Position>
+                <SC.MilitaryRank>{member.position}</SC.MilitaryRank>
               </SC.Card>
             ))}
           </SC.Slider>

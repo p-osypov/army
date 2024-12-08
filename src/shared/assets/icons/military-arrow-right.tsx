@@ -1,6 +1,6 @@
 import { IconProps } from '@/shared/assets/icons/icons.types';
 
-const CardArrowRight = ({ color, ...props }: IconProps) => (
+const MilitaryArrowRight = ({ color, ...props }: IconProps) => (
   <svg
     width="20"
     height="20"
@@ -46,4 +46,4 @@ const CardArrowRight = ({ color, ...props }: IconProps) => (
   </svg>
 );
 
-export default CardArrowRight;
+export default MilitaryArrowRight;
