@@ -12,7 +12,7 @@ export const breakpoints: Breakpoints = {
   md: 992,
   lg: 1200,
   xl: 1350,
-  xll: 1512,
+  xxl: 1512,
 };
 
 export const mediaWidth = (

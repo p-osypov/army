@@ -7,6 +7,7 @@ import FooterPhoneNum from './footer-phone-num';
 import FooterEmail from './footer-email';
 import Facebook from './facebook';
 import Instagram from './instagram';
+import MilitaryArrowRight from './military-arrow-right';
 
 const Icons = {
   Youtube,
@@ -18,6 +19,7 @@ const Icons = {
   FooterEmail,
   Facebook,
   Instagram,
+  MilitaryArrowRight,
 };
 
 export default Icons;

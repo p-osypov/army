@@ -4,6 +4,7 @@ import useTranslation from 'next-translate/useTranslation';
 import FirstScreen from '@/modules/home/first-screen';
 import AboutUs from '@/modules/home/about-us';
 import OurValues from '@/modules/home/our-values';
+import Team from '@/modules/home/team';
 
 function Index() {
   const { t } = useTranslation('header');
@@ -17,6 +18,7 @@ function Index() {
         <FirstScreen />
         <AboutUs />
         <OurValues />
+        <Team />
       </main>
     </>
   );

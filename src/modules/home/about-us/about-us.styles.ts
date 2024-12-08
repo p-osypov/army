@@ -47,10 +47,22 @@ export const SC = {
     top: 10%;
     right: 27%;
     z-index: 1;
+    ${mediaWidth('max', 'xxs')} {
+      padding: var(--spacing-x2) var(--spacing-x3);
+      right: 20%;
+    }
   `,
 
   Logo: styled.img`
     display: block;
+    ${mediaWidth('max', 'xs')} {
+      max-width: 90px;
+      max-height: 90px;
+    }
+    ${mediaWidth('max', 'xxs')} {
+      max-width: 70px;
+      max-height: 70px;
+    }
   `,
 
   InfoBlockItem: styled.div`
@@ -61,10 +73,16 @@ export const SC = {
 
   Goals: styled.span`
     font-size: 30px;
+    ${mediaWidth('max', 'xs')} {
+      font-size: var(--font-size-medium);
+    }
   `,
 
   Destroyed: styled.span`
-    font-size: 18px;
+    font-size: var(--font-size-medium);
+    ${mediaWidth('max', 'xs')} {
+      font-size: var(--font-size-normal);
+    }
   `,
 
   ImgBlock: styled.div`
@@ -101,12 +119,8 @@ export const SC = {
   `,
 
   Title: styled.h1`
-    font-size: 48px;
-    background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.2)
-    );
+    font-size: var(--font-size-title);
+    background-image: var(--text-background-gradient);
     background-clip: text;
     color: transparent;
     font-weight: var(--font-weight-medium);

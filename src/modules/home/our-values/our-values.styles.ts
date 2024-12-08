@@ -31,12 +31,8 @@ export const SC = {
     max-width: 500px;
   `,
   Title: styled.span`
-    font-size: 48px;
-    background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.2)
-    );
+    font-size: var(--font-size-title);
+    background-image: var(--text-background-gradient);
     background-clip: text;
     color: transparent;
     font-weight: var(--font-weight-medium);

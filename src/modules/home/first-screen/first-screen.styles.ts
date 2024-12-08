@@ -44,11 +44,7 @@ export const SC = {
     font-size: 90px;
     margin-bottom: var(--spacing-x4);
     font-weight: var(--font-weight-medium);
-    background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.2)
-    );
+    background-image: var(--text-background-gradient);
     background-clip: text;
     color: transparent;
     padding-right: var(--spacing);
@@ -80,18 +76,17 @@ export const SC = {
     margin-bottom: calc(var(--spacing-x3) * 2);
     font-size: 20px;
     ${mediaWidth('max', 'lg')} {
-      font-size: 18px;
+      font-size: var(--font-size-medium);
       margin-bottom: calc(var(--spacing-x3) * 1.5);
     }
     ${mediaWidth('max', 'md')} {
-      font-size: 16px;
+      font-size: var(--font-size-normal);
       margin-bottom: var(--spacing-x4);
       max-width: 75%;
     }
   `,
 
   JoinUsBtn: styled.button`
-    display: flex;
     background-color: var(--color-accent);
     padding: 20px 40px;
     border-radius: 100px;
