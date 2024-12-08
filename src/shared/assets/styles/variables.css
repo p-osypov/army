@@ -31,7 +31,7 @@
   --color-accent: #415346;
   --z-index-max: 2147483647;
   --z-index-header: 1000;
-  --background-gradient: linear-gradient(
+  --text-background-gradient: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1),
     rgba(255, 255, 255, 0.2)

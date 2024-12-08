@@ -44,7 +44,7 @@ export const SC = {
     font-size: 90px;
     margin-bottom: var(--spacing-x4);
     font-weight: var(--font-weight-medium);
-    background-image: var(--background-gradient);
+    background-image: var(--text-background-gradient);
     background-clip: text;
     color: transparent;
     padding-right: var(--spacing);

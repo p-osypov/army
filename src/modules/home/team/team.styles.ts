@@ -34,7 +34,7 @@ export const SC = {
   `,
   Title: styled.span`
     font-size: var(--font-size-title);
-    background-image: var(--background-gradient);
+    background-image: var(--text-background-gradient);
     background-clip: text;
     color: transparent;
     font-weight: var(--font-weight-medium);
