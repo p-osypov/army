@@ -12,7 +12,7 @@ function AboutUs() {
           <SC.InfoBlock>
             <SC.Logo src="/img/logo2.png" />
             <SC.InfoBlockItem>
-              <SC.Goals>{t('goals')}</SC.Goals>
+              <SC.Goals>220 {t('goals')}</SC.Goals>
               <SC.Destroyed>{t('destroyed')}</SC.Destroyed>
             </SC.InfoBlockItem>
           </SC.InfoBlock>
