@@ -33,12 +33,8 @@ export const SC = {
     gap: var(--spacing-x2);
   `,
   Title: styled.span`
-    font-size: 48px;
-    background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0.2)
-    );
+    font-size: var(--font-size-title);
+    background-image: var(--background-gradient);
     background-clip: text;
     color: transparent;
     font-weight: var(--font-weight-medium);
@@ -62,7 +58,7 @@ export const SC = {
     flex-direction: column;
     gap: var(--spacing-x2);
     text-align: center;
-    padding: 10px;
+    padding: var(--spacing);
     ${mediaWidth('max', 'xs')} {
       gap: var(--spacing);
     }
@@ -77,7 +73,7 @@ export const SC = {
       font-size: var(--font-size-normal);
     }
   `,
-  Position: styled.span`
+  MilitaryRank: styled.span`
     opacity: 70%;
     font-size: var(--font-size-normal);
     ${mediaWidth('max', 'xxs')} {
@@ -87,17 +83,16 @@ export const SC = {
 
   JoinUsBtn: styled.button`
     background-color: var(--color-accent);
-    padding: 20px 40px;
+    padding: var(--spacing-x3) calc(var(--spacing) * 5);
     border-radius: 100px;
     cursor: pointer;
     font-size: var(--font-size-medium);
     color: var(--color-white);
     margin-top: var(--spacing-x4);
-    ${mediaWidth('max', 'xs')} {
-      padding: 17px 30px;
+    ${mediaWidth('max', 'sm')} {
+      padding: var(--spacing-x2) var(--spacing-x3);
     }
     ${mediaWidth('max', 'xxs')} {
-      padding: 15px 20px;
       font-size: var(--font-size-normal);
     }
   `,

@@ -7,18 +7,15 @@ import { mediaWidth } from '@/shared/assets/styles/mixins';
 export const SC = {
   SliderControls: styled(Container)`
     position: absolute;
-    top: 52%;
+    top: 50%;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
     width: 100%;
-    ${mediaWidth('max', 'sm')} {
-      top: 50%;
-    }
   `,
-  Arrow: styled(Icons.CardArrowRight)<{
+  Arrow: styled(Icons.MilitaryArrowRight)<{
     $direction: DirectedArrowProps['direction'];
   }>`
     position: absolute;
