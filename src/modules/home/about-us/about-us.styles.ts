@@ -1,4 +1,4 @@
-import { Container } from '@/shared/assets/styles/layout';
+import { Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import styled from 'styled-components';
 
@@ -118,12 +118,7 @@ export const SC = {
     }
   `,
 
-  Title: styled.h1`
-    font-size: var(--font-size-title);
-    background-image: var(--text-background-gradient);
-    background-clip: text;
-    color: transparent;
-    font-weight: var(--font-weight-medium);
+  Title: styled(Title.H1)`
     ${mediaWidth('max', 'xs')} {
       font-size: 36px;
     }

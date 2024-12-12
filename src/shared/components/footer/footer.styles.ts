@@ -1,6 +1,7 @@
 import { Container } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const SC = {
   Footer: styled.footer`
@@ -43,7 +44,7 @@ export const SC = {
     }
   `,
 
-  TitleLogo: styled.div`
+  TitleLogo: styled(Link)`
     display: flex;
     align-items: center;
     gap: var(--spacing);

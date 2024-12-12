@@ -1,7 +1,7 @@
-import { Container } from '@/shared/assets/styles/layout';
+import { Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
-import { Label } from '@/shared/components/label/label';
+import { Label } from '@/shared/assets/styles/layout';
 import styled from 'styled-components';
 
 export const SC = {
@@ -40,13 +40,9 @@ export const SC = {
     margin-bottom: var(--spacing-x3);
   `,
 
-  Title: styled.div`
+  Title: styled(Title.Span)`
     font-size: 90px;
     margin-bottom: var(--spacing-x4);
-    font-weight: var(--font-weight-medium);
-    background-image: var(--text-background-gradient);
-    background-clip: text;
-    color: transparent;
     padding-right: var(--spacing);
     padding-bottom: var(--spacing);
     ${mediaWidth('max', 'lg')} {
