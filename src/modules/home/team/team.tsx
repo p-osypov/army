@@ -1,4 +1,4 @@
-import { Label } from '@/shared/components/label/label';
+import { Label } from '@/shared/assets/styles/layout';
 import SliderControls from '@/shared/components/slider/slider-controls';
 import useTranslation from 'next-translate/useTranslation';
 import { useRef } from 'react';
