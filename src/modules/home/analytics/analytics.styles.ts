@@ -1,6 +1,5 @@
 import { Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
-
 import styled from 'styled-components';
 
 export const SC = {
