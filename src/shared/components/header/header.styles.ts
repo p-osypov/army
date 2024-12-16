@@ -1,6 +1,8 @@
 import Icons from '@/shared/assets/icons';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import styled from 'styled-components';
+import Link from 'next/link';
+
 export const HEADER_HEIGHT = 106;
 export const SC = {
   Header: styled.header`
@@ -32,7 +34,7 @@ export const SC = {
     }
   `,
 
-  TitleLogo: styled.div`
+  TitleLogo: styled(Link)`
     display: flex;
     align-items: center;
     gap: var(--spacing);

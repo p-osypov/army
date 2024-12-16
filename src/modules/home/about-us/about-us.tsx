@@ -1,4 +1,4 @@
-import { Label } from '@/shared/components/label/label';
+import { Label } from '@/shared/assets/styles/layout';
 import useTranslation from 'next-translate/useTranslation';
 import { SC } from './about-us.styles';
 

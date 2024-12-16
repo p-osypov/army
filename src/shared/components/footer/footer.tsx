@@ -20,7 +20,7 @@ function Footer() {
       <SC.Container>
         <SC.Content>
           <SC.About>
-            <SC.TitleLogo>
+            <SC.TitleLogo href={'/'}>
               <SC.Logo src="/img/logo.png" />
               <SC.Title>{t('name')}</SC.Title>
             </SC.TitleLogo>

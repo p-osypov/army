@@ -34,7 +34,7 @@ function Header() {
   return (
     <SC.Header>
       <SC.Container>
-        <SC.TitleLogo>
+        <SC.TitleLogo href={'/'}>
           <SC.Logo src="/img/logo.png" />
           <SC.Title>{t('name')}</SC.Title>
         </SC.TitleLogo>

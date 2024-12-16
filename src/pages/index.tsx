@@ -5,6 +5,7 @@ import FirstScreen from '@/modules/home/first-screen';
 import AboutUs from '@/modules/home/about-us';
 import OurValues from '@/modules/home/our-values';
 import Team from '@/modules/home/team';
+import Analytics from '@/modules/home/analytics';
 
 function Index() {
   const { t } = useTranslation('header');
@@ -19,6 +20,7 @@ function Index() {
         <AboutUs />
         <OurValues />
         <Team />
+        <Analytics />
       </main>
     </>
   );

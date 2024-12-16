@@ -1,6 +1,6 @@
 import { SC } from './our-values.styles';
 import useTranslation from 'next-translate/useTranslation';
-import { Label } from '@/shared/components/label/label';
+import { Label } from '@/shared/assets/styles/layout';
 
 function OurValues() {
   const { t } = useTranslation('our-values');

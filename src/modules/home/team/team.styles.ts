@@ -1,4 +1,5 @@
-import { Container } from '@/shared/assets/styles/layout';
+import { Container, Title } from '@/shared/assets/styles/layout';
+
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import Slider from '@/shared/components/slider';
 import styled from 'styled-components';
@@ -32,12 +33,7 @@ export const SC = {
     align-items: center;
     gap: var(--spacing-x2);
   `,
-  Title: styled.span`
-    font-size: var(--font-size-title);
-    background-image: var(--text-background-gradient);
-    background-clip: text;
-    color: transparent;
-    font-weight: var(--font-weight-medium);
+  Title: styled(Title.Span)`
     padding-bottom: 5px;
     text-align: center;
     max-width: 580px;
