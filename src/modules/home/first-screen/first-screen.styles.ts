@@ -119,7 +119,7 @@ export const SC = {
       font-size: var(--font-size-thin);
     }
     ${mediaWidth('max', 'xs')} {
-      font-size: var(--font-size-xs);
+      font-size: 10px;
     }
   `,
   ContactLink: styled.a`
