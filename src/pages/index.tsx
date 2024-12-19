@@ -6,6 +6,7 @@ import AboutUs from '@/modules/home/about-us';
 import OurValues from '@/modules/home/our-values';
 import Team from '@/modules/home/team';
 import Analytics from '@/modules/home/analytics';
+import Vacancies from '@/modules/home/vacancies';
 
 function Index() {
   const { t } = useTranslation('header');
@@ -21,6 +22,7 @@ function Index() {
         <OurValues />
         <Team />
         <Analytics />
+        <Vacancies />
       </main>
     </>
   );
