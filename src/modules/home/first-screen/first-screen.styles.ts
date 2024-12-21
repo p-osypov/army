@@ -6,18 +6,21 @@ import styled from 'styled-components';
 
 export const SC = {
   Section: styled.section`
-    background-image: url(/img/main-photo.png);
+    background-image: url(/img/first-screen-bg.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
     color: var(--color-white);
     margin-bottom: 100px;
+
     ${mediaWidth('max', 'lg')} {
       margin-bottom: 70px;
     }
+
     ${mediaWidth('max', 'md')} {
       margin-bottom: 50px;
     }
+
     ${mediaWidth('max', 'sm')} {
       margin-bottom: 30px;
     }
