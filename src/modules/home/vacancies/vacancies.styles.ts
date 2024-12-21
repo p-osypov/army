@@ -11,13 +11,6 @@ export const cardHeight = {
 };
 export const scrollBarPadding = 30;
 
-export const cardHeight = {
-  lg: 400,
-  xs: 300,
-  xss: 200,
-};
-export const scrollBarPadding = 30;
-
 export const SC = {
   Section: styled.section`
     color: var(--color-white);
@@ -80,15 +73,6 @@ export const SC = {
     }
   `,
 
-  Scrollbar: styled(Scrollbar)`
-    height: ${cardHeight.lg + scrollBarPadding}px!important;
-    ${mediaWidth('max', 'xs')} {
-      height: ${cardHeight.xs + scrollBarPadding}px!important;
-    }
-    ${mediaWidth('max', 'xxs')} {
-      height: ${cardHeight.xss + scrollBarPadding}px!important;
-    }
-  `,
   Vacancies: styled.div`
     display: flex;
     gap: calc(var(--spacing) * 6);
@@ -99,18 +83,15 @@ export const SC = {
     max-width: 500px;
     min-width: 500px;
     min-height: ${cardHeight.lg}px;
-    min-height: ${cardHeight.lg}px;
     ${mediaWidth('max', 'xs')} {
       max-width: 400px;
       min-width: 400px;
-      min-height: ${cardHeight.xs}px;
       min-height: ${cardHeight.xs}px;
     }
     ${mediaWidth('max', 'xxs')} {
       max-width: 300px;
       min-width: 300px;
       min-height: ${cardHeight.xxs}px;
-      min-height: ${cardHeight.xss}px;
     }
   `,
 
@@ -169,7 +150,6 @@ export const SC = {
   BlockText: styled.p`
     ${mediaWidth('max', 'xs')} {
       font-size: var(--font-size-small);
-      font-size: var(--font-size-small);
     }
   `,
 
@@ -181,7 +161,6 @@ export const SC = {
     margin-top: auto;
     border-bottom: none;
     ${mediaWidth('max', 'xs')} {
-      font-size: var(--font-size-small);
       font-size: var(--font-size-small);
     }
 
@@ -199,7 +178,6 @@ export const SC = {
   PullHere: styled.span`
     font-size: var(--font-size-normal);
     ${mediaWidth('max', 'xs')} {
-      font-size: var(--font-size-small);
       font-size: var(--font-size-small);
     }
   `,
