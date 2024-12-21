@@ -14,6 +14,7 @@ export const titleStyles = css`
   background-clip: text;
   color: transparent;
   font-weight: var(--font-weight-medium);
+  padding-bottom: var(--spacing);
 `;
 
 export const Title = {

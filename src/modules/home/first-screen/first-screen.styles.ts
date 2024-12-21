@@ -44,7 +44,6 @@ export const SC = {
     font-size: 90px;
     margin-bottom: var(--spacing-x4);
     padding-right: var(--spacing);
-    padding-bottom: var(--spacing);
     ${mediaWidth('max', 'lg')} {
       font-size: 80px;
       margin-bottom: var(--spacing-x3);

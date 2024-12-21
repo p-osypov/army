@@ -34,7 +34,6 @@ export const SC = {
     gap: var(--spacing-x2);
   `,
   Title: styled(Title.Span)`
-    padding-bottom: 5px;
     text-align: center;
     max-width: 580px;
     ${mediaWidth('max', 'xs')} {
