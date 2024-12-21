@@ -35,7 +35,7 @@ function Header() {
     <SC.Header>
       <SC.Container>
         <SC.TitleLogo href={'/'}>
-          <SC.Logo src="/img/main-logo.png" />
+          <SC.Logo src="/img/logo.png" />
           <SC.Title>{t('name')}</SC.Title>
         </SC.TitleLogo>
         <SC.Navigation>
