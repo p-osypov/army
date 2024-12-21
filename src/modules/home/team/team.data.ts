@@ -2,17 +2,17 @@ import { breakpoints } from '@/shared/assets/styles/mixins';
 
 export const teamArray = [
   {
-    image: '/img/photo.png',
+    image: '/img/team-image.png',
     name: 'Юрій Савчук',
     position: 'Командир',
   },
   {
-    image: '/img/photo.png',
+    image: '/img/team-image.png',
     name: 'Ігор Ласточкін',
     position: 'Рядовий',
   },
   {
-    image: '/img/photo.png',
+    image: '/img/team-image.png',
     name: 'Павло Зібров',
     position: 'Старшина',
   },

@@ -21,7 +21,7 @@ function Footer() {
         <SC.Content>
           <SC.About>
             <SC.TitleLogo href={'/'}>
-              <SC.Logo src="/img/logo.png" />
+              <SC.Logo src="/img/main-logo.png" />
               <SC.Title>{t('name')}</SC.Title>
             </SC.TitleLogo>
             <SC.TextAboutDrone>{t('text')}</SC.TextAboutDrone>
