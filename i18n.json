@@ -3,6 +3,13 @@
   "defaultLocale": "ua",
   "pages": {
     "*": ["header", "footer"],
-    "/": ["first-screen", "about-us", "our-values", "team", "analytics"]
+    "/": [
+      "first-screen",
+      "about-us",
+      "our-values",
+      "team",
+      "analytics",
+      "vacancies"
+    ]
   }
 }

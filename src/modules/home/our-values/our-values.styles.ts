@@ -33,7 +33,6 @@ export const SC = {
     max-width: 500px;
   `,
   Title: styled(Title.Span)`
-    padding-bottom: 5px;
     ${mediaWidth('max', 'xs')} {
       font-size: 36px;
     }
