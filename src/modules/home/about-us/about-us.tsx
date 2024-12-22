@@ -10,7 +10,7 @@ function AboutUs() {
       <SC.Content>
         <SC.ImgColumn>
           <SC.InfoBlock>
-            <SC.Logo src="/img/logo2.png" />
+            <SC.Logo src="/img/logo.png" />
             <SC.InfoBlockItem>
               <SC.Goals>220 {t('goals')}</SC.Goals>
               <SC.Destroyed>{t('destroyed')}</SC.Destroyed>
