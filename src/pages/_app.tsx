@@ -1,3 +1,4 @@
+// import '@/shared/assets/styles/fonts.css';
 import '@/shared/assets/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Header from '@/shared/components/header';
