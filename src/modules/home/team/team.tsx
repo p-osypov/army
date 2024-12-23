@@ -1,5 +1,5 @@
 import { Label } from '@/shared/assets/styles/layout';
-import SliderControls from '@/shared/components/slider/slider-controls';
+import SliderArrows from '@/shared/components/slider/slider-arrows';
 import useTranslation from 'next-translate/useTranslation';
 import { useRef } from 'react';
 import Slider from 'react-slick';
@@ -20,7 +20,7 @@ function Team() {
   return (
     <SC.Section>
       <SC.Content>
-        <SliderControls previous={previous} next={next} />
+        <SliderArrows previous={previous} next={next} />
         <SC.TitleBlock>
           <Label>{t('team')}</Label>
           <SC.Title>{t('title')}</SC.Title>
