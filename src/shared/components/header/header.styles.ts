@@ -1,8 +1,7 @@
 import Icons from '@/shared/assets/icons';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
-import styled from 'styled-components';
 import Link from 'next/link';
-import { link } from 'fs';
+import styled from 'styled-components';
 
 export const HEADER_HEIGHT = 106;
 export const SC = {
