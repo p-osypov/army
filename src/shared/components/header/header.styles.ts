@@ -2,6 +2,7 @@ import Icons from '@/shared/assets/icons';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import styled from 'styled-components';
 import Link from 'next/link';
+import { link } from 'fs';
 
 export const HEADER_HEIGHT = 106;
 export const SC = {
@@ -106,7 +107,7 @@ export const SC = {
     top: calc(100% + 5px);
   `,
 
-  SuppButton: styled.button`
+  SuppButton: styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;

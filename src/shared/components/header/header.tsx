@@ -5,11 +5,12 @@ import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Link from 'next/link';
+import { ROUTER } from '@/shared/constants';
 
 const menuItems = [
-  { href: '/', tranKey: 'home' },
-  { href: '/donations', tranKey: 'donations' },
-  { href: '/vacancies', tranKey: 'vacancies' },
+  { href: ROUTER.HOME, tranKey: 'home' },
+  { href: ROUTER.DONATIONS, tranKey: 'donations' },
+  { href: ROUTER.VACANCIES, tranKey: 'vacancies' },
 ];
 
 function Header() {
@@ -65,7 +66,7 @@ function Header() {
             </SC.LanguageList>
           )}
         </SC.LanguageSelector>
-        <SC.SuppButton>
+        <SC.SuppButton href={ROUTER.DONATIONS}>
           {t('support')}
           <Icons.ArrowRight className="icon" />
         </SC.SuppButton>
