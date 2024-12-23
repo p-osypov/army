@@ -13,7 +13,7 @@ export const titleStyles = css`
   background-image: var(--text-background-gradient);
   background-clip: text;
   color: transparent;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semi-bold);
   padding-bottom: var(--spacing);
 `;
 
