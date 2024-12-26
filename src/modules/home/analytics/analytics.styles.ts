@@ -1,4 +1,4 @@
-import { Container, Title } from '@/shared/assets/styles/layout';
+import { Container } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 
 import styled from 'styled-components';
@@ -29,12 +29,6 @@ export const SC = {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-x2);
-  `,
-
-  Title: styled(Title.Span)`
-    ${mediaWidth('max', 'xs')} {
-      font-size: 36px;
-    }
   `,
 
   CardsContainer: styled.div`

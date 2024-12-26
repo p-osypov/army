@@ -58,7 +58,6 @@ export const SC = {
     text-align: center;
     max-width: 580px;
     ${mediaWidth('max', 'xs')} {
-      font-size: 36px;
       max-width: 400px;
     }
   `,

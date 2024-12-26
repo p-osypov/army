@@ -1,6 +1,6 @@
 import { SC } from './our-values.styles';
 import useTranslation from 'next-translate/useTranslation';
-import { Label } from '@/shared/assets/styles/layout';
+import { Label, Title } from '@/shared/assets/styles/layout';
 
 function OurValues() {
   const { t } = useTranslation('our-values');
@@ -10,7 +10,7 @@ function OurValues() {
       <SC.Content>
         <SC.ValueBlock>
           <Label>{t('ourValues')}</Label>
-          <SC.Title>{t('title')}</SC.Title>
+          <Title.Span>{t('title')}</Title.Span>
           <SC.ValueText>{t('text')}</SC.ValueText>
         </SC.ValueBlock>
         <SC.InfoBlock>

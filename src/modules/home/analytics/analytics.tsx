@@ -1,6 +1,6 @@
 import { SC } from './analytics.styles';
 import useTranslation from 'next-translate/useTranslation';
-import { Label } from '@/shared/assets/styles/layout';
+import { Label, Title } from '@/shared/assets/styles/layout';
 import { analyticsArray } from './analytics.data';
 
 function Analytics() {
@@ -11,7 +11,7 @@ function Analytics() {
       <SC.Content>
         <SC.AnalyticsBlock>
           <Label>{t('affectedForces')}</Label>
-          <SC.Title>{t('title')}</SC.Title>
+          <Title.Span>{t('title')}</Title.Span>
         </SC.AnalyticsBlock>
         <SC.CardsContainer>
           {analyticsArray.map((member) => (

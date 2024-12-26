@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { mediaWidth } from '@/shared/assets/styles/mixins';
 
 export const Container = styled.div`
   max-width: calc(var(--max-width) + var(--spacing-x4));
@@ -8,13 +9,16 @@ export const Container = styled.div`
   padding-right: var(--spacing-x2);
 `;
 
-export const titleStyles = css`
+export const titleStyles = `
   font-size: var(--font-size-title);
   background-image: var(--text-background-gradient);
   background-clip: text;
   color: transparent;
   font-weight: var(--font-weight-medium);
   padding-bottom: var(--spacing);
+  ${mediaWidth('max', 'xs')} {
+    font-size: 36px;
+  }
 `;
 
 export const Title = {

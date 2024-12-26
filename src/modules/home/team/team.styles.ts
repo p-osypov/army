@@ -36,9 +36,6 @@ export const SC = {
   Title: styled(Title.Span)`
     text-align: center;
     max-width: 580px;
-    ${mediaWidth('max', 'xs')} {
-      font-size: 36px;
-    }
   `,
 
   SliderContainer: styled.div`

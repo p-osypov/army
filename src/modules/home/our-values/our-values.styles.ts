@@ -1,4 +1,4 @@
-import { Container, Title } from '@/shared/assets/styles/layout';
+import { Container } from '@/shared/assets/styles/layout';
 
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 
@@ -31,11 +31,6 @@ export const SC = {
     align-items: flex-start;
     gap: var(--spacing-x2);
     max-width: 500px;
-  `,
-  Title: styled(Title.Span)`
-    ${mediaWidth('max', 'xs')} {
-      font-size: 36px;
-    }
   `,
   ValueText: styled.p`
     opacity: 70%;
