@@ -2,34 +2,50 @@ import { breakpoints } from '@/shared/assets/styles/mixins';
 
 export const ourValuesArray = [
   {
-    image: '/img/team-member-photo.png',
-    name: 'Юрій Савчук',
-    position: 'Командир',
+    title: 'Збереження життя особового складу',
+    text: 'Збереження життя —  це не лише обов’язок командирів, а й  взаємна відповідальність кожного бійця',
   },
   {
-    image: '/img/team-member-photo.png',
-    name: 'Ігор Ласточкін',
-    position: 'Рядовий',
+    title: 'Патріотизм',
+    text: 'Відданість Україні, її народу та захист незалежності є основною мотивацією кожного бійця.',
   },
   {
-    image: '/img/team-member-photo.png',
-    name: 'Павло Зібров',
-    position: 'Старшина',
+    title: 'Взаємопідтримка та командний рух',
+    text: 'Єдність і взаємна підтримка серед побратимів і посестер допомагають долати труднощі та зберігати життєздатність підрозділу.',
+  },
+  {
+    title: 'Відповідальність',
+    text: 'Кожен боєць розуміє важливість своєї ролі у спільній справі та відповідає за свої рішення, дії й побратимів поруч.',
+  },
+  {
+    title: 'Високий професіоналізм',
+    text: 'Постійне вдосконалення навичок, знань і техніки. Бійці розуміють, що лише професійність забезпечує ефективність виконання завданнь.',
+  },
+  {
+    title: 'Чесність і довіра',
+    text: 'Без довіри до командування та побратимів неможливо ефективно діяти в умовах бою.',
   },
 ];
 
-export const teamSliderSettings = {
+export const SliderSettings = {
   infinite: true,
   arrows: false,
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 0,
   swipeToSlide: true,
+  dots: true,
   responsive: [
     {
       breakpoint: breakpoints.lg,
       settings: {
         slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: breakpoints.sm,
+      settings: {
+        slidesToShow: 1,
       },
     },
   ],
