@@ -8,7 +8,6 @@ import Link from 'next/link';
 import { ROUTER } from '@/shared/constants';
 
 const menuItems = [
-  { href: ROUTER.HOME, tranKey: 'home' },
   { href: ROUTER.DONATIONS, tranKey: 'donations' },
   { href: ROUTER.VACANCIES, tranKey: 'vacancies' },
 ];

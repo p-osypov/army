@@ -1,6 +1,7 @@
 import { SC } from './our-values.styles';
 import useTranslation from 'next-translate/useTranslation';
 import { Label } from '@/shared/assets/styles/layout';
+import { ourValuesArray, SliderSettings } from './our-values.data';
 
 function OurValues() {
   const { t } = useTranslation('our-values');
@@ -13,20 +14,16 @@ function OurValues() {
           <SC.Title>{t('title')}</SC.Title>
           <SC.ValueText>{t('text')}</SC.ValueText>
         </SC.ValueBlock>
-        <SC.InfoBlock>
-          <SC.Block>
-            <SC.BlockTitle>{t('blockTitle1')}</SC.BlockTitle>
-            <SC.ValueText>{t('blockText1')}</SC.ValueText>
-          </SC.Block>
-          <SC.Block>
-            <SC.BlockTitle>{t('blockTitle2')}</SC.BlockTitle>
-            <SC.ValueText>{t('blockText2')}</SC.ValueText>
-          </SC.Block>
-          <SC.Block>
-            <SC.BlockTitle>{t('blockTitle3')}</SC.BlockTitle>
-            <SC.ValueText>{t('blockText3')}</SC.ValueText>
-          </SC.Block>
-        </SC.InfoBlock>
+        <SC.Slider {...SliderSettings}>
+          {ourValuesArray.map((item) => (
+            <SC.CardWrapper key={`slider-card-${item.title}`}>
+              <SC.Card>
+                <SC.BlockTitle>{item.title}</SC.BlockTitle>
+                <SC.ValueText>{item.text}</SC.ValueText>
+              </SC.Card>
+            </SC.CardWrapper>
+          ))}
+        </SC.Slider>
       </SC.Content>
     </SC.Section>
   );
