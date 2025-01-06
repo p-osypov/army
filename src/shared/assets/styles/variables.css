@@ -28,7 +28,8 @@
   --color-gray: #686868;
   --color-text: #000000;
   --color-white: white;
-  --color-accent: #415346;
+  --color-accent: #fed017;
+  --color-accent-dark: #111111;
   --z-index-max: 2147483647;
   --z-index-header: 1000;
   --text-background-gradient: linear-gradient(

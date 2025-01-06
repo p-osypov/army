@@ -1,22 +1,12 @@
 import { Container, Title } from '@/shared/assets/styles/layout';
-
 import { mediaWidth } from '@/shared/assets/styles/mixins';
-
+import Slider from '@/shared/components/slider';
 import styled from 'styled-components';
 
 export const SC = {
   Section: styled.section`
     color: var(--color-white);
     margin-bottom: 100px;
-    ${mediaWidth('max', 'lg')} {
-      margin-bottom: 70px;
-    }
-    ${mediaWidth('max', 'md')} {
-      margin-bottom: 50px;
-    }
-    ${mediaWidth('max', 'sm')} {
-      margin-bottom: 30px;
-    }
   `,
 
   Content: styled(Container)`
@@ -46,37 +36,44 @@ export const SC = {
     }
   `,
 
-  InfoBlock: styled.div`
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-x4);
-    flex-wrap: wrap;
-    ${mediaWidth('max', 'md')} {
-      gap: var(--spacing-x3);
-    }
-    ${mediaWidth('max', 'md')} {
-      gap: var(--spacing-x2);
+  Slider: styled(Slider)`
+    width: calc(100% + var(--spacing-x4));
+    margin-left: calc(0px - var(--spacing-x2));
+
+    .slick-dots {
+      bottom: -60px;
+      li button:before {
+        color: var(--color-white);
+        font-size: 10px;
+      }
+      li.slick-active button:before {
+        color: var(--color-accent);
+        opacity: 1;
+      }
     }
   `,
 
-  Block: styled.div`
-    display: flex;
+  CardWrapper: styled.div`
+    padding: 0 var(--spacing-x2);
+  `,
+
+  Card: styled.div`
+    display: inline-flex !important;
     flex-direction: column;
-    flex: 1;
     gap: var(--spacing-x3);
     min-height: 282px;
-    border-top: 3px solid #211f1f;
+    border-top: 3px solid var(--color-accent);
     background-color: #111111;
-    padding: calc(var(--spacing) * 9) var(--spacing-x4);
+    padding: calc(var(--spacing) * 6) var(--spacing-x4);
     ${mediaWidth('max', 'lg')} {
       padding: calc(var(--spacing) * 5) var(--spacing-x4);
     }
     ${mediaWidth('max', 'md')} {
-      min-width: 360px;
-      min-height: 100%;
+      min-height: 278px;
+      padding: var(--spacing-x4);
     }
-    ${mediaWidth('max', 'xxs')} {
-      min-width: 280px;
+    ${mediaWidth('max', 'sm')} {
+      min-height: initial;
     }
   `,
 

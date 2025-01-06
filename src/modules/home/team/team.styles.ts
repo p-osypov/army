@@ -2,6 +2,7 @@ import { Container, Title } from '@/shared/assets/styles/layout';
 
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import Slider from '@/shared/components/slider';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const SC = {
@@ -76,13 +77,12 @@ export const SC = {
     }
   `,
 
-  JoinUsBtn: styled.button`
+  JoinUsBtn: styled(Link)`
     background-color: var(--color-accent);
     padding: var(--spacing-x3) calc(var(--spacing) * 5);
     border-radius: 100px;
     cursor: pointer;
     font-size: var(--font-size-medium);
-    color: var(--color-white);
     margin-top: var(--spacing-x4);
     ${mediaWidth('max', 'sm')} {
       padding: var(--spacing-x2) var(--spacing-x3);

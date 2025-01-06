@@ -45,6 +45,8 @@ export const SC = {
 
   Logo: styled.img`
     display: block;
+    width: 60px;
+    height: 60px;
   `,
 
   Title: styled.span`
@@ -113,8 +115,13 @@ export const SC = {
     padding: 20px var(--spacing-x4);
     border-radius: 100px;
     gap: var(--spacing);
-    font-size: var(--font-size-normal);
     min-width: 174px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    &:hover {
+      color: var(--color-black);
+    }
 
     .icon {
       height: 16px;
