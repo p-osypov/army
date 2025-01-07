@@ -1,7 +1,7 @@
-import { SC } from './our-values.styles';
+import { Label, Title } from '@/shared/assets/styles/layout';
 import useTranslation from 'next-translate/useTranslation';
-import { Label } from '@/shared/assets/styles/layout';
 import { ourValuesArray, SliderSettings } from './our-values.data';
+import { SC } from './our-values.styles';
 
 function OurValues() {
   const { t } = useTranslation('our-values');
@@ -11,7 +11,7 @@ function OurValues() {
       <SC.Content>
         <SC.ValueBlock>
           <Label>{t('ourValues')}</Label>
-          <SC.Title>{t('title')}</SC.Title>
+          <Title.Span>{t('title')}</Title.Span>
           <SC.ValueText>{t('text')}</SC.ValueText>
         </SC.ValueBlock>
         <SC.Slider {...SliderSettings}>
