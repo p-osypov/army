@@ -64,22 +64,24 @@ export const SC = {
       &:nth-child(2) .labels {
         display: none;
       }
+      &:last-child {
+        flex: 100%;
+      }
     }
     ${mediaWidth('max', 'xs')} {
-      min-width: 260px;
+      min-width: 262px;
     }
   `,
 
   Labels: styled.div`
     display: flex;
     justify-content: space-between;
-    padding: var(--spacing) var(--spacing-x3) var(--spacing) 0;
+    padding: var(--spacing) 0;
   `,
 
   HeaderItem: styled.div<{ $firstElement?: boolean }>`
     opacity: 70%;
-    flex: ${({ $firstElement }) =>
-      $firstElement ? '40%' : 'calc(30% - var(--spacing-x3))'};
+    flex: ${({ $firstElement }) => ($firstElement ? '40%' : '30%')};
     text-align: ${({ $firstElement }) =>
       $firstElement ? 'initial' : 'center'};
   `,
@@ -88,7 +90,7 @@ export const SC = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--spacing-x3);
+    padding: var(--spacing-x3) 0;
     border-left: 2px solid var(--color-accent);
     background-color: #111111;
     font-weight: var(--font-weight-semi-bold);
@@ -98,6 +100,7 @@ export const SC = {
   MilitaryEquipment: styled.div`
     font-size: calc(var(--font-size-normal) * 1.5);
     flex: 40%;
+    padding-left: var(--spacing-x3);
     ${mediaWidth('max', 'xs')} {
       font-size: var(--font-size-medium);
     }
