@@ -35,9 +35,6 @@ export const SC = {
 
   Title: styled(Title.Span)`
     text-align: center;
-    ${mediaWidth('max', 'xs')} {
-      font-size: 36px;
-    }
   `,
 
   CardsContainer: styled.div`
