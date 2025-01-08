@@ -2,10 +2,16 @@
   "ourValues": "NASZE WARTOŚCI",
   "title": "Wartości są naszą siłą",
   "text": "Przy pomocy dronów brygada może z wyprzedzeniem wykryć pozycje wroga i możliwie najskuteczniej zareagować.",
-  "blockTitle1": "Naród",
-  "blockText1": "Jesteśmy na dobrej drodze do utworzenia Ukraińskiego Niepodległego Państwa Katedralnego.",
-  "blockTitle2": "Ruch dobrowolny",
-  "blockText2": "Jesteśmy wojownikami z powołania i naszym żywiołem jest wojna. Działaj wbrew strachowi i postrzegaj zagrożenie jako drapieżnika, a nie ofiarę.",
-  "blockTitle3": "Doskonałość",
-  "blockText3": "Jesteśmy na dobrej drodze do utworzenia Ukraińskiego Niepodległego Państwa Katedralnego."
+  "card1": "Ratowanie życia personelu",
+  "text1": "Ratowanie życia to nie tylko obowiązek dowódców, ale także wspólna odpowiedzialność każdego żołnierza.",
+  "card2": "Patriotyzm",
+  "text2": "Lojalność wobec Ukrainy, jej narodu i obrona jej niepodległości jest główną motywacją każdego żołnierza.",
+  "card3": "Wzajemne wsparcie i praca zespołowa",
+  "text3": "Jedność i wzajemne wsparcie wśród braci i sióstr w broni pomagają przezwyciężyć trudności i utrzymać żywotność jednostki.",
+  "title4": "Odpowiedzialność",
+  "text4": "Każdy żołnierz rozumie znaczenie swojej roli we wspólnej sprawie i jest odpowiedzialny za swoje decyzje, działania i swoich towarzyszy.",
+  "title5": "Wysoki profesjonalizm",
+  "text5": "Ciągłe doskonalenie umiejętności, wiedzy i wyposażenia. Żołnierze rozumieją, że tylko profesjonalizm zapewnia skuteczność wykonywanych zadań.",
+  "title6": "Uczciwość i zaufanie",
+  "text6": "Bez zaufania do dowództwa i kolegów niemożliwe jest skuteczne działanie w walce."
 }

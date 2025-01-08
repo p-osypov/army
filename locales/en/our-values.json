@@ -2,10 +2,16 @@
   "ourValues": "OUR VALUES",
   "title": "Values are our strength",
   "text": "With the help of drones, the brigade can detect enemy positions in advance and react as effectively as possible.",
-  "blockTitle1": "Nation",
-  "blockText1": "We are on the path to creating an Independent Ukrainian Catholic State.",
-  "blockTitle2": "Volunteer movement",
-  "blockText2": "We are warriors by vocation and our element is war. Act against fear and view the threat as a predator, not a victim.",
-  "blockTitle3": "Perfection",
-  "blockText3": "We are on the path to creating an Independent Ukrainian Catholic State."
+  "card1": "Preservation of personnel lives",
+  "text1": "Saving lives is not only the duty of commanders, but also the mutual responsibility of every soldier.",
+  "card2": "Patriotism",
+  "text2": "Devotion to Ukraine, its people, and the defense of independence is the main motivation of every fighter.",
+  "card3": "Mutual support and team movement",
+  "text3": "Unity and mutual support among brothers and sisters in arms help to overcome difficulties and maintain the unit's viability.",
+  "title4": "Responsibility",
+  "text4": "Each soldier understands the importance of his role in the common cause and is responsible for his decisions, actions and his comrades.",
+  "title5": "High professionalism",
+  "text5": "Continuous improvement of skills, knowledge and equipment. The soldiers understand that only professionalism ensures the effectiveness of their tasks.",
+  "title6": "Honesty and trust",
+  "text6": "Without trust in the command and fellow soldiers, it is impossible to act effectively in combat."
 }
