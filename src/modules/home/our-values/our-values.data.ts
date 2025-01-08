@@ -1,7 +1,7 @@
 import { breakpoints } from '@/shared/assets/styles/mixins';
 import useTranslation from 'next-translate/useTranslation';
 
-export const ourValuesArray = () => {
+export const OurValuesArray = () => {
   const { t } = useTranslation('our-values');
 
   return [
