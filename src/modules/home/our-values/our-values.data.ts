@@ -1,33 +1,38 @@
 import { breakpoints } from '@/shared/assets/styles/mixins';
+import useTranslation from 'next-translate/useTranslation';
 
-export const ourValuesArray = [
-  {
-    title: 'Збереження життя особового складу',
-    text: 'Збереження життя —  це не лише обов’язок командирів, а й  взаємна відповідальність кожного бійця',
-  },
-  {
-    title: 'Патріотизм',
-    text: 'Відданість Україні, її народу та захист незалежності є основною мотивацією кожного бійця.',
-  },
-  {
-    title: 'Взаємопідтримка та командний рух',
-    text: 'Єдність і взаємна підтримка серед побратимів і посестер допомагають долати труднощі та зберігати життєздатність підрозділу.',
-  },
-  {
-    title: 'Відповідальність',
-    text: 'Кожен боєць розуміє важливість своєї ролі у спільній справі та відповідає за свої рішення, дії й побратимів поруч.',
-  },
-  {
-    title: 'Високий професіоналізм',
-    text: 'Постійне вдосконалення навичок, знань і техніки. Бійці розуміють, що лише професійність забезпечує ефективність виконання завданнь.',
-  },
-  {
-    title: 'Чесність і довіра',
-    text: 'Без довіри до командування та побратимів неможливо ефективно діяти в умовах бою.',
-  },
-];
+export const ourValuesArray = () => {
+  const { t } = useTranslation('our-values');
 
-export const SliderSettings = {
+  return [
+    {
+      title: t('card1'),
+      text: t('text1'),
+    },
+    {
+      title: t('card2'),
+      text: t('text2'),
+    },
+    {
+      title: t('card3'),
+      text: t('text3'),
+    },
+    {
+      title: t('title4'),
+      text: t('text4'),
+    },
+    {
+      title: t('title5'),
+      text: t('text5'),
+    },
+    {
+      title: t('title6'),
+      text: t('text6'),
+    },
+  ];
+};
+
+export const valuesSliderSettings = {
   infinite: true,
   arrows: false,
   slidesToShow: 3,

@@ -18,9 +18,9 @@ function Statistics() {
             <SC.CardWrapper key={member.id}>
               {index < 3 && (
                 <SC.Labels className="labels">
-                  <SC.HeaderItem $firstElement>{t('goals')}</SC.HeaderItem>
-                  <SC.HeaderItem>{t('impressed')}</SC.HeaderItem>
-                  <SC.HeaderItem>{t('destroyed')}</SC.HeaderItem>
+                  <SC.LabelText $firstElement>{t('goals')}</SC.LabelText>
+                  <SC.LabelText>{t('impressed')}</SC.LabelText>
+                  <SC.LabelText>{t('destroyed')}</SC.LabelText>
                 </SC.Labels>
               )}
               <SC.CardContainer>
@@ -35,9 +35,7 @@ function Statistics() {
             </SC.CardWrapper>
           ))}
         </SC.CardsContainer>
-        <SC.MoreStatisticsBtn href={'/'}>
-          {t('moreStatistics')}
-        </SC.MoreStatisticsBtn>
+        <SC.MoreStatisticsBtn>{t('moreStatistics')}</SC.MoreStatisticsBtn>
       </SC.Content>
     </SC.Section>
   );

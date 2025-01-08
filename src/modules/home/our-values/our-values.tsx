@@ -1,6 +1,6 @@
 import { Label, Title } from '@/shared/assets/styles/layout';
 import useTranslation from 'next-translate/useTranslation';
-import { ourValuesArray, SliderSettings } from './our-values.data';
+import { ourValuesArray, valuesSliderSettings } from './our-values.data';
 import { SC } from './our-values.styles';
 
 function OurValues() {
@@ -14,8 +14,8 @@ function OurValues() {
           <Title.Span>{t('title')}</Title.Span>
           <SC.ValueText>{t('text')}</SC.ValueText>
         </SC.ValueBlock>
-        <SC.Slider {...SliderSettings}>
-          {ourValuesArray.map((item) => (
+        <SC.Slider {...valuesSliderSettings}>
+          {ourValuesArray().map((item) => (
             <SC.CardWrapper key={`slider-card-${item.title}`}>
               <SC.Card>
                 <SC.BlockTitle>{item.title}</SC.BlockTitle>
