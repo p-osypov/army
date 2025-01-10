@@ -1,36 +1,13 @@
 import { breakpoints } from '@/shared/assets/styles/mixins';
-import useTranslation from 'next-translate/useTranslation';
 
-export const OurValuesArray = () => {
-  const { t } = useTranslation('our-values');
-
-  return [
-    {
-      title: t('card1'),
-      text: t('text1'),
-    },
-    {
-      title: t('card2'),
-      text: t('text2'),
-    },
-    {
-      title: t('card3'),
-      text: t('text3'),
-    },
-    {
-      title: t('title4'),
-      text: t('text4'),
-    },
-    {
-      title: t('title5'),
-      text: t('text5'),
-    },
-    {
-      title: t('title6'),
-      text: t('text6'),
-    },
-  ];
-};
+export const ourValuesArray = [
+  { titleKey: 'cardTitle1', textKey: 'cardText1' },
+  { titleKey: 'cardTitle2', textKey: 'cardText2' },
+  { titleKey: 'cardTitle3', textKey: 'cardText3' },
+  { titleKey: 'cardTitle4', textKey: 'cardText4' },
+  { titleKey: 'cardTitle5', textKey: 'cardText5' },
+  { titleKey: 'cardTitle6', textKey: 'cardText6' },
+];
 
 export const valuesSliderSettings = {
   infinite: true,
