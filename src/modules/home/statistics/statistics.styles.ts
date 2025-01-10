@@ -113,17 +113,11 @@ export const SC = {
 
   MoreStatisticsBtn: styled.button`
     padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 3.75);
-    border: 1px solid transparent;
+    border: 1px solid rgba(250, 250, 250, 0.3);
     background-color: transparent;
     color: var(--color-white);
     border-radius: 100px;
     cursor: pointer;
     font-size: var(--font-size-medium);
-    border-image-source: linear-gradient(
-      90.5deg,
-      rgba(250, 250, 250, 0.3) -1.86%,
-      rgba(250, 250, 250, 0) 118.35%
-    );
-    border-image-slice: 1;
   `,
 };
