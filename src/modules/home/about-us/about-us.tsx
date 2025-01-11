@@ -16,8 +16,8 @@ function AboutUs() {
               <SC.Destroyed>{t('destroyed')}</SC.Destroyed>
             </SC.InfoBlockItem>
           </SC.InfoBlock>
-          <SC.ImgBlock />
-          <SC.ImgBlock2 />
+          <SC.Image src="/img/about-us-image.png" />
+          <SC.Image2 src="/img/about-us-image2.png" />
         </SC.ImgColumn>
         <SC.TextColumn>
           <Label>{t('aboutUS')}</Label>

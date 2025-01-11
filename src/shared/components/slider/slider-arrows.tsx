@@ -7,7 +7,7 @@ type Props = {
   next: () => void;
 };
 
-function SliderControls({ className, previous, next }: Props) {
+function SliderArrows({ className, previous, next }: Props) {
   return (
     <SC.SliderControls className={className}>
       <DirectedArrow direction="left" onClick={previous} />
@@ -16,4 +16,4 @@ function SliderControls({ className, previous, next }: Props) {
   );
 }
 
-export default SliderControls;
+export default SliderArrows;

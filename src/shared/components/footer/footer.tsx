@@ -28,13 +28,13 @@ function Footer() {
           </SC.About>
           <SC.Contacts>
             <SC.FooterTitle>{t('contacts')}</SC.FooterTitle>
-            <SC.FooterContactLink href={`tel:${contacts.footerTel}`}>
-              <Icons.FooterPhoneNum className="icon" />
-              {contacts.footerTel}
-            </SC.FooterContactLink>
-            <SC.FooterContactLink href={`mailto:${contacts.footerEmail}`}>
-              <Icons.FooterEmail className="icon" />
+            <SC.FooterContactLink href={`mailto:${contacts.email}`}>
+              <Icons.Email className="icon" />
               {contacts.footerEmail}
+            </SC.FooterContactLink>
+            <SC.FooterContactLink href={`tel:${contacts.tel}`}>
+              <Icons.PhoneNum className="icon" />
+              {contacts.footerTel}
             </SC.FooterContactLink>
           </SC.Contacts>
           <SC.Info>

@@ -52,6 +52,8 @@ export const SC = {
 
   Logo: styled.img`
     display: block;
+    width: 60px;
+    height: 60px;
   `,
 
   Title: styled.span`
