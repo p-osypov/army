@@ -2,6 +2,7 @@ import Icons from '@/shared/assets/icons';
 import { SC } from './first-screen.styles';
 import useTranslation from 'next-translate/useTranslation';
 import { contacts } from '@/shared/config';
+import { ROUTER } from '@/shared/constants';
 
 function FirstScreen() {
   const { t } = useTranslation('first-screen');
@@ -15,7 +16,12 @@ function FirstScreen() {
           {t('title2')}
         </SC.Title>
         <SC.Subtitle>{t('subtitle')}</SC.Subtitle>
-        <SC.JoinUsBtn>{t('joinUsBtn')}</SC.JoinUsBtn>
+        <SC.Buttons>
+          <SC.JoinUsBtn href={ROUTER.VACANCIES}>{t('joinUsBtn')}</SC.JoinUsBtn>
+          <SC.SuppBtn href={ROUTER.DONATIONS}>
+            {t('suppBtn')} <Icons.ArrowRight className="icon" />
+          </SC.SuppBtn>
+        </SC.Buttons>
         <SC.Contacts>
           <SC.ContactLink href="tel:{contacts.tel}">
             <Icons.PhoneNum className="icon" />

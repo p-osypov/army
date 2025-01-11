@@ -1,10 +1,11 @@
 import { Label } from '@/shared/assets/styles/layout';
-import SliderControls from '@/shared/components/slider/slider-controls';
+import SliderArrows from '@/shared/components/slider/slider-arrows';
 import useTranslation from 'next-translate/useTranslation';
 import { useRef } from 'react';
 import Slider from 'react-slick';
 import { SC } from './team.styles';
 import { teamArray, teamSliderSettings } from './team.data';
+import { ROUTER } from '@/shared/constants';
 
 function Team() {
   const { t } = useTranslation('team');
@@ -20,7 +21,7 @@ function Team() {
   return (
     <SC.Section>
       <SC.Content>
-        <SliderControls previous={previous} next={next} />
+        <SliderArrows previous={previous} next={next} />
         <SC.TitleBlock>
           <Label>{t('team')}</Label>
           <SC.Title>{t('title')}</SC.Title>
@@ -36,7 +37,7 @@ function Team() {
             ))}
           </SC.Slider>
         </SC.SliderContainer>
-        <SC.JoinUsBtn>{t('joinUsBtn')}</SC.JoinUsBtn>
+        <SC.JoinUsBtn href={ROUTER.VACANCIES}>{t('joinUsBtn')}</SC.JoinUsBtn>
       </SC.Content>
     </SC.Section>
   );

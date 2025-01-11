@@ -1,6 +1,7 @@
-import { SC } from './our-values.styles';
-import useTranslation from 'next-translate/useTranslation';
 import { Label, Title } from '@/shared/assets/styles/layout';
+import useTranslation from 'next-translate/useTranslation';
+import { ourValuesArray, valuesSliderSettings } from './our-values.data';
+import { SC } from './our-values.styles';
 
 function OurValues() {
   const { t } = useTranslation('our-values');
@@ -13,20 +14,16 @@ function OurValues() {
           <Title.Span>{t('title')}</Title.Span>
           <SC.ValueText>{t('text')}</SC.ValueText>
         </SC.ValueBlock>
-        <SC.InfoBlock>
-          <SC.Block>
-            <SC.BlockTitle>{t('blockTitle1')}</SC.BlockTitle>
-            <SC.ValueText>{t('blockText1')}</SC.ValueText>
-          </SC.Block>
-          <SC.Block>
-            <SC.BlockTitle>{t('blockTitle2')}</SC.BlockTitle>
-            <SC.ValueText>{t('blockText2')}</SC.ValueText>
-          </SC.Block>
-          <SC.Block>
-            <SC.BlockTitle>{t('blockTitle3')}</SC.BlockTitle>
-            <SC.ValueText>{t('blockText3')}</SC.ValueText>
-          </SC.Block>
-        </SC.InfoBlock>
+        <SC.Slider {...valuesSliderSettings}>
+          {ourValuesArray.map((item) => (
+            <SC.CardWrapper key={`slider-card-${item.titleKey}`}>
+              <SC.Card>
+                <SC.BlockTitle>{t(item.titleKey)}</SC.BlockTitle>
+                <SC.ValueText>{t(item.textKey)}</SC.ValueText>
+              </SC.Card>
+            </SC.CardWrapper>
+          ))}
+        </SC.Slider>
       </SC.Content>
     </SC.Section>
   );

@@ -4,8 +4,7 @@ import useTranslation from 'next-translate/useTranslation';
 import FirstScreen from '@/modules/home/first-screen';
 import AboutUs from '@/modules/home/about-us';
 import OurValues from '@/modules/home/our-values';
-import Team from '@/modules/home/team';
-import Analytics from '@/modules/home/analytics';
+import Statistics from '@/modules/home/statistics';
 import Vacancies from '@/modules/home/vacancies';
 
 function Index() {
@@ -20,8 +19,7 @@ function Index() {
         <FirstScreen />
         <AboutUs />
         <OurValues />
-        <Team />
-        <Analytics />
+        <Statistics />
         <Vacancies />
       </main>
     </>

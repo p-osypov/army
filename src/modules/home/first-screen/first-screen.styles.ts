@@ -3,13 +3,10 @@ import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
 import { Label } from '@/shared/assets/styles/layout';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const SC = {
   Section: styled.section`
-    background-image: url(/img/first-screen-bg.png);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
     color: var(--color-white);
     margin-bottom: 100px;
 
@@ -27,6 +24,10 @@ export const SC = {
   `,
 
   Content: styled(Container)`
+    background-image: url(/img/first-screen-bg.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -67,6 +68,7 @@ export const SC = {
     }
     ${mediaWidth('max', 'xxs')} {
       font-size: 40px;
+      max-width: 90%;
     }
   `,
 
@@ -84,28 +86,73 @@ export const SC = {
     }
   `,
 
-  JoinUsBtn: styled.button`
+  Buttons: styled.div`
+    display: flex;
+    gap: var(--spacing-x3);
+    margin-bottom: calc(var(--spacing-x4) * 2);
+    ${mediaWidth('max', 'xxs')} {
+      flex-direction: column;
+      gap: var(--spacing);
+      min-width: 100%;
+    }
+  `,
+
+  JoinUsBtn: styled(Link)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-accent);
-    padding: 20px 40px;
+    color: var(--color-black);
+    min-height: 60px;
+    min-width: 240px;
     border-radius: 100px;
     cursor: pointer;
     font-size: var(--font-size-medium);
-    color: var(--color-white);
-    margin-bottom: calc(var(--spacing-x4) * 2);
-    ${mediaWidth('max', 'lg')} {
-      padding: 18px 34px;
+    &:hover {
+      color: var(--color-black);
     }
     ${mediaWidth('max', 'md')} {
-      padding: 16px 28px;
+      min-height: 50px;
+      min-width: 200px;
       font-size: var(--font-size-normal);
     }
-    ${mediaWidth('max', 'sm')} {
-      padding: 14px 20px;
-      font-size: var(--font-size-small);
+    ${mediaWidth('max', 'xs')} {
+      min-width: 180px;
+    }
+    ${mediaWidth('max', 'xxs')} {
+      min-width: 100%;
+    }
+  `,
+
+  SuppBtn: styled(Link)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    min-height: 60px;
+    min-width: 240px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: var(--font-size-medium);
+    gap: var(--spacing);
+    &:hover {
+      color: var(--color-black);
+    }
+    .icon {
+      height: 16px;
+      width: 14px;
+    }
+    ${mediaWidth('max', 'md')} {
+      min-height: 50px;
+      min-width: 200px;
+      font-size: var(--font-size-normal);
     }
     ${mediaWidth('max', 'xs')} {
-      padding: 12px 16px;
-      font-size: var(--font-size-thin);
+      min-width: 180px;
+    }
+    ${mediaWidth('max', 'xxs')} {
+      min-width: 100%;
     }
   `,
 
@@ -121,7 +168,8 @@ export const SC = {
       font-size: var(--font-size-thin);
     }
     ${mediaWidth('max', 'xs')} {
-      font-size: 10px;
+      gap: var(--spacing);
+      flex-direction: column;
     }
   `,
   ContactLink: styled.a`

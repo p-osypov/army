@@ -1,7 +1,7 @@
 import Icons from '@/shared/assets/icons';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
-import styled from 'styled-components';
 import Link from 'next/link';
+import styled from 'styled-components';
 
 export const HEADER_HEIGHT = 106;
 export const SC = {
@@ -45,6 +45,8 @@ export const SC = {
 
   Logo: styled.img`
     display: block;
+    width: 60px;
+    height: 60px;
   `,
 
   Title: styled.span`
@@ -106,15 +108,20 @@ export const SC = {
     top: calc(100% + 5px);
   `,
 
-  SuppButton: styled.button`
+  SuppButton: styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px var(--spacing-x4);
     border-radius: 100px;
     gap: var(--spacing);
-    font-size: var(--font-size-normal);
     min-width: 174px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    &:hover {
+      color: var(--color-black);
+    }
 
     .icon {
       height: 16px;

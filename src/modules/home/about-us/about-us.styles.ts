@@ -27,8 +27,8 @@ export const SC = {
 
   ImgColumn: styled.div`
     position: relative;
-    max-width: 48%;
-    min-width: 48%;
+    max-width: calc(50% - var(--spacing-x2));
+    min-width: calc(50% - var(--spacing-x2));
     min-height: 574px;
     ${mediaWidth('max', 'lg')} {
       max-width: 100%;
@@ -41,10 +41,10 @@ export const SC = {
     display: flex;
     align-items: center;
     position: absolute;
-    background-color: var(--color-accent);
+    background-color: var(--color-accent-dark);
     padding: var(--spacing-x3) var(--spacing-x4);
     gap: var(--spacing-x2);
-    top: 10%;
+    top: 23%;
     right: 27%;
     z-index: 1;
     ${mediaWidth('max', 'xxs')} {
@@ -55,6 +55,8 @@ export const SC = {
 
   Logo: styled.img`
     display: block;
+    width: 100px;
+    height: 100px;
     ${mediaWidth('max', 'xs')} {
       max-width: 90px;
       max-height: 90px;
@@ -69,6 +71,7 @@ export const SC = {
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
+    color: var(--color-accent);
   `,
 
   Goals: styled.span`
@@ -85,18 +88,22 @@ export const SC = {
     }
   `,
 
-  ImgBlock: styled.div`
+  Image: styled.div<{ src: string }>`
+    background-image: url('${({ src }) => src}');
+    background-size: cover;
     position: absolute;
+    left: 0;
     bottom: 0;
-    background-color: white;
     min-height: 54%;
     min-width: 54%;
     ${mediaWidth('max', 'lg')} {
       min-height: 70%;
     }
   `,
-  ImgBlock2: styled.div`
-    background-color: white;
+  Image2: styled.div<{ src: string }>`
+    background-image: url('${({ src }) => src}');
+    background-size: cover;
+    background-position: left top;
     min-height: 90%;
     min-width: 43%;
     position: absolute;
@@ -110,8 +117,8 @@ export const SC = {
     align-items: flex-start;
     justify-content: center;
     gap: var(--spacing-x2);
-    max-width: 48%;
-    min-width: 48%;
+    max-width: calc(50% - var(--spacing-x2));
+    min-width: calc(50% - var(--spacing-x2));
     ${mediaWidth('max', 'lg')} {
       max-width: 100%;
       min-width: 100%;
