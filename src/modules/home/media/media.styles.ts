@@ -1,5 +1,4 @@
 import { Container } from '@/shared/assets/styles/layout';
-import { mediaWidth } from '@/shared/assets/styles/mixins';
 import Slider from '@/shared/components/slider';
 import styled from 'styled-components';
 
