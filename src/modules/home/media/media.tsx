@@ -11,10 +11,6 @@ function Media() {
   const { t } = useTranslation('media');
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
-  const handlePlay = (index: number) => {
-    setPlayingIndex(index);
-  };
-
   const handlePause = () => {
     setPlayingIndex(null);
   };
@@ -33,7 +29,7 @@ function Media() {
               <ReactPlayer
                 url={item.src}
                 playing={playingIndex === index}
-                onPlay={() => handlePlay(index)}
+                onPlay={() => setPlayingIndex(index)}
                 onPause={handlePause}
                 style={{ border: '5px solid var(--color-accent)' }}
                 width="100%"
