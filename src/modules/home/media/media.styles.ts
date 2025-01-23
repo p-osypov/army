@@ -1,6 +1,5 @@
 import { Container } from '@/shared/assets/styles/layout';
 import Slider from '@/shared/components/slider';
-import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
 export const SC = {
