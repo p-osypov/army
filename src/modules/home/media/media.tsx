@@ -1,10 +1,23 @@
+import dynamic from 'next/dynamic';
 import { Label, Title } from '@/shared/assets/styles/layout';
 import useTranslation from 'next-translate/useTranslation';
 import { mediaArray, mediaSliderSettings } from './media.data';
 import { SC } from './media.styles';
+import { useState } from 'react';
+
+const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 function Media() {
   const { t } = useTranslation('media');
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+
+  const handlePlay = (index: number) => {
+    setPlayingIndex(index);
+  };
+
+  const handlePause = () => {
+    setPlayingIndex(null);
+  };
 
   return (
     <SC.Section>
@@ -15,14 +28,17 @@ function Media() {
           <SC.MediaText>{t('text')}</SC.MediaText>
         </SC.MediaBlock>
         <SC.Slider {...mediaSliderSettings}>
-          {mediaArray.map((item) => (
+          {mediaArray.map((item, index) => (
             <SC.VideoWrapper key={`slider-card-${item.src}`}>
-              <SC.Video
-                src={item.src}
-                title={`YouTube video ${item.src}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
+              <ReactPlayer
+                url={item.src}
+                playing={playingIndex === index}
+                onPlay={() => handlePlay(index)}
+                onPause={handlePause}
+                style={{ border: '5px solid var(--color-accent)' }}
+                width="100%"
+                height="250px"
+                controls
               />
             </SC.VideoWrapper>
           ))}
