@@ -1,5 +1,6 @@
 import { Container } from '@/shared/assets/styles/layout';
 import Slider from '@/shared/components/slider';
+import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
 export const SC = {
@@ -46,11 +47,5 @@ export const SC = {
 
   VideoWrapper: styled.div`
     padding: 0 var(--spacing-x2);
-  `,
-
-  Video: styled.iframe`
-    width: 100%;
-    height: 250px;
-    border: 5px solid var(--color-accent);
   `,
 };
