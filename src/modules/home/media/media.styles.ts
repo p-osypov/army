@@ -1,4 +1,5 @@
 import { Container } from '@/shared/assets/styles/layout';
+import { mediaWidth } from '@/shared/assets/styles/mixins';
 import Slider from '@/shared/components/slider';
 import styled from 'styled-components';
 
@@ -14,17 +15,20 @@ export const SC = {
     gap: calc(var(--spacing) * 6);
   `,
 
-  MediaBlock: styled.div`
+  TitleBlock: styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-x2);
     max-width: 700px;
   `,
-  MediaText: styled.p`
+  Subtitle: styled.p`
     opacity: 70%;
     line-height: 1.5;
     font-size: var(--font-size-medium);
+    ${mediaWidth('max', 'xxs')} {
+      font-size: var(--font-size-normal);
+    }
   `,
 
   Slider: styled(Slider)`
