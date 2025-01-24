@@ -18,11 +18,11 @@ function Media() {
   return (
     <SC.Section>
       <SC.Content>
-        <SC.MediaBlock>
+        <SC.TitleBlock>
           <Label>{t('media')}</Label>
           <Title.Span>{t('title')}</Title.Span>
-          <SC.MediaText>{t('text')}</SC.MediaText>
-        </SC.MediaBlock>
+          <SC.Subtitle>{t('text')}</SC.Subtitle>
+        </SC.TitleBlock>
         <SC.Slider {...mediaSliderSettings}>
           {mediaArray.map((item, index) => (
             <SC.VideoWrapper key={`slider-card-${item.src}`}>
