@@ -27,7 +27,6 @@ function Contacts() {
   });
 
   const handleSubmit = (values: any) => {
-    console.log('Submitted data:', values);
     alert(t('successMessage'));
   };
 
