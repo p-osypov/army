@@ -12,7 +12,7 @@ function Vacancies() {
       <SC.Content>
         <SC.TitleBlock>
           <Label>{t('vacancies')}</Label>
-          <SC.TitleText>{t('title')}</SC.TitleText>
+          <SC.Subtitle>{t('title')}</SC.Subtitle>
         </SC.TitleBlock>
         <SC.Scrollbar>
           <SC.Vacancies>

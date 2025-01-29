@@ -54,7 +54,7 @@ export const SC = {
     margin-bottom: var(--spacing-x4);
   `,
 
-  TitleText: styled(Title.Span)`
+  Subtitle: styled(Title.Span)`
     text-align: center;
     max-width: 580px;
     ${mediaWidth('max', 'xs')} {
