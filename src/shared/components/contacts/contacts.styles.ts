@@ -1,5 +1,6 @@
 import { Container } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
+import { Field } from 'formik';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 
@@ -38,27 +39,24 @@ export const SC = {
     justify-content: center;
   `,
 
-  CooperationImage: styled.div<{ src: string }>`
-    background-image: url('${({ src }) => src}');
-    background-size: cover;
+  CooperationImage: styled.img`
     width: 174px;
     height: 153px;
   `,
 
   ContactsForm: styled.div`
     display: flex;
-    gap: var(--spacing-x4);
+    gap: calc(var(--spacing) * 10);
     border: 1px solid rgba(33, 31, 31, 1);
-    padding: 0 calc(var(--spacing) * 6);
-    min-height: 760px;
+    padding: 0 calc(var(--spacing) * 7);
     flex-wrap: wrap;
     ${mediaWidth('max', 'md')} {
       padding: 0 var(--spacing-x4);
-      gap: var(--spacing-x2);
+      gap: calc(var(--spacing) * 6);
     }
-    ${mediaWidth('max', 'md')} {
+    ${mediaWidth('max', 'sm')} {
       padding: 0;
-      gap: var(--spacing-x2);
+      gap: var(--spacing-x3);
     }
   `,
 
@@ -67,7 +65,8 @@ export const SC = {
     flex-direction: column;
     gap: var(--spacing-x3);
     padding: calc(var(--spacing) * 6) 0;
-    min-width: calc(68% - var(--spacing-x2));
+    max-width: 670px;
+    min-width: 400px;
     flex: 1;
     ${mediaWidth('max', 'md')} {
       padding: var(--spacing-x4) 0;
@@ -75,13 +74,7 @@ export const SC = {
     }
     ${mediaWidth('max', 'sm')} {
       min-width: 100%;
-      padding: var(--spacing-x4);
-    }
-    ${mediaWidth('max', 'xs')} {
-      padding: var(--spacing-x3);
-    }
-    ${mediaWidth('max', 'xxs')} {
-      padding: var(--spacing-x2);
+      padding: var(--spacing-x4) var(--spacing-x3);
     }
   `,
 
@@ -106,23 +99,22 @@ export const SC = {
     display: flex;
     gap: var(--spacing-x4);
     flex-wrap: wrap;
-    max-width: 85%;
-    ${mediaWidth('max', 'sm')} {
-      max-width: 100%;
-    }
   `,
 
-  Input: styled.div`
+  InputWrapper: styled.div`
     position: relative;
     flex: 1;
     border: 1px solid rgba(33, 31, 31, 1);
-    min-width: 220px;
+    min-width: 300px;
     min-height: 100%;
-
+    ${mediaWidth('max', 'xxs')} {
+      min-width: 220px;
+    }
     input,
-    textarea {
+    textarea,
+    select {
       background: transparent;
-      padding: 15px;
+      padding: var(--spacing-x2);
       color: white;
       width: 100%;
       min-height: 100%;
@@ -134,6 +126,17 @@ export const SC = {
       }
     }
 
+    select {
+      padding-left: calc(var(--spacing) * 1.5);
+      cursor: pointer;
+      width: calc(100% - 5px);
+
+      option {
+        background: var(--color-black);
+        color: white;
+      }
+    }
+
     textarea {
       height: 100px;
       white-space: pre-wrap;
@@ -141,7 +144,7 @@ export const SC = {
     }
 
     .form-error {
-      color: red;
+      color: indianred;
       font-size: var(--font-size-thin);
       position: absolute;
       top: 110%;
@@ -174,15 +177,13 @@ export const SC = {
     background-color: rgba(250, 250, 250, 0.02);
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    min-width: calc(32% - var(--spacing-x2));
-    padding: calc(var(--spacing) * 6) 0;
+    padding: var(--spacing-x4) 0;
     flex: 1;
     gap: var(--spacing);
+    max-width: 360px;
 
-    ${mediaWidth('max', 'md')} {
-      padding: var(--spacing-x4) 0;
-    }
     ${mediaWidth('max', 'sm')} {
       min-width: 100%;
       flex-direction: row;
@@ -202,11 +203,12 @@ export const SC = {
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    min-height: 60%;
     gap: var(--spacing);
     padding: 0 var(--spacing-x4);
-    ${mediaWidth('max', 'sm')} {
+    ${mediaWidth('max', 'md')} {
       padding: 0 var(--spacing-x2);
+    }
+    ${mediaWidth('max', 'sm')} {
       min-height: 100%;
       min-width: 50%;
     }
@@ -219,23 +221,9 @@ export const SC = {
     }
   `,
 
-  FirstLogo: styled.div<{ src: string }>`
-    background-image: url('${({ src }) => src}');
-    background-size: cover;
-    width: 230px;
-    height: 200px;
-    ${mediaWidth('max', 'md')} {
-      width: 200px;
-      height: 170px;
-    }
-    ${mediaWidth('max', 'sm')} {
-      width: 170px;
-      height: 140px;
-    }
-    ${mediaWidth('max', 'xxs')} {
-      width: 150px;
-      height: 130px;
-    }
+  Logo: styled.img`
+    max-width: 230px;
+    width: 100%;
   `,
 
   BrigadeName: styled.div`
@@ -272,42 +260,23 @@ export const SC = {
   SecondLogoWrapper: styled.div`
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     min-width: 100%;
-    min-height: 40%;
     border-top: 1px solid rgba(250, 250, 250, 0.1);
-    ${mediaWidth('max', 'md')} {
-      align-items: center;
-    }
+    padding-top: calc(var(--spacing) * 10);
+    margin: auto;
+
     ${mediaWidth('max', 'sm')} {
       border-top: none;
       min-height: 100%;
       min-width: 50%;
+      padding-top: 0;
     }
     ${mediaWidth('max', 'xxs')} {
       border-top: 1px solid rgba(250, 250, 250, 0.1);
       min-height: calc(40% - var(--spacing-x2));
       min-width: 100%;
       padding: var(--spacing) 0;
-    }
-  `,
-
-  SecondLogo: styled.div<{ src: string }>`
-    background-image: url('${({ src }) => src}');
-    background-size: cover;
-    width: 230px;
-    height: 200px;
-    ${mediaWidth('max', 'md')} {
-      width: 200px;
-      height: 170px;
-    }
-    ${mediaWidth('max', 'sm')} {
-      width: 170px;
-      height: 140px;
-    }
-    ${mediaWidth('max', 'xxs')} {
-      width: 150px;
-      height: 130px;
     }
   `,
 };
