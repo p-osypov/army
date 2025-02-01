@@ -1,5 +1,34 @@
 {
-  "contacts": "КОНТАКТИ",
-  "title": "Заповнюй заявку і вривайся",
-  "text": "За допомогою дронів бригада може завчасно виявляти позиції ворога і реагувати максимально ефективно​."
+  "contacts": "KONTAKTY",
+  "title": "Wypełnij aplikację i rozpocznij",
+  "text": "Przy pomocy dronów brygada może z wyprzedzeniem wykryć pozycje wroga i możliwie najskuteczniej zareagować.",
+  "sendBtn": "Wyślij aplikację",
+  "brigadeName": "103 Brygada SRO nazwana na cześć Metropolita Andriej Szeptycki",
+  "unitName": "«Chornyi stryzh»",
+  "placeholders": {
+    "fullName": "Pełna nazwa ",
+    "email": "Adres e-mail",
+    "phone": "+380",
+    "vacancy": "Wakat",
+    "message": "Wiadomość"
+  },
+  "errors": {
+    "fullName": "Wpisz swoje imię i nazwisko",
+    "invalidFullName": "Nieprawidłowo wprowadzona nazwa",
+    "invalidEmail": "Nieprawidłowy adres e-mail",
+    "email": "Wpisz swój adres e-mail",
+    "phoneFormat": "Nieprawidłowy format",
+    "phone": "Nieprawidłowy numer",
+    "vacancy": "Wybierz wakat",
+    "messageTooLong": "Wiadomość jest zbyt długa",
+    "message": "Wypełnij pole"
+  },
+  "vacancies": {
+    "fpv": "Operator dronów (FPV i ciężkie bombowce)",
+    "mavic": "Operator dronów (Mavic)",
+    "wings": "Operator dronów (Skrzydełka)",
+    "sapper": "Inżynier",
+    "driver": "Kierowca",
+    "analyst": "Analityk (dekoder)"
+  }
 }

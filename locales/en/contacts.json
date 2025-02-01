@@ -1,5 +1,34 @@
 {
-  "contacts": "КОНТАКТИ",
-  "title": "Заповнюй заявку і вривайся",
-  "text": "За допомогою дронів бригада може завчасно виявляти позиції ворога і реагувати максимально ефективно​."
+  "contacts": "CONTACTS",
+  "title": "Fill out the application and break in",
+  "text": "With the help of drones, the brigade can detect enemy positions in advance and respond as effectively as possible.",
+  "sendBtn": "Send a request",
+  "brigadeName": "103rd Metropolitan Andrei Sheptytskyi Regional Fire Brigade",
+  "unitName": "«Chornyi stryzh»",
+  "placeholders": {
+    "fullName": "Full name",
+    "email": "Email address",
+    "phone": "+380",
+    "vacancy": "Vacancy",
+    "message": "Message"
+  },
+  "errors": {
+    "fullName": "Enter full name",
+    "invalidFullName": "Invalid full name",
+    "invalidEmail": "Invalid email",
+    "email": "Enter email",
+    "phoneFormat": "Invalid phone format",
+    "phone": "Enter phone number",
+    "vacancy": "Choose a vacancy",
+    "messageTooLong": "Message too long",
+    "message": "Fill in the field"
+  },
+  "vacancies": {
+    "fpv": "Drone operator (FPV and heavy bombers)",
+    "mavic": "Drone operator (Mavic)",
+    "wings": "Drone operator (Wings)",
+    "sapper": "Sapper",
+    "driver": "Driver",
+    "analyst": "Analyst (decoder)"
+  }
 }
