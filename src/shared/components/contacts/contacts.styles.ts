@@ -1,6 +1,5 @@
 import { Container } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
-import { Field } from 'formik';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 
