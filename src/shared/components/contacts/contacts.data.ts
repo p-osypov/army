@@ -45,20 +45,19 @@ export const contactsSliderSettings = {
   ],
 };
 
-export const formArray = [
-  { id: uuidv4(), name: 'fullName', placeholder: 'ПІБ', type: 'text' },
-  {
-    id: uuidv4(),
-    name: 'email',
-    placeholder: 'Електронна адреса',
-    type: 'email',
-  },
-  { id: uuidv4(), name: 'phone', placeholder: '+380 (_) ', type: 'tel' },
-  { id: uuidv4(), name: 'vacancy', placeholder: 'Вакансія', type: 'text' },
-  {
-    id: uuidv4(),
-    name: 'message',
-    placeholder: 'Повідомлення',
-    type: 'textarea',
-  },
+export const initialValues = {
+  fullName: '',
+  email: '',
+  phone: '+380',
+  vacancy: '',
+  message: '',
+};
+
+export const vacancies = [
+  { id: 'fpv', key: 'vacancies.fpv' },
+  { id: 'mavic', key: 'vacancies.mavic' },
+  { id: 'wings', key: 'vacancies.wings' },
+  { id: 'sapper', key: 'vacancies.sapper' },
+  { id: 'driver', key: 'vacancies.driver' },
+  { id: 'analyst', key: 'vacancies.analyst' },
 ];
