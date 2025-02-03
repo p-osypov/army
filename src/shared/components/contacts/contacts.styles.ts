@@ -40,7 +40,6 @@ export const SC = {
 
   CooperationImage: styled.img`
     width: 174px;
-    height: 153px;
   `,
 
   ContactsForm: styled.div`
@@ -118,7 +117,6 @@ export const SC = {
       width: 100%;
       min-height: 100%;
       border: none;
-      resize: none;
 
       &::placeholder {
         color: white;
@@ -137,9 +135,8 @@ export const SC = {
     }
 
     textarea {
+      resize: none;
       height: 100px;
-      white-space: pre-wrap;
-      word-wrap: break-word;
     }
 
     .form-error {
