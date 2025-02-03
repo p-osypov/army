@@ -1,5 +1,20 @@
 {
-  "vacancies": "WAKATY",
+  "label": "WAKATY",
   "title": "Wakaty w 103 brygadzie “Chornyi Stryzh”",
-  "pullHere": "Pociągnij tutaj"
+  "pullHere": "Pociągnij tutaj",
+  "learnMore": "Dowiedz się więcej",
+  "vacancies": {
+    "fpv": "Operator dronów (FPV i ciężkie bombowce)",
+    "fpv-text": "Pokonanie i zniszczenie wroga.",
+    "mavic": "Operator dronów (Mavic)",
+    "mavic-text": "Specjaliści od rozpoznania i korekty z powietrza.",
+    "wings": "Operator dronów (Skrzydełka)",
+    "wings-text": "Profesjonaliści z pojazdami zwiadowczymi dalekiego zasięgu.",
+    "sapper": "Inżynier",
+    "sapper-text": "Specjaliści ds. bezpieczeństwa i obsługi amunicji.",
+    "driver": "Kierowca",
+    "driver-text": "Wsparcie mobilne - logistyka i szybkość.",
+    "analyst": "Analityk (dekoder)",
+    "analyst-text": "Ci, którzy widzą więcej i zapewniają świadomość sytuacyjną."
+  }
 }

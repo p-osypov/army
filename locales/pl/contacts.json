@@ -1,5 +1,5 @@
 {
-  "contacts": "KONTAKTY",
+  "label": "KONTAKTY",
   "title": "Wypełnij aplikację i rozpocznij",
   "text": "Przy pomocy dronów brygada może z wyprzedzeniem wykryć pozycje wroga i możliwie najskuteczniej zareagować.",
   "sendBtn": "Wyślij aplikację",
@@ -22,13 +22,5 @@
     "vacancy": "Wybierz wakat",
     "messageTooLong": "Wiadomość jest zbyt długa",
     "message": "Wypełnij pole"
-  },
-  "vacancies": {
-    "fpv": "Operator dronów (FPV i ciężkie bombowce)",
-    "mavic": "Operator dronów (Mavic)",
-    "wings": "Operator dronów (Skrzydełka)",
-    "sapper": "Inżynier",
-    "driver": "Kierowca",
-    "analyst": "Analityk (dekoder)"
   }
 }

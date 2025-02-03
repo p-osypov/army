@@ -1,5 +1,5 @@
 {
-  "contacts": "CONTACTS",
+  "label": "CONTACTS",
   "title": "Fill out the application and break in",
   "text": "With the help of drones, the brigade can detect enemy positions in advance and respond as effectively as possible.",
   "sendBtn": "Send a request",
@@ -22,13 +22,5 @@
     "vacancy": "Choose a vacancy",
     "messageTooLong": "Message too long",
     "message": "Fill in the field"
-  },
-  "vacancies": {
-    "fpv": "Drone operator (FPV and heavy bombers)",
-    "mavic": "Drone operator (Mavic)",
-    "wings": "Drone operator (Wings)",
-    "sapper": "Sapper",
-    "driver": "Driver",
-    "analyst": "Analyst (decoder)"
   }
 }
