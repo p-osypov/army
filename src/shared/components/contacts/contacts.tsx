@@ -5,17 +5,21 @@ import {
   contactsSliderSettings,
   cooperationArray,
   initialValues,
-  vacancies,
 } from './contacts.data';
 import { Formik, Form, ErrorMessage, Field } from 'formik';
 import * as Yup from 'yup';
+import { vacanciesArray } from '@/modules/home/vacancies/vacancies.data';
 
 function Contacts() {
   const { t } = useTranslation('contacts');
+  const { t: tV } = useTranslation('vacancies');
 
   const validationSchema = Yup.object().shape({
     fullName: Yup.string()
-      .matches(/^[A-Za-zА-Яа-яЁё\s]+$/, t('errors.invalidFullName'))
+      .matches(
+        /^[A-Za-zА-Яа-яЁёІіЇїЄєŁłĄąĆćĘęŃńÓóŚśŹźŻż\s]+$/,
+        t('errors.invalidFullName'),
+      )
       .required(t('errors.fullName')),
     email: Yup.string()
       .email(t('errors.invalidEmail'))
@@ -47,7 +51,7 @@ function Contacts() {
         <SC.ContactsForm>
           <SC.FormBlock>
             <SC.TitleBlock>
-              <Label>{t('contacts')}</Label>
+              <Label>{t('label')}</Label>
               <Title.Span>{t('title')}</Title.Span>
               <SC.Subtitle>{t('text')}</SC.Subtitle>
             </SC.TitleBlock>
@@ -101,9 +105,9 @@ function Contacts() {
                     <SC.InputWrapper>
                       <Field as="select" name="vacancy">
                         <option value="">{t('placeholders.vacancy')}</option>
-                        {vacancies.map((vacancy) => (
+                        {vacanciesArray.map((vacancy) => (
                           <option key={vacancy.id} value={vacancy.id}>
-                            {t(vacancy.key)}
+                            {tV(vacancy.militaryRank)}
                           </option>
                         ))}
                       </Field>

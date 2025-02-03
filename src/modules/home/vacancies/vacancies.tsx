@@ -11,7 +11,7 @@ function Vacancies() {
     <SC.Section>
       <SC.Content>
         <SC.TitleBlock>
-          <Label>{t('vacancies')}</Label>
+          <Label>{t('label')}</Label>
           <SC.Subtitle>{t('title')}</SC.Subtitle>
         </SC.TitleBlock>
         <SC.Scrollbar>
@@ -21,10 +21,10 @@ function Vacancies() {
                 <SC.Image src={vacancy.image} />
                 <SC.InfoBlock>
                   <SC.InfoBlockItem>
-                    <SC.MilitaryRank>{vacancy.militaryRank}</SC.MilitaryRank>
-                    <SC.BlockText>{vacancy.text}</SC.BlockText>
-                    <SC.LearnMoreBtn href={vacancy.url}>
-                      {vacancy.learnMore} <Icons.ArrowRight className="icon" />
+                    <SC.MilitaryRank>{t(vacancy.militaryRank)}</SC.MilitaryRank>
+                    <SC.BlockText>{t(vacancy.text)}</SC.BlockText>
+                    <SC.LearnMoreBtn href={t(vacancy.url)}>
+                      {t('learnMore')} <Icons.ArrowRight className="icon" />
                     </SC.LearnMoreBtn>
                   </SC.InfoBlockItem>
                 </SC.InfoBlock>

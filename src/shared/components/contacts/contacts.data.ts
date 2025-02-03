@@ -52,12 +52,3 @@ export const initialValues = {
   vacancy: '',
   message: '',
 };
-
-export const vacancies = [
-  { id: 'fpv', key: 'vacancies.fpv' },
-  { id: 'mavic', key: 'vacancies.mavic' },
-  { id: 'wings', key: 'vacancies.wings' },
-  { id: 'sapper', key: 'vacancies.sapper' },
-  { id: 'driver', key: 'vacancies.driver' },
-  { id: 'analyst', key: 'vacancies.analyst' },
-];
