@@ -4,17 +4,17 @@
   "pullHere": "Pull here",
   "learnMore": "Learn more",
   "vacancies": {
-    "fpv": "Drone operator (FPV and heavy bombers)",
-    "fpv-text": "Defeat and destruction of the enemy.",
-    "mavic": "Drone operator (Mavic)",
-    "mavic-text": "Specialists in aerial reconnaissance and correction.",
-    "wings": "Drone operator (Wings)",
-    "wings-text": "Professionals with long-range reconnaissance vehicles.",
-    "sapper": "Sapper",
-    "sapper-text": "Specialists in security and ammunition handling.",
-    "driver": "Driver",
-    "driver-text": "Mobile support - logistics and speed.",
-    "analyst": "Analyst (decoder)",
-    "analyst-text": "Those who see more and provide situational awareness."
+    "fpvTitle": "Drone operator (FPV and heavy bombers)",
+    "fpvDescription": "Defeat and destruction of the enemy.",
+    "mavicTitle": "Drone operator (Mavic)",
+    "mavicDescription": "Specialists in aerial reconnaissance and correction.",
+    "wingsTitle": "Drone operator (Wings)",
+    "wingsDescription": "Professionals with long-range reconnaissance vehicles.",
+    "sapperTitle": "Sapper",
+    "sapperDescription": "Specialists in security and ammunition handling.",
+    "driverTitle": "Driver",
+    "driverDescription": "Mobile support - logistics and speed.",
+    "analystTitle": "Analyst (decoder)",
+    "analystDescription": "Those who see more and provide situational awareness."
   }
 }
