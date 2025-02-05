@@ -1,5 +1,20 @@
 {
-  "vacancies": "VACANCIES",
+  "label": "VACANCIES",
   "title": "Vacancies of the 103rd Brigade “Chornyi Stryzh”",
-  "pullHere": "Pull here"
+  "pullHere": "Pull here",
+  "learnMore": "Learn more",
+  "vacancies": {
+    "fpvTitle": "Drone operator (FPV and heavy bombers)",
+    "fpvDescription": "Defeat and destruction of the enemy.",
+    "mavicTitle": "Drone operator (Mavic)",
+    "mavicDescription": "Specialists in aerial reconnaissance and correction.",
+    "wingsTitle": "Drone operator (Wings)",
+    "wingsDescription": "Professionals with long-range reconnaissance vehicles.",
+    "sapperTitle": "Sapper",
+    "sapperDescription": "Specialists in security and ammunition handling.",
+    "driverTitle": "Driver",
+    "driverDescription": "Mobile support - logistics and speed.",
+    "analystTitle": "Analyst (decoder)",
+    "analystDescription": "Those who see more and provide situational awareness."
+  }
 }
