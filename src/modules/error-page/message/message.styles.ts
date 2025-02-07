@@ -1,4 +1,5 @@
 import { mediaWidth } from '@/shared/assets/styles/mixins';
+import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -9,6 +10,7 @@ const Container = styled.div`
   align-items: center;
   color: var(--color-white);
   font-weight: var(--font-weight-semi-bold);
+  padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x4));
 `;
 
 const MainText = styled.div`

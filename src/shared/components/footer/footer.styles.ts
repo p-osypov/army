@@ -7,6 +7,7 @@ export const SC = {
   Footer: styled.footer`
     color: var(--color-white);
     padding-top: var(--spacing-x2);
+    background-color: rgba(17, 17, 17, 1);
   `,
 
   Container: styled(Container)`
