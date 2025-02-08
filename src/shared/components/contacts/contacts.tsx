@@ -8,7 +8,7 @@ import {
 } from './contacts.data';
 import { Formik, Form, ErrorMessage, Field } from 'formik';
 import * as Yup from 'yup';
-import { vacanciesArray } from '@/modules/home/vacancies/vacancies.data';
+import { vacanciesArray } from '@/shared/vacancies-card/vacancies.mock';
 
 function Contacts() {
   const { t } = useTranslation('contacts');

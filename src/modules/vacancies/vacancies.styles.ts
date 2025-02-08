@@ -1,6 +1,6 @@
 import { Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
-import { Scrollbar } from 'react-scrollbars-custom';
+import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
 import styled from 'styled-components';
 
 export const cardHeight = {
@@ -8,7 +8,6 @@ export const cardHeight = {
   xs: 300,
   xxs: 200,
 };
-export const scrollBarPadding = 30;
 
 export const SC = {
   Section: styled.section`
@@ -26,76 +25,55 @@ export const SC = {
   `,
 
   Content: styled(Container)`
+    padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x4));
     position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-x2);
-
-    .ScrollbarsCustom {
-      &-TrackX {
-        border-radius: initial !important;
-        height: 4px !important;
-        width: 100% !important;
-        left: 0 !important;
-      }
-      &-ThumbX {
-        background-color: var(--color-accent) !important;
-        border-radius: initial !important;
-      }
-    }
   `,
 
   TitleBlock: styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--spacing-x2);
     margin-bottom: var(--spacing-x4);
   `,
 
   Title: styled(Title.Span)`
-    text-align: center;
-    max-width: 580px;
+    max-width: 600px;
     ${mediaWidth('max', 'xs')} {
       max-width: 400px;
     }
   `,
 
-  Scrollbar: styled(Scrollbar)`
-    height: ${cardHeight.lg + scrollBarPadding}px!important;
-    ${mediaWidth('max', 'xs')} {
-      height: ${cardHeight.xs + scrollBarPadding}px!important;
-    }
+  Subtitle: styled.p`
+    opacity: 70%;
+    line-height: 1.5;
+    font-size: var(--font-size-medium);
+    max-width: 630px;
     ${mediaWidth('max', 'xxs')} {
-      height: ${cardHeight.xxs + scrollBarPadding}px!important;
+      font-size: var(--font-size-normal);
     }
   `,
 
   Vacancies: styled.div`
     display: flex;
     gap: calc(var(--spacing) * 6);
+    flex-wrap: wrap;
   `,
 
   CardWrapper: styled.div`
-    max-width: 500px;
-    min-width: 500px;
     min-height: ${cardHeight.lg}px;
+    min-width: 400px;
+    flex: 1;
+
     ${mediaWidth('max', 'xs')} {
-      max-width: 400px;
-      min-width: 400px;
+      min-width: 250px;
       min-height: ${cardHeight.xs}px;
     }
     ${mediaWidth('max', 'xxs')} {
-      max-width: 300px;
-      min-width: 300px;
       min-height: ${cardHeight.xxs}px;
-    }
-  `,
-
-  PullHere: styled.span`
-    font-size: var(--font-size-normal);
-    ${mediaWidth('max', 'xs')} {
-      font-size: var(--font-size-small);
     }
   `,
 };

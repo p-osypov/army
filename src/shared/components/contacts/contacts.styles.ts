@@ -6,7 +6,8 @@ import styled from 'styled-components';
 export const SC = {
   Section: styled.section`
     color: var(--color-white);
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+    background-color: rgba(17, 17, 17, 1);
   `,
 
   Content: styled(Container)`
