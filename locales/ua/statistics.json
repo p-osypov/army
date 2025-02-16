@@ -4,5 +4,16 @@
   "moreStatistics": "Більше статистики",
   "goals": "Цілі",
   "impressed": "Уражено",
-  "destroyed": "Знищено"
+  "destroyed": "Знищено",
+  "militaryEquipment": {
+    "ew": "РЕБ",
+    "ad": "ППО",
+    "tanks": "ЛАТ",
+    "lat": "ББМ",
+    "afv": "РЕБ",
+    "mtv": "ВАТ",
+    "mlrs": "РСЗВ",
+    "shelter": "Укриття",
+    "antennasAndCameras": "Антени і камери"
+  }
 }

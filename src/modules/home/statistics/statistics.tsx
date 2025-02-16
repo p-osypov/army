@@ -25,7 +25,7 @@ function Statistics() {
               )}
               <SC.CardContainer>
                 <SC.MilitaryEquipment>
-                  {member.militaryEquipment}
+                  {t(member.militaryEquipment)}
                 </SC.MilitaryEquipment>
                 <SC.NumImpressed $lowOpacity>
                   {member.impressed}
