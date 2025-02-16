@@ -3,7 +3,7 @@ import Icons from '@/shared/assets/icons';
 import { SC } from '@/shared/components/header/header.styles';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { ROUTER } from '@/shared/constants';
 
@@ -14,7 +14,6 @@ const menuItems = [
 
 function Header() {
   const { t, lang } = useTranslation('header');
-
   const router = useRouter();
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
 
@@ -23,13 +22,28 @@ function Header() {
   );
 
   const toggleLanguageMenu = () => setIsLanguageMenuOpen((prev) => !prev);
-
   const changeLanguage = (selectedLang: string) => {
     if (selectedLang !== lang) {
       setIsLanguageMenuOpen(false);
       router.push(router.pathname, router.asPath, { locale: selectedLang });
     }
   };
+
+  const languageMenuRef = useRef<HTMLDivElement | null>(null);
+
+  const handleClickOutside = (e: MouseEvent) => {
+    if (
+      languageMenuRef.current &&
+      !languageMenuRef.current.contains(e.target as Node)
+    ) {
+      setIsLanguageMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <SC.Header>
@@ -45,7 +59,7 @@ function Header() {
             </Link>
           ))}
         </SC.Navigation>
-        <SC.LanguageSelector>
+        <SC.LanguageSelector ref={languageMenuRef}>
           <SC.Language onClick={toggleLanguageMenu}>
             <SC.LangIcon src={`/img/${lang}.svg`} />
             <SC.LangText>{lang.toUpperCase()}</SC.LangText>
@@ -73,4 +87,5 @@ function Header() {
     </SC.Header>
   );
 }
+
 export default Header;
