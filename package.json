@@ -1,6 +1,6 @@
 {
   "name": "army",
-  "version": "0.2.0",
+  "version": "0.10.0",
   "private": false,
   "scripts": {
     "dev": "next dev",
