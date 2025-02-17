@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { ROUTER } from '@/shared/constants';
+import useClickOutside from '@/shared/hooks/click-outside';
 
 const menuItems = [
   { href: ROUTER.DONATIONS, tranKey: 'donations' },
@@ -29,21 +30,7 @@ function Header() {
     }
   };
 
-  const languageMenuRef = useRef<HTMLDivElement | null>(null);
-
-  const handleClickOutside = (e: MouseEvent) => {
-    if (
-      languageMenuRef.current &&
-      !languageMenuRef.current.contains(e.target as Node)
-    ) {
-      setIsLanguageMenuOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const dropdownRef = useClickOutside(() => setIsLanguageMenuOpen(false));
 
   return (
     <SC.Header>
@@ -59,7 +46,7 @@ function Header() {
             </Link>
           ))}
         </SC.Navigation>
-        <SC.LanguageSelector ref={languageMenuRef}>
+        <SC.LanguageSelector ref={dropdownRef}>
           <SC.Language onClick={toggleLanguageMenu}>
             <SC.LangIcon src={`/img/${lang}.svg`} />
             <SC.LangText>{lang.toUpperCase()}</SC.LangText>
