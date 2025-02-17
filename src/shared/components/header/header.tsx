@@ -3,7 +3,7 @@ import Icons from '@/shared/assets/icons';
 import { SC } from '@/shared/components/header/header.styles';
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { ROUTER } from '@/shared/constants';
 import useClickOutside from '@/shared/hooks/click-outside';
