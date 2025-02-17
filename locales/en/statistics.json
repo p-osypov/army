@@ -4,5 +4,16 @@
   "moreStatistics": "More statistics",
   "goals": "Goals",
   "impressed": "Impressed",
-  "destroyed": "Destroyed"
+  "destroyed": "Destroyed",
+  "militaryEquipment": {
+    "ew": "EW",
+    "ad": "AD",
+    "tanks": "Tanks",
+    "lat": "LAT",
+    "afv": "AFV",
+    "mtv": "MTV",
+    "mlrs": "MLRS",
+    "shelter": "Shelter",
+    "antennasAndCameras": "Antennas and cameras"
+  }
 }

@@ -4,5 +4,16 @@
   "moreStatistics": "Więcej statystyk",
   "goals": "Cele",
   "impressed": "Dotknięty",
-  "destroyed": "Zniszczony"
+  "destroyed": "Zniszczony",
+  "militaryEquipment": {
+    "ew": "OP",
+    "ad": "AD",
+    "tanks": "Czołgi",
+    "lat": "LTO",
+    "afv": "BWO",
+    "mtv": "WPT",
+    "mlrs": "WWR",
+    "shelter": "Schron",
+    "antennasAndCameras": "Anteny i kamery"
+  }
 }
