@@ -32,6 +32,9 @@ export const SC = {
     ${mediaWidth('max', 'sm')} {
       padding: 12px 28px;
     }
+    ${mediaWidth('max', 'xxs')} {
+      gap: var(--spacing);
+    }
   `,
 
   TitleLogo: styled(Link)`
@@ -51,7 +54,7 @@ export const SC = {
 
   Title: styled.span`
     font-weight: var(--font-weight-bold);
-    font-size: 22px;
+    font-size: calc(var(--font-size-normal) * 1.375);
     ${mediaWidth('max', 'md')} {
       display: none;
     }
@@ -59,17 +62,52 @@ export const SC = {
 
   Navigation: styled.nav`
     display: flex;
+    align-items: center;
     gap: var(--spacing-x3);
     flex: 1;
     justify-content: center;
+    text-align: center;
     ${mediaWidth('max', 'sm')} {
       display: none;
     }
   `,
 
-  LanguageSelector: styled.div`
+  BurgerButton: styled.button`
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    ${mediaWidth('max', 'sm')} {
+      display: flex;
+      align-items: center;
+    }
+  `,
+
+  MobileNavigation: styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-x4);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding-top: 200px;
+    z-index: calc(var(--z-index-header) - 1);
+  `,
+
+  MenuIcon: styled.img`
+    width: 32px;
+    height: 32px;
+  `,
+
+  LanguageSelector: styled.div<{ $isMenuOpen: boolean }>`
     position: relative;
     ${mediaWidth('max', 'sm')} {
+      display: ${({ $isMenuOpen }) => ($isMenuOpen ? 'none' : 'flex')};
       margin-left: auto;
     }
   `,
@@ -108,11 +146,11 @@ export const SC = {
     top: calc(100% + 5px);
   `,
 
-  SuppButton: styled(Link)`
+  SuppButton: styled(Link)<{ $isMenuOpen: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px var(--spacing-x4);
+    padding: calc(var(--spacing) * 2.5) var(--spacing-x4);
     border-radius: 100px;
     gap: var(--spacing);
     min-width: 174px;
@@ -128,13 +166,15 @@ export const SC = {
       width: 14px;
     }
     ${mediaWidth('max', 'md')} {
-      padding: 18px var(--spacing-x3);
+      padding: var(--spacing-x2) var(--spacing-x3);
     }
     ${mediaWidth('max', 'sm')} {
-      padding: var(--spacing-x2) var(--spacing-x2);
+      display: ${({ $isMenuOpen }) => ($isMenuOpen ? 'flex' : 'none')};
+      margin-left: auto;
     }
     ${mediaWidth('max', 'xxs')} {
-      display: none;
+      padding: calc(var(--spacing) * 1.5) var(--spacing);
+      min-width: 130px;
     }
   `,
 };
