@@ -84,7 +84,7 @@ export const SC = {
   `,
 
   MobileNavigation: styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
