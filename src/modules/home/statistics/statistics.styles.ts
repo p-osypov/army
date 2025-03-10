@@ -5,14 +5,8 @@ import styled from 'styled-components';
 export const SC = {
   Section: styled.section`
     color: var(--color-white);
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     ${mediaWidth('max', 'lg')} {
-      margin-bottom: 70px;
-    }
-    ${mediaWidth('max', 'md')} {
-      margin-bottom: 50px;
-    }
-    ${mediaWidth('max', 'sm')} {
       margin-bottom: 30px;
     }
   `,
@@ -22,6 +16,27 @@ export const SC = {
     flex-direction: column;
     align-items: center;
     gap: calc(var(--spacing) * 6);
+    position: relative;
+  `,
+
+  LeftCloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -40%);
+    pointer-events: none;
+    user-select: none;
+  `,
+
+  RightCloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -30%);
+    pointer-events: none;
+    user-select: none;
   `,
 
   AnalyticsBlock: styled.div`

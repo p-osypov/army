@@ -45,6 +45,36 @@ export const SC = {
     }
   `,
 
+  LeftTopCloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-70%, -40%);
+    pointer-events: none;
+    user-select: none;
+  `,
+
+  LeftBottomCloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-70%, 10%);
+    pointer-events: none;
+    user-select: none;
+  `,
+
+  RightCloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -40%);
+    pointer-events: none;
+    user-select: none;
+  `,
+
   TitleBlock: styled.div`
     display: flex;
     flex-direction: column;

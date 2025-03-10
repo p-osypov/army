@@ -40,6 +40,7 @@ function Contacts() {
   return (
     <SC.Section>
       <SC.Content>
+        <SC.RightCloudImage src="/img/cloud.png" />
         <SC.Slider {...contactsSliderSettings}>
           {cooperationArray.map((item) => (
             <SC.Cooperation key={item.id}>

@@ -7,12 +7,28 @@ export const SC = {
   Section: styled.section`
     color: var(--color-white);
     margin-bottom: 100px;
+    background-image: url(/img/media-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
   `,
 
   Content: styled(Container)`
+    padding-top: 70px;
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 6);
+    position: relative;
+  `,
+
+  RightCloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(60%, -30%);
+    pointer-events: none;
+    user-select: none;
   `,
 
   TitleBlock: styled.div`

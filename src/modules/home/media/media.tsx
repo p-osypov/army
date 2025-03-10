@@ -18,6 +18,7 @@ function Media() {
   return (
     <SC.Section>
       <SC.Content>
+        <SC.RightCloudImage src="/img/cloud.png" />
         <SC.TitleBlock>
           <Label>{t('media')}</Label>
           <Title.Span>{t('title')}</Title.Span>

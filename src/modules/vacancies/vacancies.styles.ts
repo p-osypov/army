@@ -32,6 +32,16 @@ export const SC = {
     gap: var(--spacing-x2);
   `,
 
+  CloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-65%, -30%);
+    pointer-events: none;
+    user-select: none;
+  `,
+
   TitleBlock: styled.div`
     display: flex;
     flex-direction: column;

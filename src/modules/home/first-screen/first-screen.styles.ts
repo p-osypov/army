@@ -8,17 +8,11 @@ import Link from 'next/link';
 export const SC = {
   Section: styled.section`
     color: var(--color-white);
-    margin-bottom: 100px;
-
+    margin-bottom: 70px;
     ${mediaWidth('max', 'lg')} {
-      margin-bottom: 70px;
-    }
-
-    ${mediaWidth('max', 'md')} {
       margin-bottom: 50px;
     }
-
-    ${mediaWidth('max', 'sm')} {
+    ${mediaWidth('max', 'md')} {
       margin-bottom: 30px;
     }
   `,
@@ -27,17 +21,29 @@ export const SC = {
     background-image: url(/img/first-screen-bg.png);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding-bottom: var(--spacing);
-    min-height: 100vh;
+    min-height: 700px;
+    height: 100vh;
+    max-height: 960px;
+    position: relative;
     padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x4));
     ${mediaWidth('max', 'md')} {
       padding-top: calc(${HEADER_HEIGHT}px + var(--spacing-x2));
     }
+  `,
+
+  CloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-65%, -15%);
+    pointer-events: none;
+    user-select: none;
   `,
 
   UnitName: styled(Label)`

@@ -14,6 +14,17 @@ export const SC = {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 6);
+    position: relative;
+  `,
+
+  RightCloudImage: styled.img`
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(70%, 15%);
+    pointer-events: none;
+    user-select: none;
   `,
 
   Slider: styled(Slider)`

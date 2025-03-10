@@ -10,6 +10,7 @@ function FirstScreen() {
   return (
     <SC.Section>
       <SC.Content>
+        <SC.CloudImage src="/img/cloud.png" />
         <SC.UnitName>{t('unitName')}</SC.UnitName>
         <SC.Title>
           {t('title')} <br className="br" />
