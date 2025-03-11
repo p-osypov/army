@@ -1,4 +1,4 @@
-import { Container, Title } from '@/shared/assets/styles/layout';
+import { cloudStyles, Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { Scrollbar } from 'react-scrollbars-custom';
 import styled from 'styled-components';
@@ -43,6 +43,24 @@ export const SC = {
         border-radius: initial !important;
       }
     }
+  `,
+
+  LeftTopCloudImage: styled.img`
+    ${cloudStyles}
+    left: 0;
+    transform: translate(-70%, -40%);
+  `,
+
+  LeftBottomCloudImage: styled.img`
+    ${cloudStyles}
+    left: 0;
+    transform: translate(-70%, 10%);
+  `,
+
+  RightCloudImage: styled.img`
+    ${cloudStyles}
+    right: 0;
+    transform: translate(50%, -40%);
   `,
 
   TitleBlock: styled.div`

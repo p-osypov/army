@@ -10,6 +10,9 @@ function Vacancies() {
   return (
     <SC.Section>
       <SC.Content>
+        <SC.LeftTopCloudImage src="/img/cloud.png" />
+        <SC.LeftBottomCloudImage src="/img/cloud.png" />
+        <SC.RightCloudImage src="/img/cloud.png" />
         <SC.TitleBlock>
           <Label>{t('label')}</Label>
           <SC.Title>{t('title')}</SC.Title>

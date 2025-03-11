@@ -9,6 +9,8 @@ function Statistics() {
   return (
     <SC.Section>
       <SC.Content>
+        <SC.LeftCloudImage src="/img/cloud.png" />
+        <SC.RightCloudImage src="/img/cloud.png" />
         <SC.AnalyticsBlock>
           <Label>{t('affectedForces')}</Label>
           <SC.Title>{t('title')}</SC.Title>

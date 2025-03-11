@@ -1,4 +1,4 @@
-import { Container } from '@/shared/assets/styles/layout';
+import { cloudStyles, Container } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import Slider from '@/shared/components/slider';
 import styled from 'styled-components';
@@ -14,6 +14,13 @@ export const SC = {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 6);
+    position: relative;
+  `,
+
+  RightCloudImage: styled.img`
+    ${cloudStyles}
+    right: 0;
+    transform: translate(70%, 15%);
   `,
 
   Slider: styled(Slider)`

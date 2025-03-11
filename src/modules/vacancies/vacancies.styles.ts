@@ -1,4 +1,4 @@
-import { Container, Title } from '@/shared/assets/styles/layout';
+import { cloudStyles, Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
 import styled from 'styled-components';
@@ -30,6 +30,12 @@ export const SC = {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-x2);
+  `,
+
+  CloudImage: styled.img`
+    ${cloudStyles}
+    left: 0;
+    transform: translate(-65%, -30%);
   `,
 
   TitleBlock: styled.div`
