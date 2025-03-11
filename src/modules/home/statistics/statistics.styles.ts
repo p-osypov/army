@@ -1,4 +1,4 @@
-import { Container, Title } from '@/shared/assets/styles/layout';
+import { cloudStyles, Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import styled from 'styled-components';
 
@@ -20,23 +20,15 @@ export const SC = {
   `,
 
   LeftCloudImage: styled.img`
-    height: 100%;
-    position: absolute;
-    top: 0;
+    ${cloudStyles}
     left: 0;
     transform: translate(-50%, -40%);
-    pointer-events: none;
-    user-select: none;
   `,
 
   RightCloudImage: styled.img`
-    height: 100%;
-    position: absolute;
-    top: 0;
+    ${cloudStyles}
     right: 0;
     transform: translate(50%, -30%);
-    pointer-events: none;
-    user-select: none;
   `,
 
   AnalyticsBlock: styled.div`

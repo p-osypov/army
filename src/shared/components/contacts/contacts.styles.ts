@@ -1,4 +1,4 @@
-import { Container } from '@/shared/assets/styles/layout';
+import { cloudStyles, Container } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import Slider from '@/shared/components/slider';
 import styled from 'styled-components';
@@ -18,13 +18,9 @@ export const SC = {
   `,
 
   RightCloudImage: styled.img`
-    height: 100%;
-    position: absolute;
-    top: 0;
+    ${cloudStyles}
     right: 0;
     transform: translate(70%, 15%);
-    pointer-events: none;
-    user-select: none;
   `,
 
   Slider: styled(Slider)`

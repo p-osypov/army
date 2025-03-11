@@ -1,4 +1,4 @@
-import { Container, Title } from '@/shared/assets/styles/layout';
+import { cloudStyles, Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
 import { Label } from '@/shared/assets/styles/layout';
@@ -37,13 +37,9 @@ export const SC = {
   `,
 
   CloudImage: styled.img`
-    height: 100%;
-    position: absolute;
-    top: 0;
+    ${cloudStyles}
     left: 0;
     transform: translate(-65%, -15%);
-    pointer-events: none;
-    user-select: none;
   `,
 
   UnitName: styled(Label)`

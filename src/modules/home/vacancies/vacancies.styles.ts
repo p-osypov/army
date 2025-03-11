@@ -1,4 +1,4 @@
-import { Container, Title } from '@/shared/assets/styles/layout';
+import { cloudStyles, Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { Scrollbar } from 'react-scrollbars-custom';
 import styled from 'styled-components';
@@ -46,33 +46,21 @@ export const SC = {
   `,
 
   LeftTopCloudImage: styled.img`
-    height: 100%;
-    position: absolute;
-    top: 0;
+    ${cloudStyles}
     left: 0;
     transform: translate(-70%, -40%);
-    pointer-events: none;
-    user-select: none;
   `,
 
   LeftBottomCloudImage: styled.img`
-    height: 100%;
-    position: absolute;
-    bottom: 0;
+    ${cloudStyles}
     left: 0;
     transform: translate(-70%, 10%);
-    pointer-events: none;
-    user-select: none;
   `,
 
   RightCloudImage: styled.img`
-    height: 100%;
-    position: absolute;
-    top: 0;
+    ${cloudStyles}
     right: 0;
     transform: translate(50%, -40%);
-    pointer-events: none;
-    user-select: none;
   `,
 
   TitleBlock: styled.div`

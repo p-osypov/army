@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 
 export const Container = styled.div`
@@ -38,4 +38,12 @@ export const Label = styled.span`
   padding: var(--spacing) var(--spacing-x2);
   font-size: var(--font-size-thin);
   letter-spacing: 3px;
+`;
+
+export const cloudStyles = css`
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  user-select: none;
 `;
