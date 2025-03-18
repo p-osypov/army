@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 const AdminPanel = () => {
   const router = useRouter();
   const { username } = useAuth();
-  const { t } = useTranslation('admin');
 
   useEffect(() => {
     if (!username) {
