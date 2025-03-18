@@ -2,7 +2,6 @@
 
 import { SC } from '@/modules/admin/admin.styles';
 import { useAuth } from '@/shared/context/auth';
-import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
