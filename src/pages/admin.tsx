@@ -1,25 +1,21 @@
-'use client';
+import Head from 'next/head';
+import React from 'react';
+import useTranslation from 'next-translate/useTranslation';
+import AdminPanel from '@/modules/admin/admin';
 
-import { SC } from '@/modules/admin/admin-styles';
-import { useAuth } from '@/shared/context/auth';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
-
-const AdminPanel = () => {
-  const router = useRouter();
-  const { username } = useAuth();
-
-  useEffect(() => {
-    if (!username) {
-      router.push('/login');
-    }
-  }, [username, router]);
-
+function AdminPanelIndex() {
+  const { t } = useTranslation('header');
   return (
-    <SC.Container>
-      <SC.Title>Адмін панель</SC.Title>
-    </SC.Container>
+    <>
+      <Head>
+        <title>{t('name')}</title>
+        <meta name="description" content="" />
+      </Head>
+      <main>
+        <AdminPanel />
+      </main>
+    </>
   );
-};
+}
 
-export default AdminPanel;
+export default AdminPanelIndex;
