@@ -33,7 +33,7 @@ export const SC = {
   `,
 
   CloudImage: styled.img`
-    ${cloudStyles}
+    ${cloudStyles};
     left: 0;
     transform: translate(-65%, -30%);
   `,

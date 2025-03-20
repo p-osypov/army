@@ -8,9 +8,8 @@
   "placeholders": {
     "fullName": "ПІБ",
     "email": "Електронна адреса",
-    "phone": "+380",
     "vacancy": "Вакансія",
-    "message": "Повідомлення"
+    "message": "Коментар"
   },
   "errors": {
     "fullName": "Введіть ПІБ",

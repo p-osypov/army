@@ -18,7 +18,7 @@ export const SC = {
   `,
 
   RightCloudImage: styled.img`
-    ${cloudStyles}
+    ${cloudStyles};
     right: 0;
     transform: translate(70%, 15%);
   `,
@@ -148,7 +148,7 @@ export const SC = {
     }
 
     .form-error {
-      color: indianred;
+      color: var(--color-error);
       font-size: var(--font-size-thin);
       position: absolute;
       top: 110%;

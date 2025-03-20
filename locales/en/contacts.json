@@ -8,9 +8,8 @@
   "placeholders": {
     "fullName": "Full name",
     "email": "Email address",
-    "phone": "+380",
     "vacancy": "Vacancy",
-    "message": "Message"
+    "message": "Leave your comment"
   },
   "errors": {
     "fullName": "Enter full name",

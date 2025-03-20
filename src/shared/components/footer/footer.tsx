@@ -11,57 +11,59 @@ const infoItems = [
   { href: '/contacts', tranKey: 'contacts' },
 ];
 
-function Footer() {
+function Footer({ hideContent }: { hideContent: boolean }) {
   const { t } = useTranslation('footer');
   const currentYear = new Date().getFullYear();
 
   return (
     <SC.Footer>
       <SC.Container>
-        <SC.Content>
-          <SC.About>
-            <SC.TitleLogo href={'/'}>
-              <SC.Logo src="/img/logo.png" />
-              <SC.Title>{t('name')}</SC.Title>
-            </SC.TitleLogo>
-            <SC.TextAboutDrone>{t('text')}</SC.TextAboutDrone>
-          </SC.About>
-          <SC.Contacts>
-            <SC.FooterTitle>{t('contacts')}</SC.FooterTitle>
-            <SC.FooterContactLink href={`mailto:${contacts.email}`}>
-              <Icons.Email className="icon" />
-              {contacts.footerEmail}
-            </SC.FooterContactLink>
-            <SC.FooterContactLink href={`tel:${contacts.tel}`}>
-              <Icons.PhoneNum className="icon" />
-              {contacts.footerTel}
-            </SC.FooterContactLink>
-          </SC.Contacts>
-          <SC.Info>
-            <SC.FooterTitle>{t('info')}</SC.FooterTitle>
-            <SC.InfoList>
-              {infoItems.map((item) => (
-                <Link href={item.href} key={`nav-item-${item.tranKey}`}>
-                  {t(item.tranKey)}
-                </Link>
-              ))}
-            </SC.InfoList>
-          </SC.Info>
-          <SC.SocialNetworks>
-            <SC.FooterTitle>{t('socialNetworks')}</SC.FooterTitle>
-            <SC.FooterIcons>
-              <SC.SocialLink href={contacts.facebookLink}>
-                <Icons.Facebook />
-              </SC.SocialLink>
-              <SC.SocialLink href={contacts.instagramLink}>
-                <Icons.Instagram />
-              </SC.SocialLink>
-              <SC.SocialLink href={contacts.youtubeLink}>
-                <Icons.Youtube />
-              </SC.SocialLink>
-            </SC.FooterIcons>
-          </SC.SocialNetworks>
-        </SC.Content>
+        {!hideContent && (
+          <SC.Content>
+            <SC.About>
+              <SC.TitleLogo href={'/'}>
+                <SC.Logo src="/img/logo.png" />
+                <SC.Title>{t('name')}</SC.Title>
+              </SC.TitleLogo>
+              <SC.TextAboutDrone>{t('text')}</SC.TextAboutDrone>
+            </SC.About>
+            <SC.Contacts>
+              <SC.FooterTitle>{t('contacts')}</SC.FooterTitle>
+              <SC.FooterContactLink href={`mailto:${contacts.email}`}>
+                <Icons.Email className="icon" />
+                {contacts.footerEmail}
+              </SC.FooterContactLink>
+              <SC.FooterContactLink href={`tel:${contacts.tel}`}>
+                <Icons.PhoneNum className="icon" />
+                {contacts.footerTel}
+              </SC.FooterContactLink>
+            </SC.Contacts>
+            <SC.Info>
+              <SC.FooterTitle>{t('info')}</SC.FooterTitle>
+              <SC.InfoList>
+                {infoItems.map((item) => (
+                  <Link href={item.href} key={`nav-item-${item.tranKey}`}>
+                    {t(item.tranKey)}
+                  </Link>
+                ))}
+              </SC.InfoList>
+            </SC.Info>
+            <SC.SocialNetworks>
+              <SC.FooterTitle>{t('socialNetworks')}</SC.FooterTitle>
+              <SC.FooterIcons>
+                <SC.SocialLink href={contacts.facebookLink}>
+                  <Icons.Facebook />
+                </SC.SocialLink>
+                <SC.SocialLink href={contacts.instagramLink}>
+                  <Icons.Instagram />
+                </SC.SocialLink>
+                <SC.SocialLink href={contacts.youtubeLink}>
+                  <Icons.Youtube />
+                </SC.SocialLink>
+              </SC.FooterIcons>
+            </SC.SocialNetworks>
+          </SC.Content>
+        )}
         <SC.FooterBottom>
           <span>
             © {t('name')} {currentYear} | {t('allRights')}

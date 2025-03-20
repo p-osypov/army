@@ -7,7 +7,7 @@ function Message() {
   return (
     <SC.Container>
       <SC.MainText>404</SC.MainText>
-      <SC.Title>Not Found</SC.Title>
+      <SC.Title>{t('pageNotFound')}</SC.Title>
       <SC.LinkButton href="/">{t('returnToHomePage')}</SC.LinkButton>
     </SC.Container>
   );
