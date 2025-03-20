@@ -1,16 +1,11 @@
-import Head from 'next/head';
 import React from 'react';
-import useTranslation from 'next-translate/useTranslation';
 import Login from '@/modules/login/login';
+import NextHead from '@/shared/components/next-head';
 
 function LoginIndex() {
-  const { t } = useTranslation('header');
   return (
     <>
-      <Head>
-        <title>{t('name')}</title>
-        <meta name="description" content="" />
-      </Head>
+      <NextHead title={'Авторизація'} noIndex />
       <main>
         <Login />
       </main>

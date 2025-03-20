@@ -25,7 +25,7 @@ const VacancyCard: React.FC<VacancyCardProps> = ({ vacancy }) => {
         <SC.InfoBlockItem>
           <SC.MilitaryRank>{t(vacancy.militaryRank)}</SC.MilitaryRank>
           <SC.BlockText>{t(vacancy.text)}</SC.BlockText>
-          <SC.LearnMoreBtn href={t(vacancy.url)}>
+          <SC.LearnMoreBtn href={vacancy.url}>
             {t('learnMore')} <Icons.ArrowRight className="icon" />
           </SC.LearnMoreBtn>
         </SC.InfoBlockItem>
