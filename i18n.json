@@ -2,7 +2,7 @@
   "locales": ["ua", "en", "pl"],
   "defaultLocale": "ua",
   "pages": {
-    "*": ["header", "footer", "contacts"],
+    "*": ["header", "footer", "contacts", "vacancies"],
     "/": [
       "first-screen",
       "about-us",
