@@ -25,12 +25,12 @@ const Login = () => {
   return (
     <SC.Container>
       <SC.LoginBox>
-        <SC.Title>Вхід в адмінку</SC.Title>
+        <SC.Title>Авторизуйтесь</SC.Title>
         <Formik
           initialValues={{ username: '', password: '' }}
           validationSchema={Yup.object({
-            username: Yup.string().required('Обов’язкове поле'),
-            password: Yup.string().required('Обов’язкове поле'),
+            username: Yup.string().required('Поле є обов’язковим'),
+            password: Yup.string().required('Поле є обов’язковим'),
           })}
           onSubmit={handleLogin}
         >
