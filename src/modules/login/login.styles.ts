@@ -11,22 +11,22 @@ export const SC = {
   `,
   LoginBox: styled.div`
     background-color: transparent;
-    padding: 24px;
+    padding: var(--spacing-x3);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 320px;
     text-align: center;
   `,
   Title: styled.h2`
-    font-size: 24px;
+    font-size: var(--font-size-medium);
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: var(--spacing-x3);
     color: var(--color-white);
   `,
   StyledForm: styled(Form)`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--spacing-x2);
   `,
 
   StyledField: styled(Field)`
@@ -35,29 +35,29 @@ export const SC = {
     border: none;
     border-bottom: 1px solid white;
     background-color: transparent;
-    font-size: 15px;
+    font-size: var(--font-size-normal);
     outline-style: initial;
     padding: 0;
     color: white;
   `,
   ErrorText: styled.div`
-    color: red;
-    font-size: 12px;
+    color: var(--color-error);
+    font-size: var(--font-size-thin);
     text-align: start;
   `,
   Button: styled.button`
     background-color: var(--color-accent);
     color: var(--color-black);
-    padding: 10px;
+    padding: var(--spacing);
     border: none;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: var(--spacing-x2);
     cursor: pointer;
     transition: background 0.2s;
-    font-size: 18px;
+    font-size: var(--font-size-medium);
 
     &:hover {
-      box-shadow: 0px 0px 10px var(--color-accent);
+      box-shadow: 0 0 10px var(--color-accent);
     }
   `,
 };
