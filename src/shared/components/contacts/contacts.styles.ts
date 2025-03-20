@@ -18,7 +18,7 @@ export const SC = {
   `,
 
   RightCloudImage: styled.img`
-    ${cloudStyles}
+    ${cloudStyles};
     right: 0;
     transform: translate(70%, 15%);
   `,

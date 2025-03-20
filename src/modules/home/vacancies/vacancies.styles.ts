@@ -46,19 +46,19 @@ export const SC = {
   `,
 
   LeftTopCloudImage: styled.img`
-    ${cloudStyles}
+    ${cloudStyles};
     left: 0;
     transform: translate(-70%, -40%);
   `,
 
   LeftBottomCloudImage: styled.img`
-    ${cloudStyles}
+    ${cloudStyles};
     left: 0;
     transform: translate(-70%, 10%);
   `,
 
   RightCloudImage: styled.img`
-    ${cloudStyles}
+    ${cloudStyles};
     right: 0;
     transform: translate(50%, -40%);
   `,
