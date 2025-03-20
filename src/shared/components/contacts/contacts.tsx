@@ -6,13 +6,33 @@ import {
   cooperationArray,
   initialValues,
 } from './contacts.data';
-import { Formik, Form, ErrorMessage, Field } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { vacanciesArray } from '@/shared/vacancies-card/vacancies.mock';
+import Input, { SelectOptions } from '@/shared/components/input/input';
+import { useMemo } from 'react';
 
 function Contacts() {
   const { t } = useTranslation('contacts');
   const { t: tV } = useTranslation('vacancies');
+
+  const selectedOptions: SelectOptions = useMemo(() => {
+    const options = vacanciesArray.map((v) => ({
+      id: v.id,
+      value: v.id,
+      text: tV(v.militaryRank),
+    }));
+
+    return [
+      {
+        id: 'placeholder',
+        value: '',
+        text: t('placeholders.vacancy'),
+        hidden: true,
+      },
+      ...options,
+    ];
+  }, [t, tV]);
 
   const validationSchema = Yup.object().shape({
     fullName: Yup.string()
@@ -21,16 +41,12 @@ function Contacts() {
         t('errors.invalidFullName'),
       )
       .required(t('errors.fullName')),
-    email: Yup.string()
-      .email(t('errors.invalidEmail'))
-      .required(t('errors.email')),
+    email: Yup.string().email(t('errors.invalidEmail')),
     phone: Yup.string()
       .matches(/^\+380\d{9}$/, t('errors.phoneFormat'))
       .required(t('errors.phone')),
     vacancy: Yup.string().required(t('errors.vacancy')),
-    message: Yup.string()
-      .max(500, t('errors.messageTooLong'))
-      .required(t('errors.message')),
+    message: Yup.string().max(500, t('errors.messageTooLong')),
   });
 
   const handleSubmit = (values: any) => {
@@ -64,73 +80,38 @@ function Contacts() {
               {({ isSubmitting }) => (
                 <Form>
                   <SC.Form>
-                    <SC.InputWrapper>
-                      <Field
-                        name="fullName"
-                        type="text"
-                        placeholder={t('placeholders.fullName')}
-                      />
-                      <ErrorMessage
-                        name="fullName"
-                        component="div"
-                        className="form-error"
-                      />
-                    </SC.InputWrapper>
+                    <Input
+                      name="fullName"
+                      type="text"
+                      placeholder={t('placeholders.fullName')}
+                      required
+                    />
+                    <Input
+                      name="email"
+                      type="email"
+                      placeholder={t('placeholders.email')}
+                    />
 
-                    <SC.InputWrapper>
-                      <Field
-                        name="email"
-                        type="email"
-                        placeholder={t('placeholders.email')}
-                      />
-                      <ErrorMessage
-                        name="email"
-                        component="div"
-                        className="form-error"
-                      />
-                    </SC.InputWrapper>
+                    <Input
+                      name="phone"
+                      type="tel"
+                      required
+                      placeholder={'+38 (012) 345 6789'}
+                    />
 
-                    <SC.InputWrapper>
-                      <Field
-                        name="phone"
-                        type="tel"
-                        placeholder={t('placeholders.phone')}
-                      />
-                      <ErrorMessage
-                        name="phone"
-                        component="div"
-                        className="form-error"
-                      />
-                    </SC.InputWrapper>
+                    <Input
+                      name="vacancy"
+                      type="select"
+                      placeholder={t('placeholders.vacancy')}
+                      selectOptions={selectedOptions}
+                      required
+                    />
 
-                    <SC.InputWrapper>
-                      <Field as="select" name="vacancy">
-                        <option value="">{t('placeholders.vacancy')}</option>
-                        {vacanciesArray.map((vacancy) => (
-                          <option key={vacancy.id} value={vacancy.id}>
-                            {tV(vacancy.militaryRank)}
-                          </option>
-                        ))}
-                      </Field>
-                      <ErrorMessage
-                        name="vacancy"
-                        component="div"
-                        className="form-error"
-                      />
-                    </SC.InputWrapper>
-
-                    <SC.InputWrapper>
-                      <Field
-                        name="message"
-                        as="textarea"
-                        placeholder={t('placeholders.message')}
-                      />
-                      <ErrorMessage
-                        name="message"
-                        component="div"
-                        className="form-error"
-                      />
-                    </SC.InputWrapper>
+                    <Input
+                      name="message"
+                      type="textarea"
+                      placeholder={t('placeholders.message')}
+                    />
                   </SC.Form>
                   <SC.SendBtn type="submit" disabled={isSubmitting}>
                     {t('sendBtn')}

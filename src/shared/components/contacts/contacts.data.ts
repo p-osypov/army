@@ -48,7 +48,7 @@ export const contactsSliderSettings = {
 export const initialValues = {
   fullName: '',
   email: '',
-  phone: '+380',
+  phone: '',
   vacancy: '',
   message: '',
 };
