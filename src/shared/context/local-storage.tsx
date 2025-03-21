@@ -7,13 +7,24 @@ import React, {
   ReactNode,
 } from 'react';
 
+export enum LocalStorageKeys {
+  _user = 'user',
+}
+type StoredValue = string | number | boolean | Record<string, any> | null;
+export type StoredValues = Record<LocalStorageKeys, StoredValue>;
 interface LocalStorageContextType {
-  storedValues: { [key: string]: any };
-  updateStoredValue: (key: string, newValue: any) => void;
-  getStoredValue: (key: string) => any;
+  storedValues: Partial<StoredValues>;
+  updateStoredValue: (key: LocalStorageKeys, newValue: any) => void;
+  getStoredValue: (key: LocalStorageKeys) => any;
+  lsInitialized: boolean;
 }
 
-const LocalStorageContext = createContext<LocalStorageContextType | null>(null);
+const LocalStorageContext = createContext<LocalStorageContextType>({
+  storedValues: {},
+  updateStoredValue: () => {},
+  getStoredValue: () => {},
+  lsInitialized: false,
+});
 
 interface LocalStorageProviderProps {
   children: ReactNode;
@@ -22,7 +33,7 @@ interface LocalStorageProviderProps {
 export const LocalStorageProvider = ({
   children,
 }: LocalStorageProviderProps) => {
-  const [storedValues, setStoredValues] = useState<{ [key: string]: any }>({});
+  const [storedValues, setStoredValues] = useState<Partial<StoredValues>>({});
 
   const getStoredValue = useCallback((key: string) => {
     const storedValue = localStorage.getItem(key);
@@ -33,7 +44,7 @@ export const LocalStorageProvider = ({
     }
   }, []);
 
-  const updateStoredValue = (key: string, newValue: any) => {
+  const updateStoredValue = (key: LocalStorageKeys, newValue: any) => {
     if (typeof newValue === 'string') {
       localStorage.setItem(key, newValue);
     } else {
@@ -43,20 +54,25 @@ export const LocalStorageProvider = ({
   };
 
   useEffect(() => {
-    const keys = Object.keys(localStorage);
-    const initialValues: { [key: string]: any } = {};
+    const keys = Object.keys(localStorage) as LocalStorageKeys[];
+    const state: Partial<StoredValues> = {};
     keys.forEach((key) => {
-      const storedValue = getStoredValue(key);
-      if (storedValue !== null) {
-        initialValues[key] = storedValue;
+      const value = getStoredValue(key);
+      if (value !== null) {
+        state[key] = value;
       }
     });
-    setStoredValues(initialValues);
+    setStoredValues(state);
   }, [getStoredValue]);
 
   return (
     <LocalStorageContext.Provider
-      value={{ storedValues, updateStoredValue, getStoredValue }}
+      value={{
+        storedValues,
+        updateStoredValue,
+        getStoredValue,
+        lsInitialized: !!Object.keys(storedValues).length,
+      }}
     >
       {children}
     </LocalStorageContext.Provider>

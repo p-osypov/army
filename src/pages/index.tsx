@@ -9,17 +9,15 @@ import NextHead from '@/shared/components/next-head';
 
 function Index() {
   return (
-    <>
+    <React.Fragment>
       <NextHead />
-      <main>
-        <FirstScreen />
-        <AboutUs />
-        <OurValues />
-        <Statistics />
-        <Media />
-        <Vacancies />
-      </main>
-    </>
+      <FirstScreen />
+      <AboutUs />
+      <OurValues />
+      <Statistics />
+      <Media />
+      <Vacancies />
+    </React.Fragment>
   );
 }
 

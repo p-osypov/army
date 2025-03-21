@@ -1,12 +1,12 @@
 import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from 'react';
 import { useRouter } from 'next/router';
-import { useLocalStorageContext } from './local-storage';
+import { LocalStorageKeys, useLocalStorageContext } from './local-storage';
 
 interface User {
   username: string;
@@ -30,26 +30,24 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [username, setUsername] = useState<string | null>(null);
 
   useEffect(() => {
-    const storedUser: User | null = getStoredValue('user');
-    if (storedUser?.username) {
-      setUsername(storedUser.username);
-    }
+    const storedUser: User | null = getStoredValue(LocalStorageKeys._user);
+    if (storedUser) setUsername(storedUser.username);
   }, [getStoredValue]);
 
   const login = (username: string, password: string) => {
     if (username === 'admin' && password === 'admin') {
       setUsername(username);
-      updateStoredValue('user', { username });
-      router.push('/admin');
+      updateStoredValue(LocalStorageKeys._user, { username });
+      void router.push('/admin');
     } else {
       alert('Incorrect login or password');
     }
   };
 
   const logout = () => {
-    updateStoredValue('user', null);
+    updateStoredValue(LocalStorageKeys._user, null);
     setUsername(null);
-    router.push('/login');
+    void router.push('/login');
   };
 
   return (

@@ -3,18 +3,21 @@
 import { SC } from '@/modules/admin/admin.styles';
 import { useAuth } from '@/shared/context/auth';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useLocalStorageContext } from '@/shared/context/local-storage';
 
-const AdminPanel = () => {
+const AdminPanelPage = () => {
   const router = useRouter();
+  const { lsInitialized } = useLocalStorageContext();
   const { username } = useAuth();
 
   useEffect(() => {
-    if (!username) {
+    if (lsInitialized && !username) {
       router.push('/login');
     }
-  }, [username, router]);
+  }, [lsInitialized, username, router]);
 
+  if (!username) return <React.Fragment />;
   return (
     <SC.Container>
       <SC.Title>Адмін панель</SC.Title>
@@ -22,4 +25,4 @@ const AdminPanel = () => {
   );
 };
 
-export default AdminPanel;
+export default AdminPanelPage;

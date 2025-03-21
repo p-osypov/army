@@ -8,9 +8,7 @@ function VacanciesIndex() {
   return (
     <>
       <NextHead title={t('label')} description={t('title')} />
-      <main>
-        <Vacancies />
-      </main>
+      <Vacancies />
     </>
   );
 }
