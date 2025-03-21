@@ -25,6 +25,7 @@ const AdminPanelPage = () => {
       <Title.H1>Адміністративна панель</Title.H1>
       <SC.Content>
         <Sidebar />
+        <SC.RouteBody />
       </SC.Content>
     </SC.Container>
   );

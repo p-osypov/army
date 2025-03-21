@@ -4,9 +4,10 @@ import { SC } from '@/modules/admin/sidebar/sidebar.styles';
 function Sidebar() {
   return (
     <SC.Container>
-      <SC.Route>Vacancies</SC.Route>
-      <SC.Route>Users</SC.Route>
-      <SC.Route>Donations</SC.Route>
+      <SC.Route>Вакансії</SC.Route>
+      <SC.Route>Користувачі</SC.Route>
+      <SC.Route>Донати</SC.Route>
+      <SC.Route>Вийти</SC.Route>
     </SC.Container>
   );
 }
