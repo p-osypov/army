@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect } from 'react';
 import { useLocalStorageContext } from '@/shared/context/local-storage';
 import { Title } from '@/shared/assets/styles/layout';
+import Sidebar from '@/modules/admin/sidebar/sidebar';
 
 const AdminPanelPage = () => {
   const router = useRouter();
@@ -22,6 +23,9 @@ const AdminPanelPage = () => {
   return (
     <SC.Container>
       <Title.H1>Адміністративна панель</Title.H1>
+      <SC.Content>
+        <Sidebar />
+      </SC.Content>
     </SC.Container>
   );
 };
