@@ -25,8 +25,9 @@ export const Title = {
   Span: styled.span`
     ${titleStyles}
   `,
-  H1: styled.h1`
-    ${titleStyles}
+  H1: styled.h1<{ $centered?: boolean }>`
+    ${titleStyles};
+    text-align: ${({ $centered }) => ($centered ? 'center' : 'initial')};
   `,
 };
 

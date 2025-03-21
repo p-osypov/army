@@ -1,15 +1,13 @@
 import React from 'react';
-import AdminPanel from '@/modules/admin/admin';
+import AdminPanelPage from '@/modules/admin/admin.page';
 import NextHead from '@/shared/components/next-head';
 
 function AdminPanelIndex() {
   return (
-    <>
+    <React.Fragment>
       <NextHead title={'Адміністративна панель'} noIndex />
-      <main>
-        <AdminPanel />
-      </main>
-    </>
+      <AdminPanelPage />
+    </React.Fragment>
   );
 }
 

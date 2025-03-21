@@ -17,7 +17,7 @@ export const SC = {
     width: 320px;
     text-align: center;
   `,
-  Title: styled.h2`
+  Title: styled.h1`
     font-size: var(--font-size-medium);
     font-weight: bold;
     margin-bottom: var(--spacing-x3);

@@ -6,7 +6,7 @@ import Contacts from '@/shared/components/contacts';
 import { LocalStorageProvider } from '@/shared/context/local-storage';
 import { AuthProvider } from '@/shared/context/auth';
 import { useRouter } from 'next/router';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
 interface ClientRoutesGuardProps {
   children: React.ReactNode;
@@ -19,25 +19,21 @@ function ClientRoutesGuard({ children }: ClientRoutesGuardProps) {
     router.pathname === '/login' || router.pathname === '/admin';
 
   return (
-    <>
-      {children}
-      {!hideClientContent && <Contacts />}
+    <React.Fragment>
+      <main>
+        {children}
+        {!hideClientContent && <Contacts />}
+      </main>
       <Footer hideContent={hideClientContent} />
-    </>
+    </React.Fragment>
   );
 }
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  const pageLayoutRef = useRef<HTMLDivElement | null>(null);
-
   useEffect(() => {
     const handleRouteChange = () => {
-      if (pageLayoutRef.current) {
-        pageLayoutRef.current.scrollTo(0, 0);
-      } else {
-        window.scrollTo(0, 0);
-      }
+      document.body.scrollTo(0, 0);
     };
 
     router.events.on('routeChangeComplete', handleRouteChange);
@@ -46,12 +42,13 @@ export default function App({ Component, pageProps }: AppProps) {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
+
   return (
     <LocalStorageProvider>
       <AuthProvider>
         <Header />
         <ClientRoutesGuard>
-          <Component {...pageProps} ref={pageLayoutRef} />
+          <Component {...pageProps} />
         </ClientRoutesGuard>
       </AuthProvider>
     </LocalStorageProvider>

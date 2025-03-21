@@ -1,2 +1,2 @@
-import Vacancies from './vacancies';
-export default Vacancies;
+import VacanciesPage from './vacancies.page';
+export default VacanciesPage;

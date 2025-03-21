@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from '@/modules/login/login';
+import LoginPage from '@/modules/login/login.page';
 import NextHead from '@/shared/components/next-head';
 
 function LoginIndex() {
@@ -7,7 +7,7 @@ function LoginIndex() {
     <>
       <NextHead title={'Авторизація'} noIndex />
       <main>
-        <Login />
+        <LoginPage />
       </main>
     </>
   );
