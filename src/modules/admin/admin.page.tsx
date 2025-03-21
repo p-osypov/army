@@ -5,6 +5,7 @@ import { useAuth } from '@/shared/context/auth';
 import { useRouter } from 'next/navigation';
 import React, { useEffect } from 'react';
 import { useLocalStorageContext } from '@/shared/context/local-storage';
+import { Title } from '@/shared/assets/styles/layout';
 
 const AdminPanelPage = () => {
   const router = useRouter();
@@ -20,7 +21,7 @@ const AdminPanelPage = () => {
   if (!username) return <React.Fragment />;
   return (
     <SC.Container>
-      <SC.Title>Адмін панель</SC.Title>
+      <Title.H1>Адміністративна панель</Title.H1>
     </SC.Container>
   );
 };
