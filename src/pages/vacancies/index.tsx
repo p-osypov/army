@@ -1,6 +1,6 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import Vacancies from 'src/modules/vacancies';
+import VacanciesPage from 'src/modules/vacancies';
 import NextHead from '@/shared/components/next-head';
 
 function VacanciesIndex() {
@@ -8,7 +8,7 @@ function VacanciesIndex() {
   return (
     <>
       <NextHead title={t('label')} description={t('title')} />
-      <Vacancies />
+      <VacanciesPage />
     </>
   );
 }

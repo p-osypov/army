@@ -8,7 +8,7 @@ import * as Yup from 'yup';
 import { useAuth } from '@/shared/context/auth';
 import { SC } from './login.styles';
 
-const Login = () => {
+const LoginPage = () => {
   const router = useRouter();
   const { login, username } = useAuth();
 
@@ -53,4 +53,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

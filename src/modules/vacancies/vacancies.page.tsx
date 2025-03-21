@@ -4,7 +4,7 @@ import { SC } from './vacancies.styles';
 import { vacanciesArray } from '@/shared/vacancies-card/vacancies.mock';
 import VacancyCard from '@/shared/vacancies-card';
 
-function Vacancies() {
+function VacanciesPage() {
   const { t } = useTranslation('vacancies');
 
   return (
@@ -28,4 +28,4 @@ function Vacancies() {
   );
 }
 
-export default Vacancies;
+export default VacanciesPage;
