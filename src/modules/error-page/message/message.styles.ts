@@ -25,23 +25,18 @@ const MainText = styled.div`
 const Title = styled.div`
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-size: var(--font-size-title);
-
+  text-align: center;
   ${mediaWidth('max', 'sm')} {
-    font-size: var(--font-size-page-title);
+    font-size: var(--font-size-title);
   }
 `;
 const LinkButton = styled(Link)`
   border: 1px solid var(--color-white);
   padding: var(--spacing) var(--spacing-x2);
-  border-radius: var(--border-radius-md);
+  border-radius: 4px;
   margin-top: var(--spacing-x4);
-  font-size: var(--font-size-sm);
   white-space: nowrap;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-  ${mediaWidth('max', 'sm')} {
-    font-size: var(--font-size-thin);
-  }
 `;
 
 export const SC = {
