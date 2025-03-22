@@ -19,18 +19,18 @@ export const SC = {
     top: 110%;
     left: 0;
   `,
-  Field: styled(Field)<{ as?: 'textarea' | 'select' }>`
+  Field: styled(Field)<{ component?: 'textarea' | 'select' }>`
     background-color: transparent;
     padding: var(--spacing-x2);
     color: white;
-    width: ${({ as }) =>
-      as === 'select' ? 'calc(100% - var(--spacing))' : '100%'};
-    height: ${({ as }) => (as === 'textarea' ? '150px' : '50px')};
+    width: ${({ component }) =>
+      component === 'select' ? 'calc(100% - var(--spacing))' : '100%'};
+    height: ${({ component }) => (component === 'textarea' ? '150px' : '50px')};
     border: none;
     resize: none;
     /* For select elements, when the field is invalid (i.e. still on placeholder), use grey */
-    ${({ as }) =>
-      as === 'select' &&
+    ${({ component }) =>
+      component === 'select' &&
       `
         &:invalid {
           color: grey;

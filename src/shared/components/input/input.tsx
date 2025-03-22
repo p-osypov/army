@@ -19,7 +19,7 @@ const getFieldTypeProps = (type: InputProps['type']) => {
   switch (type) {
     case 'textarea':
     case 'select':
-      return { as: type };
+      return { component: type };
     default:
       return { type };
   }
@@ -46,7 +46,6 @@ function Input({
               key={option.id}
               value={option.value}
               disabled={option.disabled}
-              selected={option.selected}
               hidden={option.hidden}
             >
               {option.text}

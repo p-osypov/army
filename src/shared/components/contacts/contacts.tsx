@@ -19,7 +19,7 @@ function Contacts() {
   const selectedOptions: SelectOptions = useMemo(() => {
     const options = vacanciesArray.map((v) => ({
       id: v.id,
-      value: v.id,
+      value: tV(v.militaryRank),
       text: tV(v.militaryRank),
     }));
 
@@ -45,7 +45,9 @@ function Contacts() {
     phone: Yup.string()
       .matches(/^\+380\d{9}$/, t('errors.phoneFormat'))
       .required(t('errors.phone')),
-    vacancy: Yup.string().required(t('errors.vacancy')),
+    vacancy: Yup.string()
+      .notOneOf([''], t('errors.vacancy'))
+      .required(t('errors.vacancy')),
     message: Yup.string().max(500, t('errors.messageTooLong')),
   });
 
@@ -77,47 +79,50 @@ function Contacts() {
               validationSchema={validationSchema}
               onSubmit={handleSubmit}
             >
-              {({ isSubmitting }) => (
-                <Form>
-                  <SC.Form>
-                    <Input
-                      name="fullName"
-                      type="text"
-                      placeholder={t('placeholders.fullName')}
-                      required
-                    />
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder={t('placeholders.email')}
-                    />
+              {({ isSubmitting }) => {
+                return (
+                  <Form>
+                    <SC.Form>
+                      <Input
+                        name="fullName"
+                        type="text"
+                        placeholder={t('placeholders.fullName')}
+                        required
+                      />
+                      <Input
+                        name="email"
+                        type="email"
+                        placeholder={t('placeholders.email')}
+                      />
 
-                    <Input
-                      name="phone"
-                      type="tel"
-                      required
-                      placeholder={'+38 (012) 345 6789'}
-                    />
+                      <Input
+                        name="phone"
+                        type="tel"
+                        required
+                        placeholder={'+38 (012) 345 6789'}
+                      />
 
-                    <Input
-                      name="vacancy"
-                      type="select"
-                      placeholder={t('placeholders.vacancy')}
-                      selectOptions={selectedOptions}
-                      required
-                    />
+                      <Input
+                        name="vacancy"
+                        type="select"
+                        placeholder={t('placeholders.vacancy')}
+                        selectOptions={selectedOptions}
+                        required
+                      />
 
-                    <Input
-                      name="message"
-                      type="textarea"
-                      placeholder={t('placeholders.message')}
-                    />
-                  </SC.Form>
-                  <SC.SendBtn type="submit" disabled={isSubmitting}>
-                    {t('sendBtn')}
-                  </SC.SendBtn>
-                </Form>
-              )}
+                      <Input
+                        name="message"
+                        type="textarea"
+                        placeholder={t('placeholders.message')}
+                      />
+                    </SC.Form>
+
+                    <SC.SendBtn type="submit" disabled={isSubmitting}>
+                      {t('sendBtn')}
+                    </SC.SendBtn>
+                  </Form>
+                );
+              }}
             </Formik>
           </SC.FormBlock>
           <SC.LogosBlock>
