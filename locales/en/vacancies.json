@@ -17,5 +17,10 @@
     "driverDescription": "Mobile support - logistics and speed.",
     "analystTitle": "Analyst (decoder)",
     "analystDescription": "Those who see more and provide situational awareness."
+  },
+  "applied": {
+    "title": "You have already applied for this vacancy",
+    "description": "We will contact you as soon as possible to discuss the details of your application.",
+    "returnHome": "Go to the main page"
   }
 }
