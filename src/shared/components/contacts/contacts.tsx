@@ -10,12 +10,13 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { vacanciesArray } from '@/shared/vacancies-card/vacancies.mock';
 import Input, { SelectOptions } from '@/shared/components/input/input';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
+import axios from 'axios';
 
 function Contacts() {
   const { t } = useTranslation('contacts');
   const { t: tV } = useTranslation('vacancies');
-
+  const [error, setError] = useState<string | null>(null);
   const selectedOptions: SelectOptions = useMemo(() => {
     const options = vacanciesArray.map((v) => ({
       id: v.id,
@@ -51,8 +52,15 @@ function Contacts() {
     message: Yup.string().max(500, t('errors.messageTooLong')),
   });
 
-  const handleSubmit = (values: any) => {
-    alert(t('successMessage'));
+  const handleSubmit = async (values: any) => {
+    return axios
+      .post('/api/send-email', values)
+      .then((response) => {
+        alert(t('successMessage'));
+      })
+      .catch((e) => {
+        console.warn(e);
+      });
   };
 
   return (
@@ -118,7 +126,7 @@ function Contacts() {
                     </SC.Form>
 
                     <SC.SendBtn type="submit" disabled={isSubmitting}>
-                      {t('sendBtn')}
+                      {isSubmitting ? 'isSubmitting...' : t('sendBtn')}
                     </SC.SendBtn>
                   </Form>
                 );
