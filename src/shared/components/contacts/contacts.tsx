@@ -55,15 +55,13 @@ function Contacts() {
   });
 
   const handleSubmit = async (values: any) => {
-    return axios
-      .post('/api/send-email', values)
-      .then((response) => {
-        router.push('/vacancies/applied');
-      })
-      .catch((e) => {
-        console.warn(e);
-        setError(e.message);
-      });
+    try {
+      await axios.post('/api/send-email', values);
+      void router.push('/vacancies/applied');
+    } catch (e: any) {
+      console.warn(e);
+      setError(e.message);
+    }
   };
 
   return (
