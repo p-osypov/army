@@ -17,5 +17,10 @@
     "driverDescription": "Wsparcie mobilne - logistyka i szybkość.",
     "analystTitle": "Analityk (dekoder)",
     "analystDescription": "Ci, którzy widzą więcej i zapewniają świadomość sytuacyjną."
+  },
+  "applied": {
+    "title": "Twoje zgłoszenie na wakat zostało pomyślnie wysłane!",
+    "description": "Skontaktujemy się z Tobą wkrótce, aby omówić szczegóły.",
+    "returnHome": "Powrót do strony głównej"
   }
 }

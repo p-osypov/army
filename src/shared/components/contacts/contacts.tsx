@@ -10,12 +10,15 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { vacanciesArray } from '@/shared/vacancies-card/vacancies.mock';
 import Input, { SelectOptions } from '@/shared/components/input/input';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
 function Contacts() {
   const { t } = useTranslation('contacts');
   const { t: tV } = useTranslation('vacancies');
-
+  const [error, setError] = useState<string>('');
+  const router = useRouter();
   const selectedOptions: SelectOptions = useMemo(() => {
     const options = vacanciesArray.map((v) => ({
       id: v.id,
@@ -51,8 +54,15 @@ function Contacts() {
     message: Yup.string().max(500, t('errors.messageTooLong')),
   });
 
-  const handleSubmit = (values: any) => {
-    alert(t('successMessage'));
+  const handleSubmit = async (values: any) => {
+    setError('');
+    try {
+      await axios.post('/api/send-email', values);
+      void router.push('/vacancies/applied');
+    } catch (e: any) {
+      console.warn(e);
+      setError(e.message);
+    }
   };
 
   return (
@@ -118,8 +128,9 @@ function Contacts() {
                     </SC.Form>
 
                     <SC.SendBtn type="submit" disabled={isSubmitting}>
-                      {t('sendBtn')}
+                      {t(isSubmitting ? 'isSubmitting' : 'sendBtn')}
                     </SC.SendBtn>
+                    {error && <SC.ErrorText>{error}</SC.ErrorText>}
                   </Form>
                 );
               }}

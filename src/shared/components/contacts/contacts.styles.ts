@@ -176,6 +176,11 @@ export const SC = {
     }
   `,
 
+  ErrorText: styled.div`
+    color: var(--color-error);
+    margin-top: var(--spacing);
+  `,
+
   LogosBlock: styled.div`
     min-height: 100%;
     background-color: rgba(250, 250, 250, 0.02);

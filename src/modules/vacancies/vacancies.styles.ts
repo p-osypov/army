@@ -2,6 +2,7 @@ import { cloudStyles, Container, Title } from '@/shared/assets/styles/layout';
 import { mediaWidth } from '@/shared/assets/styles/mixins';
 import { HEADER_HEIGHT } from '@/shared/components/header/header.styles';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const cardHeight = {
   lg: 400,
@@ -82,4 +83,21 @@ export const SC = {
       min-height: ${cardHeight.xxs}px;
     }
   `,
+  Applied: {
+    PageTitle: styled.h1`
+      font-size: var(--font-size-medium);
+      text-align: center;
+    `,
+    PageDescription: styled.p`
+      text-align: center;
+    `,
+    ReturnHomeButton: styled(Link)`
+      border: 1px solid var(--color-white);
+      padding: var(--spacing) var(--spacing-x2);
+      border-radius: 4px;
+      color: white;
+      max-width: max-content;
+      margin: var(--spacing-x4) auto 0 auto;
+    `,
+  },
 };
