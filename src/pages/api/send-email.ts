@@ -78,9 +78,9 @@ export default async function handler(
       transporter.sendMail(mailPersonPayload),
     ]);
     // 5. Respond with success
-    return res.status(200).json({ message: 'Email sent successfully!' });
+    return res.status(200).json({ message: 'Email sent successfully.' });
   } catch (error: any) {
     console.error('Error sending email:', error);
-    return res.status(500).json({ message: 'Error sending email', error });
+    return res.status(500).json({ message: 'Error sending email.' });
   }
 }
