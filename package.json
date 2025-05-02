@@ -1,6 +1,6 @@
 {
-  "name": "army",
-  "version": "0.13.0",
+  "name": "chornyi-stryzh-website",
+  "version": "1.0.1",
   "private": false,
   "scripts": {
     "dev": "next dev",
@@ -20,7 +20,7 @@
   "dependencies": {
     "axios": "^1.7.2",
     "formik": "^2.4.6",
-    "next": "^14.2.3",
+    "next": "^15.3.1",
     "next-translate": "^2.6.2",
     "next-translate-plugin": "^2.6.2",
     "react": "^18.3.1",
