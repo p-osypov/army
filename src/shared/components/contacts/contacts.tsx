@@ -55,6 +55,7 @@ function Contacts() {
   });
 
   const handleSubmit = async (values: any) => {
+    setError('');
     try {
       await axios.post('/api/send-email', values);
       void router.push('/vacancies/applied');
