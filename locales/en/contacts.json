@@ -3,6 +3,7 @@
   "title": "Fill out the application and break in",
   "text": "With the help of drones, the brigade can detect enemy positions in advance and respond as effectively as possible.",
   "sendBtn": "Send a request",
+  "isSubmitting": "Submitting...",
   "brigadeName": "103rd Metropolitan Andrei Sheptytskyi Regional Fire Brigade",
   "unitName": "«Chornyi stryzh»",
   "placeholders": {
