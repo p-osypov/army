@@ -4,6 +4,13 @@ export const vacanciesArray = [
   {
     id: uuidv4(),
     image: '/img/vacancies/cover-do-fpv.png',
+    militaryRank: 'vacancies.bomberTitle',
+    text: 'vacancies.bomberDescription',
+    url: '/vacancies/fpv',
+  },
+  {
+    id: uuidv4(),
+    image: '/img/vacancies/cover-do-fpv.png',
     militaryRank: 'vacancies.fpvTitle',
     text: 'vacancies.fpvDescription',
     url: '/vacancies/fpv',
@@ -18,8 +25,8 @@ export const vacanciesArray = [
   {
     id: uuidv4(),
     image: '/img/vacancies/cover-do-wings.png',
-    militaryRank: 'vacancies.wingsTitle',
-    text: 'vacancies.wingsDescription',
+    militaryRank: 'vacancies.fixedWingTitle',
+    text: 'vacancies.fixedWingDescription',
     url: '/vacancies/wings',
   },
   {
@@ -42,5 +49,12 @@ export const vacanciesArray = [
     militaryRank: 'vacancies.analystTitle',
     text: 'vacancies.analystDescription',
     url: '/vacancies/analyst',
+  },
+  {
+    id: uuidv4(),
+    image: '/img/vacancies/cover-analyst.png',
+    militaryRank: 'vacancies.solderingTechnicianTitle',
+    text: 'vacancies.solderingTechnicianDescription',
+    url: '/vacancies/soldering-technician',
   },
 ];

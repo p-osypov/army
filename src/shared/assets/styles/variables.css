@@ -27,9 +27,9 @@
   --color-black: #0c0c0c;
   --color-gray: #686868;
   --color-text: #000000;
-  --color-white: white;
-  --color-accent: #fed017;
-  --color-accent-dark: #111111;
+  --color-white: #fefefe;
+  --color-accent: #fcd20e;
+  --color-accent-dark: #0b0b0b;
   --color-error: indianred;
   --z-index-max: 2147483647;
   --z-index-header: 1000;

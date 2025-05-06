@@ -18,8 +18,7 @@ export const SC = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: var(--max-width);
-    border: 1px solid #fafafa33;
+    max-width: 100%;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     margin: 0 auto;
