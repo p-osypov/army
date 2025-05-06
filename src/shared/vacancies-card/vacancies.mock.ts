@@ -55,6 +55,6 @@ export const vacanciesArray = [
     image: '/img/vacancies/cover-analyst.png',
     militaryRank: 'vacancies.solderingTechnicianTitle',
     text: 'vacancies.solderingTechnicianDescription',
-    url: '/vacancies/analyst',
+    url: '/vacancies/soldering-technician',
   },
 ];
