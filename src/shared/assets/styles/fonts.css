@@ -1,9 +1,45 @@
 @font-face {
-  font-family: 'uaarmylabels';
-  src:
-    local('uaarmylabels Regular'),
-    local('uaarmylabels-Regular'),
-    url('/fonts/uaarmylabels.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'UAFSans';
+  src: url('/fonts/UAFSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UAFSans';
+  src: url('/fonts/UAFSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UAFSans';
+  src: url('/fonts/UAFSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UAFSans';
+  src: url('/fonts/UAFSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UAFSans-NameTape';
+  src: url('/fonts/UAFSans-NameTape.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UAFSans-OnBoard';
+  src: url('/fonts/UAFSans-OnBoard.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UAFSans-OnBoardStencil';
+  src: url('/fonts/UAFSans-OnBoardStencil.ttf') format('truetype');
   font-style: normal;
 }
