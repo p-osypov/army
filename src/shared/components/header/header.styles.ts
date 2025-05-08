@@ -10,6 +10,7 @@ export const SC = {
     left: 0;
     top: 0;
     width: 100%;
+    backdrop-filter: blur(20px);
     z-index: var(--z-index-header);
     color: var(--color-white);
   `,
@@ -18,18 +19,18 @@ export const SC = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 100%;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 22px 38px;
-    backdrop-filter: blur(20px);
+    padding: var(--spacing-x3) 0;
     gap: var(--spacing-x2);
+    ${mediaWidth('max', 'xl')} {
+      padding: var(--spacing-x3) var(--spacing-x3);
+    }
     ${mediaWidth('max', 'md')} {
-      padding: 18px 34px;
+      padding: var(--spacing-x2) var(--spacing-x3);
     }
     ${mediaWidth('max', 'sm')} {
-      padding: 12px 28px;
+      padding: calc(var(--spacing) * 1.5) var(--spacing-x3);
     }
     ${mediaWidth('max', 'xxs')} {
       gap: var(--spacing);
