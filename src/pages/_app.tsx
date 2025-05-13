@@ -7,6 +7,7 @@ import { LocalStorageProvider } from '@/shared/context/local-storage';
 import { AuthProvider } from '@/shared/context/auth';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
+import Head from 'next/head';
 
 interface ClientRoutesGuardProps {
   children: React.ReactNode;
@@ -46,6 +47,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <LocalStorageProvider>
       <AuthProvider>
+        <Head>
+          <meta name="robots" content="noindex, nofollow" />
+        </Head>
         <Header />
         <ClientRoutesGuard>
           <Component {...pageProps} />
