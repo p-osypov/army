@@ -87,8 +87,8 @@ export const SC = {
     gap: var(--spacing-x2);
 
     .icon {
-      height: var(--font-size-small);
-      width: var(--font-size-small);
+      min-height: var(--font-size-small);
+      min-width: var(--font-size-small);
     }
   `,
 

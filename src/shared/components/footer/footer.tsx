@@ -31,11 +31,11 @@ function Footer({ hideContent }: { hideContent: boolean }) {
               <SC.FooterTitle>{t('contacts')}</SC.FooterTitle>
               <SC.FooterContactLink href={`mailto:${contacts.email}`}>
                 <Icons.Email className="icon" />
-                {contacts.footerEmail}
+                {contacts.email}
               </SC.FooterContactLink>
               <SC.FooterContactLink href={`tel:${contacts.tel}`}>
                 <Icons.PhoneNum className="icon" />
-                {contacts.footerTel}
+                {contacts.tel}
               </SC.FooterContactLink>
             </SC.Contacts>
             <SC.Info>

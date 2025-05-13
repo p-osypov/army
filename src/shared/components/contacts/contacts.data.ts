@@ -2,17 +2,15 @@ import { breakpoints } from '@/shared/assets/styles/mixins';
 import { v4 as uuidv4 } from 'uuid';
 
 export const cooperationArray = [
-  { id: uuidv4(), src: '/img/sternenko-spilnota.png' },
-  { id: uuidv4(), src: '/img/sternenko-spilnota.png' },
-  { id: uuidv4(), src: '/img/sternenko-spilnota.png' },
-  { id: uuidv4(), src: '/img/sternenko-spilnota.png' },
-  { id: uuidv4(), src: '/img/sternenko-spilnota.png' },
+  { id: uuidv4(), src: '/img/logo-sternenko.png' },
+  { id: uuidv4(), src: '/img/logo-techmagic.svg' },
+  { id: uuidv4(), src: '/img/logo-TORO.png' },
 ];
 
 export const contactsSliderSettings = {
   infinite: true,
   arrows: false,
-  slidesToShow: 5,
+  slidesToShow: cooperationArray.length > 5 ? 5 : cooperationArray.length,
   slidesToScroll: 1,
   initialSlide: 0,
   swipeToSlide: true,

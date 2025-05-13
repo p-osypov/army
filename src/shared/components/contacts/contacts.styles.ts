@@ -43,7 +43,9 @@ export const SC = {
   Cooperation: styled.div`
     padding: 0 var(--spacing-x2);
     display: inline-flex !important;
+    align-items: center;
     justify-content: center;
+    min-height: 160px;
   `,
 
   CooperationImage: styled.img`
