@@ -61,7 +61,7 @@ function Contacts() {
       void router.push('/vacancies/applied');
     } catch (e: any) {
       console.warn(e);
-      setError(e.message);
+      setError(e.response?.message || e.message);
     }
   };
 

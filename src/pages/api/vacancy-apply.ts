@@ -19,7 +19,7 @@ export default async function handler(
       pass: process.env.EMAIL_PASS,
     };
     if (!auth.user || !auth.pass) {
-      return res.status(500).json({ message: 'Email credentials not set.' });
+      return res.status(500).json({ message: "Email credentials aren't set." });
     }
     const transporter = nodemailer.createTransport({
       // For example, using Gmail:
