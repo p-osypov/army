@@ -2,6 +2,7 @@ import { Label, Title } from '@/shared/assets/styles/layout';
 import useTranslation from 'next-translate/useTranslation';
 import { SC } from './contacts.styles';
 import {
+  ContactsFormValues,
   contactsSliderSettings,
   cooperationArray,
   initialValues,
@@ -54,14 +55,14 @@ function Contacts() {
     message: Yup.string().max(500, t('errors.messageTooLong')),
   });
 
-  const handleSubmit = async (values: any) => {
+  const handleSubmit = async (values: ContactsFormValues) => {
     setError('');
     try {
       await axios.post('/api/vacancy-apply', values);
       void router.push('/vacancies/applied');
     } catch (e: any) {
       console.warn(e);
-      setError(e.response?.message || e.message);
+      setError(e.response?.data?.message || e.message);
     }
   };
 

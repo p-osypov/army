@@ -17,4 +17,8 @@ module.exports = {
       localeDetection: false, // Disable automatic detection
     },
   }),
+  env: {
+    EMAIL_USER: process.env.EMAIL_USER,
+    EMAIL_PASS: process.env.EMAIL_PASS,
+  },
 };

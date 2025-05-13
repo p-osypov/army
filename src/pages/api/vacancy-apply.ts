@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-export default async function handler(
+export default async function vacancyApply(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {

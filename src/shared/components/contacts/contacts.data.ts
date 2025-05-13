@@ -42,8 +42,14 @@ export const contactsSliderSettings = {
     },
   ],
 };
-
-export const initialValues = {
+export interface ContactsFormValues {
+  fullName: string;
+  email: string;
+  phone: string;
+  vacancy: string;
+  message: string;
+}
+export const initialValues: ContactsFormValues = {
   fullName: '',
   email: '',
   phone: '',
